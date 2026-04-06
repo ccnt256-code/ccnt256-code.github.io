@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ccnt256-code.github.io/sitemap.xml
