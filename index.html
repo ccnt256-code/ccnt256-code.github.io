@@ -30,7 +30,7 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif
 .shop-name { color:#fff; font-size:1.49rem; font-weight:800; margin-bottom:2px; }
 .shop-addr { color:#aaa; font-size:1.01rem; margin-bottom:14px; }
 .shop-buttons { display:flex; gap:8px; max-width:500px; margin:0 auto; }
-.shop-btn { flex:1; display:flex; align-items:center; justify-content:center; gap:5px; padding:12px 6px; border-radius:10px; font-size:1.04rem; font-weight:700; text-decoration:none; color:#fff; transition:transform .15s; }
+.shop-btn { flex:1; display:flex; align-items:center; justify-content:center; gap:6px; padding:13px 8px; border-radius:10px; font-size:1.04rem; font-weight:700; text-decoration:none; color:#fff; transition:transform .15s; }
 .shop-btn:hover { transform:scale(1.03); }
 .shop-btn.call { background:#E53935; }
 .shop-btn.naver-map { background:#03C75A; }
@@ -43,11 +43,11 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif
 }
 .search-area { max-width:900px; margin:0 auto; padding:16px; }
 .search-bar { display:flex; gap:8px; margin-bottom:12px; }
-.search-bar input { flex:1; padding:12px 16px; border:2px solid #ddd; border-radius:10px; font-size:1.3rem; outline:none; transition:border .2s; }
+.search-bar input { flex:1; padding:14px 18px; border:2px solid #ddd; border-radius:10px; font-size:1.3rem; outline:none; transition:border .2s; }
 .search-bar input:focus { border-color:#1a1a2e; }
-.btn-search { padding:12px 20px; background:#1a1a2e; color:#fff; border:none; border-radius:10px; font-size:1.3rem; font-weight:700; cursor:pointer; white-space:nowrap; }
+.btn-search { padding:14px 22px; background:#1a1a2e; color:#fff; border:none; border-radius:10px; font-size:1.3rem; font-weight:700; cursor:pointer; white-space:nowrap; }
 .brand-filters { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px; }
-.brand-btn { padding:8px 16px; border:2px solid #ddd; border-radius:20px; background:#fff; cursor:pointer; font-size:1.1rem; font-weight:600; transition:all .2s; }
+.brand-btn { padding:10px 18px; border:2px solid #ddd; border-radius:20px; background:#fff; cursor:pointer; font-size:1.1rem; font-weight:600; transition:all .2s; }
 .brand-btn:hover { transform:scale(1.05); }
 .brand-btn.active { color:#fff; border-color:transparent; }
 .brand-btn[data-brand="미쉐린"] { color:#B8960F; border-color:#FFD700; }
@@ -76,18 +76,18 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif
 .sort-btn { padding:6px 12px; border:1px solid #ddd; border-radius:8px; background:#fff; cursor:pointer; font-size:1.04rem; font-weight:600; }
 .sort-btn.active { background:#1a1a2e; color:#fff; border-color:#1a1a2e; }
 .results { max-width:900px; margin:0 auto; padding:0 16px 80px; }
-.tire-card { background:#fff; border-radius:12px; padding:14px 16px; margin-bottom:10px; box-shadow:0 1px 3px rgba(0,0,0,0.08); transition:transform .15s; }
+.tire-card { background:#fff; border-radius:12px; padding:16px 18px; margin-bottom:10px; box-shadow:0 1px 3px rgba(0,0,0,0.08); transition:transform .15s; }
 .tire-card:hover { transform:translateY(-1px); box-shadow:0 3px 8px rgba(0,0,0,0.12); }
-.brand-tag { min-width:60px; text-align:center; padding:6px 10px; border-radius:8px; color:#fff; font-size:0.91rem; font-weight:700; flex-shrink:0; }
+.brand-tag { min-width:70px; text-align:center; padding:8px 12px; border-radius:8px; color:#fff; font-size:0.91rem; font-weight:700; flex-shrink:0; }
 .tire-info { flex:1; }
 .tire-pattern { font-weight:700; font-size:1.23rem; }
 .tire-size { color:#666; font-size:1.1rem; margin-top:2px; }
 .tire-price { font-size:1.49rem; font-weight:800; color:#1a1a2e; white-space:nowrap; }
 .tire-calc { display:flex; align-items:center; gap:6px; margin-top:6px; flex-wrap:wrap; }
-.tire-calc input { width:48px; padding:4px; border:1.5px solid #ddd; border-radius:6px; font-size:1.04rem; text-align:center; font-weight:700; }
+.tire-calc input { width:54px; padding:5px; border:1.5px solid #ddd; border-radius:6px; font-size:1.04rem; text-align:center; font-weight:700; }
 .tire-calc input:focus { border-color:#1a1a2e; outline:none; }
 .tire-calc span { font-size:0.98rem; color:#888; }
-.tire-calc .qty-btn { width:24px; height:24px; border:1.5px solid #ddd; border-radius:6px; background:#fff; font-size:1.17rem; font-weight:700; cursor:pointer; padding:0; line-height:1; }
+.tire-calc .qty-btn { width:28px; height:28px; border:1.5px solid #ddd; border-radius:6px; background:#fff; font-size:1.17rem; font-weight:700; cursor:pointer; padding:0; line-height:1; }
 .tire-calc .qty-btn:hover { background:#f0f0f0; }
 .calc-result { font-size:1.3rem; font-weight:800; color:#CC0000; margin-left:auto; white-space:nowrap; }
 /* DC Calculator Modal */
@@ -133,10 +133,10 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif
 .edit-btn { background:none; border:none; cursor:pointer; font-size:1.43rem; padding:4px; }
 .hidden { display:none !important; }
 @media(max-width:600px) {
-  .brand-tag { min-width:auto; font-size:0.78rem; padding:4px 8px; }
+  .brand-tag { min-width:auto; font-size:0.82rem; padding:5px 9px; }
   .tire-price { font-size:1.3rem; }
   .tire-calc { gap:4px; }
-  .tire-calc input { width:40px; font-size:0.98rem; padding:3px; }
+  .tire-calc input { width:46px; font-size:0.98rem; padding:4px; }
   .calc-result { font-size:1.17rem; }
 }
 </style>
@@ -199,7 +199,7 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif
     <div class="dc-product" id="dcProduct"></div>
     <div class="dc-row">
       <span class="dc-label">공장도가</span>
-      <span id="dcBasePrice" style="font-weight:700;font-size:1rem;"></span>
+      <span id="dcBasePrice" style="font-weight:700;font-size:1.3rem;"></span>
     </div>
     <div class="dc-row">
       <span class="dc-label">DC율</span>
