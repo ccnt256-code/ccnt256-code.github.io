@@ -76,13 +76,13 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif
 .sort-btn { padding:6px 12px; border:1px solid #ddd; border-radius:8px; background:#fff; cursor:pointer; font-size:1.04rem; font-weight:600; flex:1; text-align:center; }
 .sort-btn.active { background:#1a1a2e; color:#fff; border-color:#1a1a2e; }
 .results { max-width:900px; margin:0 auto; padding:0 16px 80px; }
-.tire-card { background:#fff; border-radius:12px; padding:16px 18px; margin-bottom:10px; box-shadow:0 1px 3px rgba(0,0,0,0.08); transition:transform .15s; }
+.tire-card { background:#fff; border-radius:12px; padding:16px 18px; margin-bottom:10px; box-shadow:0 1px 3px rgba(0,0,0,0.08); transition:transform .15s; overflow:hidden; }
 .tire-card:hover { transform:translateY(-1px); box-shadow:0 3px 8px rgba(0,0,0,0.12); }
 .brand-tag { min-width:70px; text-align:center; padding:8px 12px; border-radius:8px; color:#fff; font-size:0.91rem; font-weight:700; flex-shrink:0; }
-.tire-info { flex:1; }
-.tire-pattern { font-weight:700; font-size:1.23rem; }
+.tire-info { flex:1; min-width:0; overflow:hidden; }
+.tire-pattern { font-weight:700; font-size:1.23rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .tire-size { color:#666; font-size:1.1rem; margin-top:2px; }
-.tire-price { font-size:1.49rem; font-weight:800; color:#1a1a2e; white-space:nowrap; }
+.tire-price { font-size:1.49rem; font-weight:800; color:#1a1a2e; white-space:nowrap; flex-shrink:0; text-align:right; }
 .tire-calc { display:flex; align-items:center; gap:6px; margin-top:6px; flex-wrap:wrap; }
 .tire-calc input { width:54px; padding:5px; border:1.5px solid #ddd; border-radius:6px; font-size:1.04rem; text-align:center; font-weight:700; }
 .tire-calc input:focus { border-color:#1a1a2e; outline:none; }
