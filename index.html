@@ -356,7 +356,7 @@ function render() {
     const textColor = item.brand === '미쉐린' ? '#333' : '#fff';
     const cid = `c${realIdx}`;
     return `<div class="tire-card">
-      <div style="display:flex;align-items:center;gap:12px;">
+      <div class="tire-card-row" style="display:flex;align-items:center;gap:12px;">
         <div class="brand-tag" style="background:${color};color:${textColor}">${item.brand}</div>
         <div class="tire-info">
           <div class="tire-pattern">${item.pattern}</div>
