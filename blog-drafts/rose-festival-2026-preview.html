@@ -21,9 +21,33 @@ a { color: #e74c3c; }
 </head>
 <body>
 
+<div style="background:#fff3cd; padding:20px; border-radius:10px; margin-bottom:20px; border:1px solid #ffc107;">
+<h3 style="margin-top:0; color:#856404;">📋 티스토리 SEO 설정 (글쓰기 화면에서 입력)</h3>
+
+<p><b>제목:</b></p>
+<div style="background:white; padding:10px; border-radius:6px; border:1px solid #ddd; margin-bottom:12px; cursor:pointer;" onclick="copyText(this.querySelector('span').textContent, this)" title="클릭하면 복사">
+<span>2026 울산대공원 장미축제 완벽 가이드 | 일정·입장료·프로그램·주차 총정리</span>
+<small style="float:right; color:#999;">클릭 복사</small>
+</div>
+
+<p><b>설명 (meta description):</b></p>
+<div style="background:white; padding:10px; border-radius:6px; border:1px solid #ddd; margin-bottom:12px; cursor:pointer;" onclick="copyText(this.querySelector('span').textContent, this)" title="클릭하면 복사">
+<span>2026년 제18회 울산대공원 장미축제 일정(5/20~25), 입장료, 프로그램, 주차장, 교통편, 야간 경관조명까지 한 번에 정리했습니다. 278품종 300만 송이 장미가 만개하는 울산 최고의 봄 축제!</span>
+<small style="float:right; color:#999;">클릭 복사</small>
+</div>
+
+<p><b>태그:</b></p>
+<div style="background:white; padding:10px; border-radius:6px; border:1px solid #ddd; margin-bottom:12px; cursor:pointer;" onclick="copyText(this.querySelector('span').textContent, this)" title="클릭하면 복사">
+<span>울산대공원장미축제, 울산장미축제2026, 울산대공원장미원, 울산5월축제, 울산가볼만한곳, 울산대공원입장료, 울산대공원주차장, 울산데이트코스, 울산봄축제, 장미축제, 울산축제, 울산여행, 울산대공원, 울산관광</span>
+<small style="float:right; color:#999;">클릭 복사</small>
+</div>
+
+<p><b>카테고리:</b> 울산 축제/행사</p>
+</div>
+
 <div id="copy-section">
-<p>⬇️ 아래 버튼을 누르면 <b>티스토리용 HTML</b>이 클립보드에 복사됩니다</p>
-<button id="copy-btn" onclick="copyHTML()">📋 HTML 복사하기</button>
+<p>⬇️ 아래 버튼을 누르면 <b>티스토리용 HTML 본문</b>이 클립보드에 복사됩니다</p>
+<button id="copy-btn" onclick="copyHTML()">📋 HTML 본문 복사하기</button>
 <p id="copy-status">✅ 복사 완료! 티스토리 HTML 모드에 붙여넣기 하세요.</p>
 </div>
 
@@ -424,6 +448,18 @@ function copyHTML() {
     setTimeout(function() {
       document.getElementById('copy-status').style.display = 'none';
     }, 3000);
+  });
+}
+function copyText(text, el) {
+  navigator.clipboard.writeText(text).then(function() {
+    var small = el.querySelector('small');
+    var orig = small.textContent;
+    small.textContent = '✅ 복사됨!';
+    small.style.color = '#27ae60';
+    setTimeout(function() {
+      small.textContent = orig;
+      small.style.color = '#999';
+    }, 2000);
   });
 }
 </script>
