@@ -45,13 +45,15 @@ a { color: #e74c3c; }
 <p><b>카테고리:</b> 울산 축제/행사</p>
 </div>
 
-<div id="copy-section">
-<p>⬇️ 아래 버튼을 누르면 <b>티스토리용 HTML 본문</b>이 클립보드에 복사됩니다</p>
-<button id="copy-btn" onclick="copyHTML()">📋 HTML 본문 복사하기</button>
-<p id="copy-status">✅ 복사 완료! 티스토리 HTML 모드에 붙여넣기 하세요.</p>
+<div id="copy-section" style="background:#e8f5e9; padding:20px; border-radius:10px; margin-bottom:20px; border:1px solid #4caf50;">
+<h3 style="margin-top:0; color:#2e7d32;">📋 티스토리 HTML 본문 (아래 박스 클릭 → 전체선택 → 복사)</h3>
+<p>아래 박스를 클릭하면 자동으로 전체 선택됩니다. <b>Ctrl+C</b> (맥: Cmd+C)로 복사 후 티스토리 HTML 모드에 붙여넣기!</p>
+<textarea id="html-source" readonly onclick="this.select();" style="width:100%; height:300px; font-family:monospace; font-size:12px; padding:10px; border:2px solid #4caf50; border-radius:6px; background:white; resize:vertical;"></textarea>
 </div>
 
 <hr>
+
+<h2 style="color:#555;">👇 미리보기</h2>
 
 <div id="blog-content">
 <h2>2026 울산대공원 장미축제 완벽 가이드 | 일정·입장료·프로그램·주차 총정리</h2>
@@ -441,15 +443,14 @@ a { color: #e74c3c; }
 </div>
 
 <script>
-function copyHTML() {
-  const content = document.getElementById('blog-content').innerHTML;
-  navigator.clipboard.writeText(content).then(function() {
-    document.getElementById('copy-status').style.display = 'block';
-    setTimeout(function() {
-      document.getElementById('copy-status').style.display = 'none';
-    }, 3000);
-  });
-}
+// 페이지 로드 후 blog-content의 HTML을 textarea에 넣기
+window.addEventListener('DOMContentLoaded', function() {
+  var source = document.getElementById('blog-content').innerHTML;
+  // 앞뒤 공백 정리
+  source = source.trim();
+  document.getElementById('html-source').value = source;
+});
+
 function copyText(text, el) {
   navigator.clipboard.writeText(text).then(function() {
     var small = el.querySelector('small');
