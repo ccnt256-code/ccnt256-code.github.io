@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>블로그 미리보기 - 영남알프스 초여름 등산 코스</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 860px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+  .seo-box { background: #fff9e6; border: 2px solid #f0c000; border-radius: 10px; padding: 20px; margin-bottom: 20px; }
+  .seo-box h3 { margin-top: 0; color: #b8860b; }
+  .seo-item { background: white; border: 1px solid #e0d090; border-radius: 6px; padding: 10px 14px; margin: 8px 0; cursor: pointer; transition: background 0.2s; }
+  .seo-item:hover { background: #fff3cc; }
+  .seo-item:active { background: #ffe680; }
+  .seo-label { font-weight: bold; color: #8B7500; font-size: 13px; }
+  .seo-value { color: #333; margin-top: 4px; }
+  .html-box { background: #e8f5e9; border: 2px solid #4caf50; border-radius: 10px; padding: 20px; margin-bottom: 20px; }
+  .html-box h3 { margin-top: 0; color: #2e7d32; }
+  .html-box textarea { width: 100%; height: 200px; font-family: 'Courier New', monospace; font-size: 12px; border: 1px solid #a5d6a7; border-radius: 6px; padding: 10px; resize: vertical; }
+  .preview-box { background: white; border: 1px solid #ddd; border-radius: 10px; padding: 30px; }
+  .preview-box h3 { color: #333; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+  .copied { position: fixed; top: 20px; right: 20px; background: #4caf50; color: white; padding: 10px 20px; border-radius: 8px; z-index: 1000; animation: fadeOut 2s forwards; }
+  @keyframes fadeOut { 0% { opacity: 1; } 70% { opacity: 1; } 100% { opacity: 0; } }
+</style>
+</head>
+<body>
+
+<h1 style="text-align:center; color:#2d5016;">🏔️ 블로그 포스팅 미리보기</h1>
+<p style="text-align:center; color:#888;">아래 내용을 확인하고 티스토리에 붙여넣기 하세요</p>
+
+<!-- SEO 설정 -->
+<div class="seo-box">
+  <h3>⚙️ 티스토리 SEO 설정 (클릭하면 복사됩니다)</h3>
+  <div class="seo-item" onclick="copyText(this, '제목')">
+    <div class="seo-label">📝 제목</div>
+    <div class="seo-value">2026 울산 영남알프스 초여름 등산 코스 완벽 가이드 | 가지산 신불산 간월산 추천</div>
+  </div>
+  <div class="seo-item" onclick="copyText(this, '설명')">
+    <div class="seo-label">📋 설명 (meta description)</div>
+    <div class="seo-value">울산 영남알프스 초여름(5~6월) 등산 코스를 총정리했습니다. 가지산, 신불산, 간월산, 영축산 등 주요 봉우리별 추천 코스, 난이도, 소요시간, 접근 방법까지 한눈에 확인하세요.</div>
+  </div>
+  <div class="seo-item" onclick="copyText(this, '태그')">
+    <div class="seo-label">🏷️ 태그</div>
+    <div class="seo-value">울산영남알프스,영남알프스등산,가지산등산코스,신불산등산,간월산등산,영축산,울산등산코스,초여름등산,간월재억새,신불산자연휴양림,울산여행,울산가볼만한곳,영남알프스초보코스</div>
+  </div>
+  <div class="seo-item" onclick="copyText(this, '카테고리')">
+    <div class="seo-label">📂 카테고리</div>
+    <div class="seo-value">울산 여행</div>
+  </div>
+</div>
+
+<!-- HTML 소스 -->
+<div class="html-box">
+  <h3>📄 HTML 소스 (클릭하면 전체 선택)</h3>
+  <textarea id="htmlSource" onclick="this.select()" readonly>&lt;!--
+★ 티스토리 SEO 설정 ★
+[제목] 2026 울산 영남알프스 초여름 등산 코스 완벽 가이드 | 가지산 신불산 간월산 추천
+[설명 (meta description)] 울산 영남알프스 초여름(5~6월) 등산 코스를 총정리했습니다. 가지산, 신불산, 간월산, 영축산 등 주요 봉우리별 추천 코스, 난이도, 소요시간, 접근 방법까지 한눈에 확인하세요.
+[태그] 울산영남알프스,영남알프스등산,가지산등산코스,신불산등산,간월산등산,영축산,울산등산코스,초여름등산,간월재억새,신불산자연휴양림,울산여행,울산가볼만한곳,영남알프스초보코스
+[카테고리] 울산 여행
+--&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h2&gt;🏔️ 영남알프스, 초여름이 가장 아름다운 이유&lt;/h2&gt;
+
+&lt;p&gt;울산 울주군에서 밀양, 양산, 청도, 경주까지 걸쳐 있는 &lt;b&gt;영남알프스&lt;/b&gt;는 해발 1,000m 이상 봉우리 8개가 모여 있는 국내 대표 산악군이에요. 유럽 알프스에 비견될 만큼 수려한 산세로 유명하죠.&lt;/p&gt;
+
+&lt;p&gt;특히 &lt;b&gt;5~6월 초여름&lt;/b&gt;은 영남알프스를 걷기에 최고의 시즌입니다. 한여름 폭염 전이라 쾌적하고, 신록이 가장 짙어지는 때라 온 산이 싱그러운 초록빛으로 물들어요. 능선 위에서 불어오는 바람은 시원하고, 계곡물은 차갑게 흐르기 시작하는 — 등산하기 딱 좋은 조건이 갖춰지는 시기죠.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;
+&lt;img src=&quot;https://ccnt256-code.github.io/blog-images/yeongnam-alps-summer-2026.jpg&quot; alt=&quot;울산 영남알프스 초여름 등산 풍경&quot; style=&quot;max-width: 100%; border-radius: 8px;&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;이번 글에서는 영남알프스의 &lt;b&gt;주요 봉우리 4곳&lt;/b&gt;을 중심으로 초여름에 추천하는 등산 코스를 난이도·소요시간·접근성까지 꼼꼼하게 정리해봤어요. 영남알프스 입문자부터 경험자까지, 이 글 하나면 코스 선택 고민 끝! 🥾&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h2&gt;📋 영남알프스 주요 봉우리 한눈에 보기&lt;/h2&gt;
+
+&lt;table style=&quot;width:100%; border-collapse: collapse; margin: 20px 0;&quot;&gt;
+&lt;thead&gt;
+&lt;tr style=&quot;background-color: #2d5016; color: white;&quot;&gt;
+&lt;th style=&quot;padding: 12px; border: 1px solid #ddd;&quot;&gt;봉우리&lt;/th&gt;
+&lt;th style=&quot;padding: 12px; border: 1px solid #ddd;&quot;&gt;높이&lt;/th&gt;
+&lt;th style=&quot;padding: 12px; border: 1px solid #ddd;&quot;&gt;특징&lt;/th&gt;
+&lt;th style=&quot;padding: 12px; border: 1px solid #ddd;&quot;&gt;난이도&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 10px; border: 1px solid #ddd;&quot;&gt;&lt;b&gt;가지산&lt;/b&gt;&lt;/td&gt;
+&lt;td style=&quot;padding: 10px; border: 1px solid #ddd;&quot;&gt;1,241m&lt;/td&gt;
+&lt;td style=&quot;padding: 10px; border: 1px solid #ddd;&quot;&gt;영남알프스 최고봉, 쌀바위&lt;/td&gt;
+&lt;td style=&quot;padding: 10px; border: 1px solid #ddd;&quot;&gt;⭐⭐⭐ 중상&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;background-color: #f9f9f9;&quot;&gt;
+&lt;td style=&quot;padding: 10px; border: 1px solid #ddd;&quot;&gt;&lt;b&gt;신불산&lt;/b&gt;&lt;/td&gt;
+&lt;td style=&quot;padding: 10px; border: 1px solid #ddd;&quot;&gt;1,159m&lt;/td&gt;
+&lt;td style=&quot;padding: 10px; border: 1px solid #ddd;&quot;&gt;억새평원, 자연휴양림&lt;/td&gt;
+&lt;td style=&quot;padding: 10px; border: 1px solid #ddd;&quot;&gt;⭐⭐⭐ 중&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 10px; border: 1px solid #ddd;&quot;&gt;&lt;b&gt;간월산&lt;/b&gt;&lt;/td&gt;
+&lt;td style=&quot;padding: 10px; border: 1px solid #ddd;&quot;&gt;1,069m&lt;/td&gt;
+&lt;td style=&quot;padding: 10px; border: 1px solid #ddd;&quot;&gt;간월재, 초보자 친화&lt;/td&gt;
+&lt;td style=&quot;padding: 10px; border: 1px solid #ddd;&quot;&gt;⭐⭐ 중하&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&quot;background-color: #f9f9f9;&quot;&gt;
+&lt;td style=&quot;padding: 10px; border: 1px solid #ddd;&quot;&gt;&lt;b&gt;영축산&lt;/b&gt;&lt;/td&gt;
+&lt;td style=&quot;padding: 10px; border: 1px solid #ddd;&quot;&gt;1,082m&lt;/td&gt;
+&lt;td style=&quot;padding: 10px; border: 1px solid #ddd;&quot;&gt;통도사, 능선 종주&lt;/td&gt;
+&lt;td style=&quot;padding: 10px; border: 1px solid #ddd;&quot;&gt;⭐⭐⭐ 중상&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h2&gt;🥾 코스 1. 간월산 — 초보자도 OK! 간월재 억새평원 코스&lt;/h2&gt;
+
+&lt;div style=&quot;background-color: #f0f7e6; padding: 16px; border-radius: 8px; margin: 10px 0;&quot;&gt;
+&lt;b&gt;📌 코스 요약&lt;/b&gt;&lt;br/&gt;
+• 코스: 배내고개 → 간월재 → 간월산 정상 → 원점회귀&lt;br/&gt;
+• 거리: 약 6km (왕복)&lt;br/&gt;
+• 소요시간: 약 2시간 30분~3시간&lt;br/&gt;
+• 난이도: ★★☆☆☆ (초중급)&lt;br/&gt;
+• 접근: 울산시내에서 차량 약 50분
+&lt;/div&gt;
+
+&lt;p&gt;영남알프스 입문자에게 가장 먼저 추천하는 코스예요. &lt;b&gt;배내고개&lt;/b&gt;에서 출발하면 &lt;b&gt;간월재&lt;/b&gt;까지 비교적 완만한 능선길을 걸을 수 있어요. 간월재는 약 10만 평 규모의 억새 군락지로, 가을 억새가 유명하지만 초여름에는 초록 풀밭이 끝없이 펼쳐지면서 또 다른 매력을 보여줍니다.&lt;/p&gt;
+
+&lt;p&gt;간월재에서 간월산 정상까지는 약 30분 정도. 정상에 서면 신불산, 영축산, 가지산까지 영남알프스의 주요 봉우리가 파노라마처럼 펼쳐져요. 초여름 맑은 날에는 울산 시내와 동해 바다까지 보인다고 하니, 날씨 좋은 날을 노려보세요!&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;💡 팁:&lt;/b&gt; 배내고개 주차장은 주말에 만차가 빠르니 오전 8시 이전 도착을 추천해요. 간월재에는 화장실이 있어서 편의시설 걱정은 덜합니다.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h2&gt;🥾 코스 2. 신불산 — 억새평원과 자연휴양림의 하모니&lt;/h2&gt;
+
+&lt;div style=&quot;background-color: #f0f7e6; padding: 16px; border-radius: 8px; margin: 10px 0;&quot;&gt;
+&lt;b&gt;📌 코스 요약&lt;/b&gt;&lt;br/&gt;
+• 코스 A (추천): 신불산자연휴양림 → 신불산 정상 → 간월재 → 원점회귀&lt;br/&gt;
+• 코스 B: 배내고개 → 간월재 → 신불산 → 원점회귀&lt;br/&gt;
+• 거리: 약 9~11km&lt;br/&gt;
+• 소요시간: 약 4시간~5시간&lt;br/&gt;
+• 난이도: ★★★☆☆ (중급)&lt;br/&gt;
+• 접근: 울산시내에서 차량 약 40분
+&lt;/div&gt;
+
+&lt;p&gt;신불산(1,159m)은 영남알프스에서 두 번째로 높은 산으로, 울산 시내에서 접근성이 가장 좋은 고산 중 하나예요. 특히 &lt;b&gt;신불산 자연휴양림&lt;/b&gt;에서 출발하는 코스가 인기인데, 숲속 데크 계단을 따라 오르면 어느새 탁 트인 능선에 올라서게 됩니다.&lt;/p&gt;
+
+&lt;p&gt;신불산 정상 부근의 &lt;b&gt;억새평원&lt;/b&gt;은 약 60만 평 규모! 초여름에는 억새 대신 싱그러운 풀밭이 바람에 출렁이면서 마치 초원 위를 걷는 느낌이에요. 정상에서 간월재 방향으로 내려가는 능선길은 영남알프스에서 가장 아름다운 능선 구간 중 하나로 꼽힙니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;💡 팁:&lt;/b&gt; 신불산자연휴양림에서 출발하면 숲속의집, 산림문화휴양관 등 숙박 시설도 이용 가능해요. 1박 2일로 계획하면 여유롭게 즐길 수 있어요. 휴양림 입장료는 성인 1,000원입니다.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h2&gt;🥾 코스 3. 가지산 — 영남알프스 최고봉 도전!&lt;/h2&gt;
+
+&lt;div style=&quot;background-color: #f0f7e6; padding: 16px; border-radius: 8px; margin: 10px 0;&quot;&gt;
+&lt;b&gt;📌 코스 요약&lt;/b&gt;&lt;br/&gt;
+• 코스 A (인기): 석남사 → 가지산 정상 → 쌀바위 → 석남사&lt;br/&gt;
+• 코스 B: 운문령 → 가지산 정상 → 석남사 (편도)&lt;br/&gt;
+• 거리: 약 8~12km&lt;br/&gt;
+• 소요시간: 약 4시간 30분~6시간&lt;br/&gt;
+• 난이도: ★★★★☆ (중상급)&lt;br/&gt;
+• 접근: 울산시내에서 차량 약 1시간
+&lt;/div&gt;
+
+&lt;p&gt;영남알프스의 &lt;b&gt;최고봉 가지산(1,241m)&lt;/b&gt;은 100대 명산에 이름을 올린 명실상부한 대표 산이에요. &lt;b&gt;석남사&lt;/b&gt;에서 출발하는 코스가 가장 클래식한 루트입니다.&lt;/p&gt;
+
+&lt;p&gt;석남사를 지나 계곡을 따라 오르면 중간에 &lt;b&gt;쌀바위&lt;/b&gt;라는 거대한 바위가 나타나요. 쌀바위에서 바라보는 조망이 정말 환상적인데, 맑은 날이면 울산 시내는 물론 부산 방향까지 시야가 트여요. 초여름에는 쌀바위 주변의 철쭉이 피어 있을 수도 있어요.&lt;/p&gt;
+
+&lt;p&gt;가지산 정상까지는 꽤 가파른 구간이 있어서 체력 안배가 중요합니다. 하지만 정상에 서는 순간, 영남알프스 전체 봉우리가 한눈에 들어오는 360도 파노라마는 그 모든 수고를 보상해줘요.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;💡 팁:&lt;/b&gt; 운문령에서 출발하면 좀 더 수월하게 정상에 도달할 수 있어요. 다만 편도 코스라 차량 배치가 필요합니다. 석남사 주차장은 무료이며, 사찰 입장은 문화재 관람료(성인 2,000원)가 있어요.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h2&gt;🥾 코스 4. 영축산 — 통도사에서 시작하는 능선 종주&lt;/h2&gt;
+
+&lt;div style=&quot;background-color: #f0f7e6; padding: 16px; border-radius: 8px; margin: 10px 0;&quot;&gt;
+&lt;b&gt;📌 코스 요약&lt;/b&gt;&lt;br/&gt;
+• 코스: 통도사 → 영축산 정상 → 신불산 방향 능선 (또는 원점회귀)&lt;br/&gt;
+• 거리: 약 10~14km&lt;br/&gt;
+• 소요시간: 약 5시간~7시간&lt;br/&gt;
+• 난이도: ★★★★☆ (중상급)&lt;br/&gt;
+• 접근: 울산시내에서 차량 약 40분
+&lt;/div&gt;
+
+&lt;p&gt;양산 &lt;b&gt;통도사&lt;/b&gt;에서 시작해 영축산(1,082m) 정상까지 오르는 코스예요. 통도사 자체가 유네스코 세계유산으로 등재된 명찰이라, 등산과 문화유산 탐방을 동시에 즐길 수 있는 게 큰 장점이에요.&lt;/p&gt;
+
+&lt;p&gt;통도사에서 영축산까지는 숲이 울창한 구간을 지나기 때문에 초여름 더위에도 그늘이 많아 비교적 시원하게 오를 수 있어요. 정상 부근에 오르면 신불산과 이어지는 능선이 장쾌하게 펼쳐지는데, 체력이 된다면 신불산 방향으로 능선 종주를 이어가는 것도 가능합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;💡 팁:&lt;/b&gt; 통도사 주차장(유료)을 이용하면 편리해요. 등산 전후로 통도사 경내를 둘러보는 걸 추천! 대웅전 없이 부처님 진신사리를 모신 독특한 사찰이에요.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h2&gt;📅 초여름 등산 시 꼭 알아둘 것&lt;/h2&gt;
+
+&lt;p&gt;&lt;b&gt;🌡️ 날씨와 복장&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;5~6월 산 위 기온은 평지보다 6~8도 낮아요. 정상 부근은 바람이 강해 &lt;b&gt;바람막이&lt;/b&gt; 필수!&lt;/li&gt;
+&lt;li&gt;기능성 반팔 + 긴팔 겹쳐 입기 추천&lt;/li&gt;
+&lt;li&gt;오후에 소나기가 올 수 있으니 &lt;b&gt;우의나 판초&lt;/b&gt;를 꼭 챙기세요&lt;/li&gt;
+&lt;li&gt;등산화는 발목을 잡아주는 중등산화 추천 (능선길 돌이 많아요)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;b&gt;🚗 교통 &amp; 주차&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;자가용:&lt;/b&gt; 경부고속도로 언양IC → 각 등산로 입구까지 20~40분&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;대중교통:&lt;/b&gt; 울산역(KTX) → 시내버스로 언양·상북면 방향 이동 가능하나, 배차 간격이 넓어 자가용 추천&lt;/li&gt;
+&lt;li&gt;주말 주차장 혼잡 → 오전 7~8시 도착 권장&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;b&gt;🎒 준비물 체크리스트&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;물 1.5L 이상 (산 위에 매점 없어요!)&lt;/li&gt;
+&lt;li&gt;간식 및 도시락&lt;/li&gt;
+&lt;li&gt;자외선 차단제 + 모자&lt;/li&gt;
+&lt;li&gt;등산 스틱 (무릎 보호에 큰 도움)&lt;/li&gt;
+&lt;li&gt;헤드랜턴 (일찍 출발하거나 늦을 경우 대비)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h2&gt;🗺️ 추천 일정 조합&lt;/h2&gt;
+
+&lt;p&gt;&lt;b&gt;반나절 코스 (3시간 이내)&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;👉 간월산 코스: 배내고개 → 간월재 → 간월산 정상 → 원점회귀&lt;/p&gt;
+&lt;p&gt;시간이 많지 않거나 등산 입문자에게 딱! 오전에 다녀와서 오후에 언양 불고기 맛집 탐방도 가능해요. 😋&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;하루 코스 (5~6시간)&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;👉 신불산 + 간월재 종주: 신불산자연휴양림 → 신불산 → 간월재 → 배내고개&lt;/p&gt;
+&lt;p&gt;영남알프스의 하이라이트 능선을 제대로 즐길 수 있는 코스. 차량 2대 또는 택시 배치 필요.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;1박 2일 코스&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;👉 Day 1: 신불산자연휴양림 도착 → 가볍게 산책 → 숙박&lt;br/&gt;
+👉 Day 2: 이른 아침 신불산 정상 → 간월재 → 간월산 → 하산&lt;/p&gt;
+&lt;p&gt;여유롭게 영남알프스를 즐기고 싶다면 이 코스를 추천! 휴양림에서의 하룻밤은 도시에서는 느낄 수 없는 힐링이에요.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h2&gt;❓ 자주 묻는 질문 (FAQ)&lt;/h2&gt;
+
+&lt;p&gt;&lt;b&gt;Q. 영남알프스 등산 초보자에게 추천하는 코스는?&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;A. 배내고개 → 간월재 → 간월산 코스가 가장 추천이에요. 완만한 능선길 위주라 부담이 적고, 조망도 훌륭해요.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Q. 5월~6월에 억새를 볼 수 있나요?&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;A. 억새가 황금빛으로 물드는 건 9~11월이에요. 초여름에는 초록빛 풀밭이 펼쳐지는데, 이것도 정말 아름다워요! 능선 위 초록 카펫 위를 걷는 느낌이랄까요.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Q. 대중교통으로 갈 수 있나요?&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;A. 가능하지만 불편해요. 언양 시외버스터미널에서 상북면 방향 버스가 있지만 배차 간격이 길어요. 자가용이나 택시 이용을 추천합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Q. 등산로에 위험한 구간이 있나요?&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;A. 가지산 쌀바위 부근, 신불산 일부 구간에 급경사와 바위 구간이 있어요. 표시된 등산로를 벗어나지 않는 게 중요하고, 특히 하산 시 길을 잘못 들지 않도록 주의하세요.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Q. 반려견과 함께 등산할 수 있나요?&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;A. 가지산 도립공원 구역 내에서는 반려동물 동반이 제한될 수 있어요. 미리 확인하고 가시는 게 좋습니다.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h2&gt;🔍 SEO 키워드 정리&lt;/h2&gt;
+
+&lt;p&gt;울산 영남알프스, 영남알프스 등산 코스, 가지산 등산, 신불산 등산, 간월산 등산, 영축산 등산, 간월재, 억새평원, 신불산 자연휴양림, 울산 등산 추천, 초여름 등산, 울산 가볼만한 곳, 석남사, 배내고개, 영남알프스 초보 코스, 2026 울산 여행&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h2&gt;📌 함께 읽으면 좋은 글&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://usmichelin.tistory.com&quot; target=&quot;_blank&quot;&gt;🌹 2026 울산대공원 장미축제 완벽 가이드&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://usmichelin.tistory.com&quot; target=&quot;_blank&quot;&gt;🐋 장생포 고래문화특구 하루 여행 코스&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://usmichelin.tistory.com&quot; target=&quot;_blank&quot;&gt;🌿 태화강 국가정원 봄 풍경 산책 코스&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://usmichelin.tistory.com&quot; target=&quot;_blank&quot;&gt;🏖️ 대왕암공원 산책 코스 2026 완벽 가이드&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center; color: #888; font-size: 14px;&quot;&gt;울산의 숨은 보석, 영남알프스에서 초여름의 싱그러움을 만끽해보세요! 🏔️💚&lt;/p&gt;
+</textarea>
+</div>
+
+<!-- 미리보기 -->
+<div class="preview-box">
+  <h3>👀 실제 블로그 미리보기</h3>
+  <!--
+★ 티스토리 SEO 설정 ★
+[제목] 2026 울산 영남알프스 초여름 등산 코스 완벽 가이드 | 가지산 신불산 간월산 추천
+[설명 (meta description)] 울산 영남알프스 초여름(5~6월) 등산 코스를 총정리했습니다. 가지산, 신불산, 간월산, 영축산 등 주요 봉우리별 추천 코스, 난이도, 소요시간, 접근 방법까지 한눈에 확인하세요.
+[태그] 울산영남알프스,영남알프스등산,가지산등산코스,신불산등산,간월산등산,영축산,울산등산코스,초여름등산,간월재억새,신불산자연휴양림,울산여행,울산가볼만한곳,영남알프스초보코스
+[카테고리] 울산 여행
+-->
+
+<p>&nbsp;</p>
+
+<h2>🏔️ 영남알프스, 초여름이 가장 아름다운 이유</h2>
+
+<p>울산 울주군에서 밀양, 양산, 청도, 경주까지 걸쳐 있는 <b>영남알프스</b>는 해발 1,000m 이상 봉우리 8개가 모여 있는 국내 대표 산악군이에요. 유럽 알프스에 비견될 만큼 수려한 산세로 유명하죠.</p>
+
+<p>특히 <b>5~6월 초여름</b>은 영남알프스를 걷기에 최고의 시즌입니다. 한여름 폭염 전이라 쾌적하고, 신록이 가장 짙어지는 때라 온 산이 싱그러운 초록빛으로 물들어요. 능선 위에서 불어오는 바람은 시원하고, 계곡물은 차갑게 흐르기 시작하는 — 등산하기 딱 좋은 조건이 갖춰지는 시기죠.</p>
+
+<p style="text-align: center;">
+<img src="https://ccnt256-code.github.io/blog-images/yeongnam-alps-summer-2026.jpg" alt="울산 영남알프스 초여름 등산 풍경" style="max-width: 100%; border-radius: 8px;" />
+</p>
+
+<p>이번 글에서는 영남알프스의 <b>주요 봉우리 4곳</b>을 중심으로 초여름에 추천하는 등산 코스를 난이도·소요시간·접근성까지 꼼꼼하게 정리해봤어요. 영남알프스 입문자부터 경험자까지, 이 글 하나면 코스 선택 고민 끝! 🥾</p>
+
+<p>&nbsp;</p>
+
+<h2>📋 영남알프스 주요 봉우리 한눈에 보기</h2>
+
+<table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+<thead>
+<tr style="background-color: #2d5016; color: white;">
+<th style="padding: 12px; border: 1px solid #ddd;">봉우리</th>
+<th style="padding: 12px; border: 1px solid #ddd;">높이</th>
+<th style="padding: 12px; border: 1px solid #ddd;">특징</th>
+<th style="padding: 12px; border: 1px solid #ddd;">난이도</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd;"><b>가지산</b></td>
+<td style="padding: 10px; border: 1px solid #ddd;">1,241m</td>
+<td style="padding: 10px; border: 1px solid #ddd;">영남알프스 최고봉, 쌀바위</td>
+<td style="padding: 10px; border: 1px solid #ddd;">⭐⭐⭐ 중상</td>
+</tr>
+<tr style="background-color: #f9f9f9;">
+<td style="padding: 10px; border: 1px solid #ddd;"><b>신불산</b></td>
+<td style="padding: 10px; border: 1px solid #ddd;">1,159m</td>
+<td style="padding: 10px; border: 1px solid #ddd;">억새평원, 자연휴양림</td>
+<td style="padding: 10px; border: 1px solid #ddd;">⭐⭐⭐ 중</td>
+</tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd;"><b>간월산</b></td>
+<td style="padding: 10px; border: 1px solid #ddd;">1,069m</td>
+<td style="padding: 10px; border: 1px solid #ddd;">간월재, 초보자 친화</td>
+<td style="padding: 10px; border: 1px solid #ddd;">⭐⭐ 중하</td>
+</tr>
+<tr style="background-color: #f9f9f9;">
+<td style="padding: 10px; border: 1px solid #ddd;"><b>영축산</b></td>
+<td style="padding: 10px; border: 1px solid #ddd;">1,082m</td>
+<td style="padding: 10px; border: 1px solid #ddd;">통도사, 능선 종주</td>
+<td style="padding: 10px; border: 1px solid #ddd;">⭐⭐⭐ 중상</td>
+</tr>
+</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<h2>🥾 코스 1. 간월산 — 초보자도 OK! 간월재 억새평원 코스</h2>
+
+<div style="background-color: #f0f7e6; padding: 16px; border-radius: 8px; margin: 10px 0;">
+<b>📌 코스 요약</b><br/>
+• 코스: 배내고개 → 간월재 → 간월산 정상 → 원점회귀<br/>
+• 거리: 약 6km (왕복)<br/>
+• 소요시간: 약 2시간 30분~3시간<br/>
+• 난이도: ★★☆☆☆ (초중급)<br/>
+• 접근: 울산시내에서 차량 약 50분
+</div>
+
+<p>영남알프스 입문자에게 가장 먼저 추천하는 코스예요. <b>배내고개</b>에서 출발하면 <b>간월재</b>까지 비교적 완만한 능선길을 걸을 수 있어요. 간월재는 약 10만 평 규모의 억새 군락지로, 가을 억새가 유명하지만 초여름에는 초록 풀밭이 끝없이 펼쳐지면서 또 다른 매력을 보여줍니다.</p>
+
+<p>간월재에서 간월산 정상까지는 약 30분 정도. 정상에 서면 신불산, 영축산, 가지산까지 영남알프스의 주요 봉우리가 파노라마처럼 펼쳐져요. 초여름 맑은 날에는 울산 시내와 동해 바다까지 보인다고 하니, 날씨 좋은 날을 노려보세요!</p>
+
+<p><b>💡 팁:</b> 배내고개 주차장은 주말에 만차가 빠르니 오전 8시 이전 도착을 추천해요. 간월재에는 화장실이 있어서 편의시설 걱정은 덜합니다.</p>
+
+<p>&nbsp;</p>
+
+<h2>🥾 코스 2. 신불산 — 억새평원과 자연휴양림의 하모니</h2>
+
+<div style="background-color: #f0f7e6; padding: 16px; border-radius: 8px; margin: 10px 0;">
+<b>📌 코스 요약</b><br/>
+• 코스 A (추천): 신불산자연휴양림 → 신불산 정상 → 간월재 → 원점회귀<br/>
+• 코스 B: 배내고개 → 간월재 → 신불산 → 원점회귀<br/>
+• 거리: 약 9~11km<br/>
+• 소요시간: 약 4시간~5시간<br/>
+• 난이도: ★★★☆☆ (중급)<br/>
+• 접근: 울산시내에서 차량 약 40분
+</div>
+
+<p>신불산(1,159m)은 영남알프스에서 두 번째로 높은 산으로, 울산 시내에서 접근성이 가장 좋은 고산 중 하나예요. 특히 <b>신불산 자연휴양림</b>에서 출발하는 코스가 인기인데, 숲속 데크 계단을 따라 오르면 어느새 탁 트인 능선에 올라서게 됩니다.</p>
+
+<p>신불산 정상 부근의 <b>억새평원</b>은 약 60만 평 규모! 초여름에는 억새 대신 싱그러운 풀밭이 바람에 출렁이면서 마치 초원 위를 걷는 느낌이에요. 정상에서 간월재 방향으로 내려가는 능선길은 영남알프스에서 가장 아름다운 능선 구간 중 하나로 꼽힙니다.</p>
+
+<p><b>💡 팁:</b> 신불산자연휴양림에서 출발하면 숲속의집, 산림문화휴양관 등 숙박 시설도 이용 가능해요. 1박 2일로 계획하면 여유롭게 즐길 수 있어요. 휴양림 입장료는 성인 1,000원입니다.</p>
+
+<p>&nbsp;</p>
+
+<h2>🥾 코스 3. 가지산 — 영남알프스 최고봉 도전!</h2>
+
+<div style="background-color: #f0f7e6; padding: 16px; border-radius: 8px; margin: 10px 0;">
+<b>📌 코스 요약</b><br/>
+• 코스 A (인기): 석남사 → 가지산 정상 → 쌀바위 → 석남사<br/>
+• 코스 B: 운문령 → 가지산 정상 → 석남사 (편도)<br/>
+• 거리: 약 8~12km<br/>
+• 소요시간: 약 4시간 30분~6시간<br/>
+• 난이도: ★★★★☆ (중상급)<br/>
+• 접근: 울산시내에서 차량 약 1시간
+</div>
+
+<p>영남알프스의 <b>최고봉 가지산(1,241m)</b>은 100대 명산에 이름을 올린 명실상부한 대표 산이에요. <b>석남사</b>에서 출발하는 코스가 가장 클래식한 루트입니다.</p>
+
+<p>석남사를 지나 계곡을 따라 오르면 중간에 <b>쌀바위</b>라는 거대한 바위가 나타나요. 쌀바위에서 바라보는 조망이 정말 환상적인데, 맑은 날이면 울산 시내는 물론 부산 방향까지 시야가 트여요. 초여름에는 쌀바위 주변의 철쭉이 피어 있을 수도 있어요.</p>
+
+<p>가지산 정상까지는 꽤 가파른 구간이 있어서 체력 안배가 중요합니다. 하지만 정상에 서는 순간, 영남알프스 전체 봉우리가 한눈에 들어오는 360도 파노라마는 그 모든 수고를 보상해줘요.</p>
+
+<p><b>💡 팁:</b> 운문령에서 출발하면 좀 더 수월하게 정상에 도달할 수 있어요. 다만 편도 코스라 차량 배치가 필요합니다. 석남사 주차장은 무료이며, 사찰 입장은 문화재 관람료(성인 2,000원)가 있어요.</p>
+
+<p>&nbsp;</p>
+
+<h2>🥾 코스 4. 영축산 — 통도사에서 시작하는 능선 종주</h2>
+
+<div style="background-color: #f0f7e6; padding: 16px; border-radius: 8px; margin: 10px 0;">
+<b>📌 코스 요약</b><br/>
+• 코스: 통도사 → 영축산 정상 → 신불산 방향 능선 (또는 원점회귀)<br/>
+• 거리: 약 10~14km<br/>
+• 소요시간: 약 5시간~7시간<br/>
+• 난이도: ★★★★☆ (중상급)<br/>
+• 접근: 울산시내에서 차량 약 40분
+</div>
+
+<p>양산 <b>통도사</b>에서 시작해 영축산(1,082m) 정상까지 오르는 코스예요. 통도사 자체가 유네스코 세계유산으로 등재된 명찰이라, 등산과 문화유산 탐방을 동시에 즐길 수 있는 게 큰 장점이에요.</p>
+
+<p>통도사에서 영축산까지는 숲이 울창한 구간을 지나기 때문에 초여름 더위에도 그늘이 많아 비교적 시원하게 오를 수 있어요. 정상 부근에 오르면 신불산과 이어지는 능선이 장쾌하게 펼쳐지는데, 체력이 된다면 신불산 방향으로 능선 종주를 이어가는 것도 가능합니다.</p>
+
+<p><b>💡 팁:</b> 통도사 주차장(유료)을 이용하면 편리해요. 등산 전후로 통도사 경내를 둘러보는 걸 추천! 대웅전 없이 부처님 진신사리를 모신 독특한 사찰이에요.</p>
+
+<p>&nbsp;</p>
+
+<h2>📅 초여름 등산 시 꼭 알아둘 것</h2>
+
+<p><b>🌡️ 날씨와 복장</b></p>
+<ul>
+<li>5~6월 산 위 기온은 평지보다 6~8도 낮아요. 정상 부근은 바람이 강해 <b>바람막이</b> 필수!</li>
+<li>기능성 반팔 + 긴팔 겹쳐 입기 추천</li>
+<li>오후에 소나기가 올 수 있으니 <b>우의나 판초</b>를 꼭 챙기세요</li>
+<li>등산화는 발목을 잡아주는 중등산화 추천 (능선길 돌이 많아요)</li>
+</ul>
+
+<p><b>🚗 교통 & 주차</b></p>
+<ul>
+<li><b>자가용:</b> 경부고속도로 언양IC → 각 등산로 입구까지 20~40분</li>
+<li><b>대중교통:</b> 울산역(KTX) → 시내버스로 언양·상북면 방향 이동 가능하나, 배차 간격이 넓어 자가용 추천</li>
+<li>주말 주차장 혼잡 → 오전 7~8시 도착 권장</li>
+</ul>
+
+<p><b>🎒 준비물 체크리스트</b></p>
+<ul>
+<li>물 1.5L 이상 (산 위에 매점 없어요!)</li>
+<li>간식 및 도시락</li>
+<li>자외선 차단제 + 모자</li>
+<li>등산 스틱 (무릎 보호에 큰 도움)</li>
+<li>헤드랜턴 (일찍 출발하거나 늦을 경우 대비)</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>🗺️ 추천 일정 조합</h2>
+
+<p><b>반나절 코스 (3시간 이내)</b></p>
+<p>👉 간월산 코스: 배내고개 → 간월재 → 간월산 정상 → 원점회귀</p>
+<p>시간이 많지 않거나 등산 입문자에게 딱! 오전에 다녀와서 오후에 언양 불고기 맛집 탐방도 가능해요. 😋</p>
+
+<p><b>하루 코스 (5~6시간)</b></p>
+<p>👉 신불산 + 간월재 종주: 신불산자연휴양림 → 신불산 → 간월재 → 배내고개</p>
+<p>영남알프스의 하이라이트 능선을 제대로 즐길 수 있는 코스. 차량 2대 또는 택시 배치 필요.</p>
+
+<p><b>1박 2일 코스</b></p>
+<p>👉 Day 1: 신불산자연휴양림 도착 → 가볍게 산책 → 숙박<br/>
+👉 Day 2: 이른 아침 신불산 정상 → 간월재 → 간월산 → 하산</p>
+<p>여유롭게 영남알프스를 즐기고 싶다면 이 코스를 추천! 휴양림에서의 하룻밤은 도시에서는 느낄 수 없는 힐링이에요.</p>
+
+<p>&nbsp;</p>
+
+<h2>❓ 자주 묻는 질문 (FAQ)</h2>
+
+<p><b>Q. 영남알프스 등산 초보자에게 추천하는 코스는?</b></p>
+<p>A. 배내고개 → 간월재 → 간월산 코스가 가장 추천이에요. 완만한 능선길 위주라 부담이 적고, 조망도 훌륭해요.</p>
+
+<p><b>Q. 5월~6월에 억새를 볼 수 있나요?</b></p>
+<p>A. 억새가 황금빛으로 물드는 건 9~11월이에요. 초여름에는 초록빛 풀밭이 펼쳐지는데, 이것도 정말 아름다워요! 능선 위 초록 카펫 위를 걷는 느낌이랄까요.</p>
+
+<p><b>Q. 대중교통으로 갈 수 있나요?</b></p>
+<p>A. 가능하지만 불편해요. 언양 시외버스터미널에서 상북면 방향 버스가 있지만 배차 간격이 길어요. 자가용이나 택시 이용을 추천합니다.</p>
+
+<p><b>Q. 등산로에 위험한 구간이 있나요?</b></p>
+<p>A. 가지산 쌀바위 부근, 신불산 일부 구간에 급경사와 바위 구간이 있어요. 표시된 등산로를 벗어나지 않는 게 중요하고, 특히 하산 시 길을 잘못 들지 않도록 주의하세요.</p>
+
+<p><b>Q. 반려견과 함께 등산할 수 있나요?</b></p>
+<p>A. 가지산 도립공원 구역 내에서는 반려동물 동반이 제한될 수 있어요. 미리 확인하고 가시는 게 좋습니다.</p>
+
+<p>&nbsp;</p>
+
+<h2>🔍 SEO 키워드 정리</h2>
+
+<p>울산 영남알프스, 영남알프스 등산 코스, 가지산 등산, 신불산 등산, 간월산 등산, 영축산 등산, 간월재, 억새평원, 신불산 자연휴양림, 울산 등산 추천, 초여름 등산, 울산 가볼만한 곳, 석남사, 배내고개, 영남알프스 초보 코스, 2026 울산 여행</p>
+
+<p>&nbsp;</p>
+
+<h2>📌 함께 읽으면 좋은 글</h2>
+
+<ul>
+<li><a href="https://usmichelin.tistory.com" target="_blank">🌹 2026 울산대공원 장미축제 완벽 가이드</a></li>
+<li><a href="https://usmichelin.tistory.com" target="_blank">🐋 장생포 고래문화특구 하루 여행 코스</a></li>
+<li><a href="https://usmichelin.tistory.com" target="_blank">🌿 태화강 국가정원 봄 풍경 산책 코스</a></li>
+<li><a href="https://usmichelin.tistory.com" target="_blank">🏖️ 대왕암공원 산책 코스 2026 완벽 가이드</a></li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center; color: #888; font-size: 14px;">울산의 숨은 보석, 영남알프스에서 초여름의 싱그러움을 만끽해보세요! 🏔️💚</p>
+
+</div>
+
+<script>
+function copyText(el, label) {
+  const text = el.querySelector(".seo-value").innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const msg = document.createElement("div");
+    msg.className = "copied";
+    msg.textContent = label + " 복사됨! ✓";
+    document.body.appendChild(msg);
+    setTimeout(() => msg.remove(), 2000);
+  });
+}
+</script>
+
+</body>
+</html>
