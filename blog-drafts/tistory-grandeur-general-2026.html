@@ -15,17 +15,16 @@ body { font-family: 'Noto Sans KR', -apple-system, sans-serif; background: #f5f5
 .seo-box { background: #FFF8E1; border: 2px solid #FFC107; border-radius: 8px; padding: 16px; margin-bottom: 16px; position: relative; }
 .seo-box pre { white-space: pre-wrap; word-break: break-all; font-size: 13px; font-family: 'Noto Sans KR', sans-serif; line-height: 1.7; }
 .html-box { background: #E8F5E9; border: 2px solid #4CAF50; border-radius: 8px; padding: 16px; position: relative; }
-.html-box textarea { width: 100%; min-height: 400px; font-size: 12px; font-family: 'Courier New', monospace; line-height: 1.5; border: 1px solid #ccc; border-radius: 4px; padding: 12px; resize: vertical; }
-.copy-btn { position: absolute; top: 8px; right: 8px; background: #FF5A00; color: #fff; border: none; border-radius: 6px; padding: 6px 14px; font-size: 13px; cursor: pointer; }
+.html-box textarea { width: 100%; min-height: 500px; font-size: 12px; font-family: 'Courier New', monospace; line-height: 1.5; border: 1px solid #ccc; border-radius: 4px; padding: 12px; resize: vertical; }
+.copy-btn { position: absolute; top: 8px; right: 8px; background: #FF5A00; color: #fff; border: none; border-radius: 6px; padding: 6px 14px; font-size: 13px; cursor: pointer; z-index: 10; }
 .copy-btn:hover { background: #e04e00; }
 .copy-btn.copied { background: #666; }
 .blog-preview { max-width: 800px; margin: 20px auto; background: #fff; border-radius: 12px; padding: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); line-height: 1.9; font-size: 15px; }
 .blog-preview h3 { font-size: 18px; margin: 28px 0 12px; color: #222; }
-.blog-preview .photo-marker { display: inline-block; background: #ff6b35; color: #fff; padding: 3px 10px; border-radius: 4px; font-size: 13px; margin: 10px 0; }
+.blog-preview img { max-width: 100%; border-radius: 8px; margin: 10px 0; }
 .blog-preview .info-box { background: #f0f7ff; border-left: 4px solid #2196f3; padding: 14px; margin: 14px 0; border-radius: 0 8px 8px 0; }
 .blog-preview .tip-box { background: #e8f5e9; border-left: 4px solid #4caf50; padding: 14px; margin: 14px 0; border-radius: 0 8px 8px 0; }
 .blog-preview .faq-item { background: #f5f5f5; border-radius: 8px; padding: 14px; margin: 10px 0; }
-.blog-preview .faq-item strong { color: #1976d2; }
 .blog-preview .shop-info { background: #f5f5f5; border-radius: 8px; padding: 16px; margin-top: 20px; text-align: center; }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
@@ -33,8 +32,8 @@ body { font-family: 'Noto Sans KR', -apple-system, sans-serif; background: #f5f5
 <body>
 
 <div class="header">
-  <h1>📝 티스토리 블로그 초안 (HTML)</h1>
-  <p>타이어모어 울산학산점 — 그랜저 제너럴타이어 알티맥스 GS6 교체</p>
+  <h1>📝 티스토리 블로그 초안 (HTML + 이미지 포함)</h1>
+  <p>타이어모어 울산학산점 — 그랜저 제너럴타이어 알티맥스 GS6 교체 후기</p>
 </div>
 
 <!-- SEO 설정 -->
@@ -43,23 +42,23 @@ body { font-family: 'Noto Sans KR', -apple-system, sans-serif; background: #f5f5
   <div class="seo-box" onclick="copyPre(this)">
     <button class="copy-btn">복사</button>
     <pre>★ 티스토리 SEO 설정 ★
-[제목] 그랜저 타이어 교체 후기 | 제너럴타이어 알티맥스 GS6 225/55R17 장착 | 울산 타이어
-[설명] 현대 그랜저에 제너럴타이어 알티맥스 GS6 225/55R17 4본 교체한 후기입니다. 콘티넨탈 기술 기반 가성비 사계절 타이어의 특장점과 작업 과정을 소개합니다. 울산 타이어모어 학산점.
-[태그] 그랜저타이어, 제너럴타이어, 알티맥스GS6, 225/55R17, 타이어교체후기, 울산타이어, 사계절타이어, 콘티넨탈, 타이어모어, 그랜저타이어추천
+[제목] 그랜저 타이어 교체 후기 | 제너럴타이어 알티맥스 GS6 225/55R17 장착 — 넥센에서 업그레이드
+[설명] 현대 그랜저에 제너럴타이어 알티맥스 GS6 225/55R17 4본을 교체한 실제 작업 후기. 콘티넨탈 기술 기반 가성비 사계절 타이어의 특장점, 넥센과의 차이, 림 보호·밸런싱·토크렌치·얼라인먼트까지 전 과정을 사진과 함께 소개합니다.
+[태그] 그랜저타이어, 제너럴타이어, 알티맥스GS6, 225/55R17, 타이어교체후기, 울산타이어, 사계절타이어, 콘티넨탈, 타이어모어, 그랜저타이어추천, 넥센타이어교체, 가성비타이어, 타이어밸런싱, 휠얼라인먼트
 [카테고리] 타이어 교체 후기</pre>
   </div>
 </div>
 
 <!-- HTML 본문 -->
 <div class="section">
-  <h2>🟢 HTML 본문 전체 (클릭 → 전체선택 → 복사)</h2>
+  <h2>🟢 HTML 본문 전체 (클릭 → 전체선택 → 복사해서 티스토리 HTML 모드에 붙여넣기)</h2>
   <div class="html-box">
     <button class="copy-btn" onclick="copyTextarea()">복사</button>
     <textarea id="html-source" onclick="this.select()"><!--
 ★ 티스토리 SEO 설정 ★
-[제목] 그랜저 타이어 교체 후기 | 제너럴타이어 알티맥스 GS6 225/55R17 장착 | 울산 타이어
-[설명] 현대 그랜저에 제너럴타이어 알티맥스 GS6 225/55R17 4본 교체한 후기입니다. 콘티넨탈 기술 기반 가성비 사계절 타이어의 특장점과 작업 과정을 소개합니다. 울산 타이어모어 학산점.
-[태그] 그랜저타이어, 제너럴타이어, 알티맥스GS6, 225/55R17, 타이어교체후기, 울산타이어, 사계절타이어, 콘티넨탈, 타이어모어, 그랜저타이어추천
+[제목] 그랜저 타이어 교체 후기 | 제너럴타이어 알티맥스 GS6 225/55R17 장착 — 넥센에서 업그레이드
+[설명] 현대 그랜저에 제너럴타이어 알티맥스 GS6 225/55R17 4본을 교체한 실제 작업 후기. 콘티넨탈 기술 기반 가성비 사계절 타이어의 특장점, 넥센과의 차이, 림 보호·밸런싱·토크렌치·얼라인먼트까지 전 과정을 사진과 함께 소개합니다.
+[태그] 그랜저타이어, 제너럴타이어, 알티맥스GS6, 225/55R17, 타이어교체후기, 울산타이어, 사계절타이어, 콘티넨탈, 타이어모어, 그랜저타이어추천, 넥센타이어교체, 가성비타이어, 타이어밸런싱, 휠얼라인먼트
 [카테고리] 타이어 교체 후기
 -->
 
@@ -67,9 +66,9 @@ body { font-family: 'Noto Sans KR', -apple-system, sans-serif; background: #f5f5
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "그랜저 타이어 교체 후기 | 제너럴타이어 알티맥스 GS6 225/55R17 장착",
-  "description": "현대 그랜저에 제너럴타이어 알티맥스 GS6 225/55R17 4본 교체한 후기입니다. 콘티넨탈 기술 기반 가성비 사계절 타이어의 특장점과 작업 과정을 소개합니다.",
-  "author": {"@type": "Organization", "name": "타이어모어 울산학산점"},
+  "headline": "그랜저 타이어 교체 후기 — 제너럴타이어 알티맥스 GS6 225/55R17 장착",
+  "description": "현대 그랜저에 제너럴타이어 알티맥스 GS6 225/55R17 4본을 교체한 실제 작업 후기. 콘티넨탈 기술 기반 가성비 사계절 타이어의 특장점과 작업 전 과정을 소개합니다.",
+  "author": {"@type": "Organization", "name": "타이어모어 울산학산점", "url": "https://usmichelin.tistory.com"},
   "publisher": {"@type": "Organization", "name": "타이어모어 울산학산점"},
   "datePublished": "2026-06-08",
   "dateModified": "2026-06-08",
@@ -87,15 +86,23 @@ body { font-family: 'Noto Sans KR', -apple-system, sans-serif; background: #f5f5
       "name": "제너럴타이어 알티맥스 GS6는 어떤 타이어인가요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "제너럴타이어 알티맥스 GS6는 콘티넨탈 그룹의 서브 브랜드인 제너럴타이어에서 출시한 사계절 올시즌 타이어입니다. 콘티넨탈의 기술력을 기반으로 정숙성, 승차감, 젖은 노면 제동력이 우수하며 합리적인 가격대가 장점입니다."
+        "text": "제너럴타이어 알티맥스 GS6는 콘티넨탈 그룹 산하 제너럴타이어 브랜드의 사계절 올시즌 타이어입니다. 콘티넨탈의 독일 기술력을 기반으로 정숙성, 승차감, 젖은 노면 제동력이 우수하며 합리적인 가격대로 가성비가 뛰어납니다."
       }
     },
     {
       "@type": "Question",
-      "name": "그랜저에 맞는 타이어 사이즈는?",
+      "name": "그랜저에 맞는 타이어 사이즈는 무엇인가요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "현대 그랜저는 연식과 트림에 따라 215/55R17, 225/55R17, 225/45R18, 235/45R18 등의 사이즈가 적용됩니다. 차량 도어 안쪽 스티커에서 정확한 규격을 확인할 수 있습니다."
+        "text": "현대 그랜저는 연식과 트림에 따라 215/55R17, 225/55R17, 225/45R18, 235/45R18 등이 적용됩니다. 운전석 도어 안쪽 스티커에서 정확한 규격을 확인할 수 있으며, 잘못된 사이즈 장착은 안전에 직접적인 영향을 줄 수 있으므로 반드시 확인해야 합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "제너럴타이어와 콘티넨탈의 관계는?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "제너럴타이어(General Tire)는 세계 4대 타이어 기업인 콘티넨탈 AG의 서브 브랜드입니다. 콘티넨탈의 기술력과 품질 관리 시스템을 공유하면서도 보다 합리적인 가격대를 제공합니다. 독일 기술의 가성비 타이어라고 보시면 됩니다."
       }
     },
     {
@@ -103,223 +110,333 @@ body { font-family: 'Noto Sans KR', -apple-system, sans-serif; background: #f5f5
       "name": "타이어 교체 후 얼라인먼트는 꼭 해야 하나요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "네, 타이어 교체 후 4륜 얼라인먼트를 맞추는 것을 권장합니다. 얼라인먼트가 틀어져 있으면 편마모가 발생하고 주행 안정성이 떨어질 수 있습니다. 새 타이어의 수명을 최대한 활용하려면 교체 시 함께 작업하는 것이 좋습니다."
+        "text": "타이어 교체 후 4륜 얼라인먼트를 맞추는 것을 강력히 권장합니다. 얼라인먼트가 틀어진 상태로 주행하면 편마모가 발생해 새 타이어 수명이 크게 단축되며, 직진 안정성이 떨어지고 연비에도 악영향을 줍니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "디지털 토크렌치로 체결하면 뭐가 다른가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "디지털 토크렌치는 볼트 체결 토크를 정밀하게 측정하여 제조사가 지정한 규정 토크(그랜저 기준 약 127 N·m)로 정확하게 조여줍니다. 일반 임팩트 렌치만 사용하면 과도하게 조여져 볼트가 손상되거나, 덜 조여져 주행 중 풀릴 위험이 있습니다."
       }
     }
   ]
 }
 </script>
 
-<p>현대 그랜저에 제너럴타이어 알티맥스 GS6 225/55R17 4본을 교체한 작업 후기입니다. 콘티넨탈 기술 기반의 가성비 사계절 타이어로, 정숙성과 젖은 노면 제동력이 우수합니다. 림 보호 테이핑부터 밸런싱, 토크렌치 체결, 4륜 얼라인먼트까지 전 과정을 소개합니다.</p>
+<p><b>현대 그랜저에 제너럴타이어 알티맥스 GS6 225/55R17 4본을 교체한 작업 후기입니다.</b> 기존 넥센 타이어의 마모로 교체 시기가 된 차량에, 콘티넨탈 기술 기반의 가성비 사계절 타이어 알티맥스 GS6를 장착해 드렸습니다. 림 보호 테이핑부터 정밀 밸런싱, 디지털 토크렌치 체결, 4륜 얼라인먼트까지 전 과정을 사진과 함께 소개합니다.</p>
 
 <p>&nbsp;</p>
 
-<p>📸1 (그랜저 리프트 위 전체샷)</p>
+<p style="text-align:center;"><img src="https://ccnt256-code.github.io/blog-images/grandeur_gs6_2026_1.jpg" alt="현대 그랜저 타이어 교체 - 리프트 위 전체샷" style="max-width:100%;"></p>
 
 <p>&nbsp;</p>
 
 <p>안녕하세요 😊<br>미쉐린·콘티넨탈 공식 인증 대리점<br><b>타이어모어 울산학산점</b>입니다.</p>
 
-<p>오늘은 <b>현대 그랜저</b> 타이어 교체 작업을 소개해 드릴게요!</p>
+<p>오늘은 <b>현대 그랜저</b>의 타이어 교체 작업을 소개해 드릴게요!</p>
 
-<p>기존에 장착되어 있던 넥센 타이어에서<br><b>제너럴타이어 알티맥스 GS6 225/55R17</b>로 4본 교체해 드렸습니다 🛞</p>
+<p>기존에 장착되어 있던 <b>넥센 타이어</b>가 마모 한계에 도달해서,<br>이번에 <b>제너럴타이어 알티맥스 GS6 225/55R17</b>로 4본 모두 새로 교체해 드렸습니다 🛞</p>
 
 <p>&nbsp;</p>
 
-<h2>🚗 작업 정보</h2>
+<h2>🚗 작업 정보 한눈에 보기</h2>
 
 <table style="width:100%; border-collapse:collapse; margin:15px 0;">
 <tbody>
 <tr style="background:#f0f7ff;">
-<td style="padding:10px; border:1px solid #ddd; font-weight:bold; width:30%;">차량</td>
-<td style="padding:10px; border:1px solid #ddd;">현대 그랜저</td>
+<td style="padding:12px; border:1px solid #ddd; font-weight:bold; width:30%;">차량</td>
+<td style="padding:12px; border:1px solid #ddd;">현대 그랜저 (블랙)</td>
 </tr>
 <tr>
-<td style="padding:10px; border:1px solid #ddd; font-weight:bold;">기존 타이어</td>
-<td style="padding:10px; border:1px solid #ddd;">넥센</td>
+<td style="padding:12px; border:1px solid #ddd; font-weight:bold;">기존 타이어</td>
+<td style="padding:12px; border:1px solid #ddd;">넥센 (마모 교체)</td>
 </tr>
 <tr style="background:#f0f7ff;">
-<td style="padding:10px; border:1px solid #ddd; font-weight:bold;">신규 타이어</td>
-<td style="padding:10px; border:1px solid #ddd;">제너럴타이어 알티맥스 GS6 225/55R17 101W XL</td>
+<td style="padding:12px; border:1px solid #ddd; font-weight:bold;">신규 타이어</td>
+<td style="padding:12px; border:1px solid #ddd;">제너럴타이어 알티맥스 GS6 225/55R17 101W XL</td>
 </tr>
 <tr>
-<td style="padding:10px; border:1px solid #ddd; font-weight:bold;">작업 내용</td>
-<td style="padding:10px; border:1px solid #ddd;">4본 교체 + 림 보호 + 밸런싱 + 토크렌치 체결 + 4륜 얼라인먼트</td>
+<td style="padding:12px; border:1px solid #ddd; font-weight:bold;">작업 내용</td>
+<td style="padding:12px; border:1px solid #ddd;">4본 교체 + 림 보호 테이핑 + 정밀 밸런싱 + 디지털 토크렌치 체결 + 4륜 얼라인먼트</td>
 </tr>
 </tbody>
 </table>
 
 <p>&nbsp;</p>
 
-<h2>🔍 기존 타이어 상태</h2>
+<h2>🔍 기존 타이어 상태 — 교체가 필요한 이유</h2>
 
-<p>📸2 (기존 넥센 타이어 + 휠 세트)</p>
+<p style="text-align:center;"><img src="https://ccnt256-code.github.io/blog-images/grandeur_gs6_2026_2.jpg" alt="기존 넥센 타이어와 휠 세트" style="max-width:100%;"></p>
 
-<p>먼저 기존에 장착되어 있던 넥센 타이어입니다.<br>트레드 마모가 상당히 진행된 상태여서 교체 시기가 된 상태였어요.</p>
+<p>기존에 장착되어 있던 넥센 타이어입니다.<br>트레드 마모가 상당히 진행된 상태였어요.</p>
+
+<p>타이어 트레드(홈)는 빗물을 배출하고 접지력을 유지하는 역할을 하는데,<br>마모가 진행되면 <b>빗길 제동력이 급격히 떨어지고 수막현상 위험</b>이 높아집니다.</p>
+
+<p>특히 다가오는 장마철을 앞두고 타이어 상태를 점검해 보시는 것이 중요합니다.<br>법적 최소 트레드 깊이는 1.6mm이지만, <b>안전을 위해서는 3mm 이하일 때 교체</b>를 권장합니다.</p>
 
 <p>&nbsp;</p>
 
-<h2>🛞 제너럴타이어 알티맥스 GS6란?</h2>
+<h2>🛞 제너럴타이어 알티맥스 GS6 — 콘티넨탈 기술의 가성비 사계절 타이어</h2>
 
-<p>📸3 (제너럴타이어 알티맥스 GS6 새 타이어)</p>
+<p style="text-align:center;"><img src="https://ccnt256-code.github.io/blog-images/grandeur_gs6_2026_3.jpg" alt="제너럴타이어 알티맥스 GS6 225/55R17 새 타이어" style="max-width:100%;"></p>
 
 <p>이번에 장착할 <b>제너럴타이어 알티맥스 GS6</b>입니다!</p>
 
-<p><b>제너럴타이어</b>는 세계적인 타이어 기업 <b>콘티넨탈 그룹의 서브 브랜드</b>입니다.<br>콘티넨탈의 기술력을 합리적인 가격에 만나볼 수 있는 타이어예요.</p>
+<p><b>제너럴타이어(General Tire)</b>를 처음 들어보시는 분도 계실 텐데요.<br>제너럴타이어는 세계 4대 타이어 기업 중 하나인 <b>독일 콘티넨탈(Continental) AG의 서브 브랜드</b>입니다.</p>
 
-<p><b>알티맥스 GS6 특장점:</b></p>
+<p>쉽게 말해, <b>콘티넨탈의 독일 기술력을 합리적인 가격에 만나볼 수 있는 타이어</b>예요.<br>콘티넨탈과 같은 공장, 같은 품질 관리 시스템에서 생산되기 때문에 품질에 대한 걱정은 없습니다.</p>
+
+<p>&nbsp;</p>
+
+<h3>✅ 알티맥스 GS6의 핵심 특장점</h3>
+
+<table style="width:100%; border-collapse:collapse; margin:15px 0;">
+<tbody>
+<tr style="background:#e8f5e9;">
+<td style="padding:10px; border:1px solid #ddd; font-weight:bold; width:30%;">타입</td>
+<td style="padding:10px; border:1px solid #ddd;">사계절 올시즌 (M+S 마크)</td>
+</tr>
+<tr>
+<td style="padding:10px; border:1px solid #ddd; font-weight:bold;">정숙성</td>
+<td style="padding:10px; border:1px solid #ddd;">최적화된 트레드 패턴으로 소음 최소화 — 세단에 딱 맞는 조용한 주행</td>
+</tr>
+<tr style="background:#e8f5e9;">
+<td style="padding:10px; border:1px solid #ddd; font-weight:bold;">젖은 노면</td>
+<td style="padding:10px; border:1px solid #ddd;">실리카 컴파운드 적용 — 빗길 제동력 강화, 수막현상 저항력 향상</td>
+</tr>
+<tr>
+<td style="padding:10px; border:1px solid #ddd; font-weight:bold;">승차감</td>
+<td style="padding:10px; border:1px solid #ddd;">부드러운 사이드월 설계로 노면 충격 흡수 우수</td>
+</tr>
+<tr style="background:#e8f5e9;">
+<td style="padding:10px; border:1px solid #ddd; font-weight:bold;">내구성</td>
+<td style="padding:10px; border:1px solid #ddd;">균일한 마모 설계로 긴 수명, XL(Extra Load) 규격으로 하중 여유</td>
+</tr>
+<tr>
+<td style="padding:10px; border:1px solid #ddd; font-weight:bold;">가격</td>
+<td style="padding:10px; border:1px solid #ddd;">콘티넨탈 대비 합리적인 가격대 — 가성비 최고</td>
+</tr>
+</tbody>
+</table>
+
+<p>특히 그랜저 같은 중대형 세단에서는 <b>정숙성과 승차감</b>이 중요한데,<br>알티맥스 GS6는 이 두 가지를 모두 잡으면서 가격까지 합리적이라 만족도가 높은 타이어입니다.</p>
+
+<p>&nbsp;</p>
+
+<h2>🔧 작업 과정 — 꼼꼼한 6단계</h2>
+
+<h3>STEP 1. 림 보호 테이핑</h3>
+
+<p style="text-align:center;"><img src="https://ccnt256-code.github.io/blog-images/grandeur_gs6_2026_4.jpg" alt="림 보호 테이핑 작업" style="max-width:100%;"></p>
+
+<p style="text-align:center;"><img src="https://ccnt256-code.github.io/blog-images/grandeur_gs6_2026_5.jpg" alt="기존 타이어 장착 상태" style="max-width:100%;"></p>
+
+<p>타이어 교체의 첫 단계는 <b>림 보호 테이핑</b>입니다.</p>
+
+<p>타이어를 휠에서 탈거하고 새 타이어를 장착하는 과정에서<br>타이어 체인저 장비가 휠 림과 직접 접촉하게 되는데요.<br>이때 <b>휠 림 가장자리에 보호 테이프</b>를 감아서 스크래치가 생기지 않도록 보호합니다.</p>
+
+<p>작은 디테일이지만, 고가의 순정 휠이나 애프터마켓 휠을 보호하는 데<br>꼭 필요한 과정입니다 💪</p>
+
+<p>&nbsp;</p>
+
+<h3>STEP 2. 새 타이어 장착</h3>
+
+<p style="text-align:center;"><img src="https://ccnt256-code.github.io/blog-images/grandeur_gs6_2026_6.jpg" alt="제너럴타이어 알티맥스 GS6 장착 완료" style="max-width:100%;"></p>
+
+<p>기존 넥센 타이어를 탈거하고 <b>제너럴타이어 알티맥스 GS6</b>를 장착한 모습입니다.</p>
+
+<p>새 타이어의 트레드 패턴이 선명하게 보이네요!<br>이 깊은 홈들이 빗물을 빠르게 배출해서 장마철에도 안정적인 접지력을 유지해 줍니다.</p>
+
+<p>&nbsp;</p>
+
+<h3>STEP 3. 정밀 휠 밸런싱</h3>
+
+<p style="text-align:center;"><img src="https://ccnt256-code.github.io/blog-images/grandeur_gs6_2026_7.jpg" alt="휠 밸런싱 작업 중" style="max-width:100%;"></p>
+
+<p style="text-align:center;"><img src="https://ccnt256-code.github.io/blog-images/grandeur_gs6_2026_8.jpg" alt="밸런싱 완료 0g OK" style="max-width:100%;"></p>
+
+<p>타이어 장착 후 반드시 거쳐야 하는 <b>정밀 휠 밸런싱</b> 작업입니다.</p>
+
+<p>타이어와 휠은 아무리 정밀하게 만들어도 미세한 무게 차이가 존재합니다.<br>이 불균형을 보정하지 않으면 <b>고속 주행 시 핸들 떨림, 승차감 저하, 타이어 편마모</b>가 발생할 수 있어요.</p>
+
+<p>이 바퀴는 <b>양쪽 모두 0g — 퍼펙트 밸런스!</b> 👌<br>보정 웨이트를 부착할 필요가 없을 정도로 완벽한 밸런스입니다.</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align:center;"><img src="https://ccnt256-code.github.io/blog-images/grandeur_gs6_2026_9.jpg" alt="밸런싱 수치 0g / 30g" style="max-width:100%;"></p>
+
+<p>다른 바퀴의 밸런싱 결과입니다.<br>한쪽에 <b>30g 보정 웨이트</b>를 부착해서 정밀하게 밸런싱을 맞춰줬습니다.</p>
+
+<p>30g 정도는 일반적인 보정 범위예요. 이 정도의 미세한 차이도<br>고속 주행에서는 체감될 수 있기 때문에, 정확한 밸런싱이 중요합니다.</p>
+
+<p>&nbsp;</p>
+
+<h3>STEP 4. 장착 완료 확인</h3>
+
+<p style="text-align:center;"><img src="https://ccnt256-code.github.io/blog-images/grandeur_gs6_2026_10.jpg" alt="제너럴타이어 알티맥스 GS6 장착 완료 클로즈업" style="max-width:100%;"></p>
+
+<p>장착 완료된 <b>제너럴타이어 알티맥스 GS6</b>의 클로즈업입니다.</p>
+
+<p><b>GENERAL ALTIMAX GS6</b> 사이드월 레터링이 선명하게 보이네요 ✨<br>225/55R17 101W XL 규격과 M+S(Mud and Snow) 마크도 확인할 수 있습니다.</p>
+
+<p>&nbsp;</p>
+
+<h3>STEP 5. 디지털 토크렌치 규정 토크 체결</h3>
+
+<p style="text-align:center;"><img src="https://ccnt256-code.github.io/blog-images/grandeur_gs6_2026_11.jpg" alt="디지털 토크렌치 체결 126.8 N·m" style="max-width:100%;"></p>
+
+<p>모든 휠 볼트를 <b>디지털 토크렌치</b>로 체결합니다.</p>
+
+<p>그랜저의 규정 토크인 <b>약 127 N·m</b>에 맞춰 정확하게 조여줍니다.<br>사진에서 <b>126.8 N·m</b> 수치가 표시된 것이 보이시죠?</p>
+
+<p><b>왜 토크렌치가 중요한가요?</b></p>
 <ul>
-<li>✅ <b>사계절 올시즌 타이어</b> — 여름·겨울 모두 안정적인 성능</li>
-<li>✅ <b>정숙성과 승차감 우수</b> — 세단에 딱 맞는 조용한 주행</li>
-<li>✅ <b>젖은 노면 제동력 강화</b> — 실리카 컴파운드 적용</li>
-<li>✅ <b>합리적 가격대</b> — 콘티넨탈 기술 기반의 가성비</li>
+<li>일반 임팩트 렌치만 사용하면 과도하게 조여져 <b>볼트가 늘어나거나 파손</b>될 수 있습니다</li>
+<li>반대로 덜 조이면 주행 중 <b>볼트가 풀려 바퀴 이탈 사고</b>로 이어질 수 있어요</li>
+<li>디지털 토크렌치는 정확한 수치로 관리하기 때문에 이런 위험을 원천 차단합니다</li>
 </ul>
 
-<p>&nbsp;</p>
-
-<h2>🔧 작업 과정</h2>
-
-<h3>1. 림 보호 테이핑</h3>
-
-<p>📸4 (림 보호 테이핑)</p>
-<p>📸5 (기존 타이어 장착 상태)</p>
-
-<p>타이어 탈거 전 <b>림 보호 테이핑</b> 작업입니다.<br>휠 림 가장자리에 보호 테이프를 감아서 교체 과정에서 휠에 스크래치가 생기지 않도록 꼼꼼하게 보호해 드립니다 💪</p>
+<p>저희 타이어모어 울산학산점에서는 <b>모든 차량에 디지털 토크렌치를 사용</b>합니다 ✅</p>
 
 <p>&nbsp;</p>
 
-<h3>2. 새 타이어 장착</h3>
+<h3>STEP 6. 4륜 얼라인먼트</h3>
 
-<p>📸6 (새 타이어 장착 완료)</p>
+<p style="text-align:center;"><img src="https://ccnt256-code.github.io/blog-images/grandeur_gs6_2026_12.jpg" alt="4륜 얼라인먼트 작업" style="max-width:100%;"></p>
 
-<p>새 타이어 장착이 완료된 모습입니다!<br>제너럴타이어 알티맥스 GS6가 깔끔하게 들어갔어요.</p>
+<p>마지막으로 <b>4륜 얼라인먼트</b> 작업입니다.</p>
 
-<p>&nbsp;</p>
-
-<h3>3. 정밀 휠 밸런싱</h3>
-
-<p>📸7 (밸런싱 작업 중)</p>
-<p>📸8 (밸런싱 완료 0g OK)</p>
-
-<p>정밀 <b>휠 밸런싱</b> 작업입니다.<br>밸런싱이 맞지 않으면 고속 주행 시 핸들 떨림이 발생할 수 있어요.</p>
-
-<p>한쪽 바퀴는 <b>0g / 0g 퍼펙트 밸런스!</b> 👌</p>
-
-<p>📸9 (밸런싱 수치 0g / 30g)</p>
-
-<p>다른 바퀴는 한쪽에 30g 보정 웨이트를 부착해서 정밀하게 밸런싱을 맞춰줬습니다.</p>
-
-<p>&nbsp;</p>
-
-<h3>4. 장착 완료</h3>
-
-<p>📸10 (장착 완료 클로즈업)</p>
-
-<p>장착 완료된 제너럴타이어 알티맥스 GS6 클로즈업입니다.<br><b>GENERAL ALTIMAX GS6</b> 사이드월이 선명하게 보이네요 ✨</p>
-
-<p>&nbsp;</p>
-
-<h3>5. 디지털 토크렌치 체결</h3>
-
-<p>📸11 (디지털 토크렌치 체결)</p>
-
-<p>디지털 토크렌치로 <b>규정 토크 126.8 N·m</b>에 맞춰 체결합니다.<br>토크렌치를 사용하지 않으면 볼트가 풀리거나 과도하게 조여질 수 있어요.</p>
-
-<p>저희는 <b>모든 차량 디지털 토크렌치로 정확하게 체결</b>해 드립니다! ✅</p>
-
-<p>&nbsp;</p>
-
-<h3>6. 4륜 얼라인먼트</h3>
-
-<p>📸12 (4륜 얼라인먼트)</p>
-
-<p>마지막으로 <b>4륜 얼라인먼트</b> 작업입니다.<br>타이어 교체 후 얼라인먼트를 맞춰주면 편마모를 방지하고 주행 안정성을 높여줍니다.</p>
-
-<p>&nbsp;</p>
-
-<h2>✅ 작업 완료 요약</h2>
-
-<p>넥센 → <b>제너럴타이어 알티맥스 GS6</b>로 교체 완료!</p>
+<p>얼라인먼트란 네 바퀴의 정렬 각도를 정확하게 맞추는 작업인데요.<br>타이어 교체 후 얼라인먼트를 맞춰주면:</p>
 
 <ul>
-<li>✅ 림 보호 테이핑</li>
-<li>✅ 정밀 휠 밸런싱</li>
-<li>✅ 디지털 토크렌치 규정 토크 체결 (126.8 N·m)</li>
-<li>✅ 4륜 얼라인먼트</li>
+<li>✅ <b>편마모 방지</b> — 새 타이어 수명을 최대한 활용</li>
+<li>✅ <b>직진 안정성 향상</b> — 핸들이 한쪽으로 쏠리는 현상 해소</li>
+<li>✅ <b>연비 개선</b> — 불필요한 타이어 저항 감소</li>
 </ul>
 
-<p>콘티넨탈 기술력의 가성비 사계절 타이어로 그랜저에 딱 맞는 선택이었습니다 😊</p>
+<p>타이어 교체하면서 얼라인먼트까지 한 번에 해주시는 것이 가장 좋습니다!</p>
+
+<p>&nbsp;</p>
+
+<h2>✅ 작업 완료 — 넥센에서 제너럴타이어로 업그레이드!</h2>
+
+<p>넥센 → <b>제너럴타이어 알티맥스 GS6 225/55R17</b>로 4본 교체 완료!</p>
+
+<table style="width:100%; border-collapse:collapse; margin:15px 0;">
+<tbody>
+<tr style="background:#e8f5e9;">
+<td style="padding:10px; border:1px solid #ddd;">✅ 림 보호 테이핑</td>
+<td style="padding:10px; border:1px solid #ddd;">휠 스크래치 방지</td>
+</tr>
+<tr>
+<td style="padding:10px; border:1px solid #ddd;">✅ 정밀 휠 밸런싱</td>
+<td style="padding:10px; border:1px solid #ddd;">0g 퍼펙트 + 30g 보정</td>
+</tr>
+<tr style="background:#e8f5e9;">
+<td style="padding:10px; border:1px solid #ddd;">✅ 디지털 토크렌치</td>
+<td style="padding:10px; border:1px solid #ddd;">규정 토크 126.8 N·m 체결</td>
+</tr>
+<tr>
+<td style="padding:10px; border:1px solid #ddd;">✅ 4륜 얼라인먼트</td>
+<td style="padding:10px; border:1px solid #ddd;">편마모 방지 + 직진 안정성</td>
+</tr>
+</tbody>
+</table>
+
+<p>콘티넨탈 기술력의 가성비 사계절 타이어,<br><b>제너럴타이어 알티맥스 GS6</b>로 그랜저에 딱 맞는 선택이었습니다 😊</p>
 
 <p>&nbsp;</p>
 
 <h2>❓ 자주 묻는 질문 (FAQ)</h2>
 
 <p><b>Q. 제너럴타이어 알티맥스 GS6는 어떤 타이어인가요?</b></p>
-<p>A. 콘티넨탈 그룹의 서브 브랜드인 제너럴타이어에서 출시한 사계절 올시즌 타이어입니다. 콘티넨탈의 기술력을 기반으로 정숙성, 승차감, 젖은 노면 제동력이 우수하며 합리적인 가격대가 장점입니다.</p>
+<p>A. 콘티넨탈 그룹 산하 제너럴타이어 브랜드의 사계절 올시즌 타이어입니다. 콘티넨탈의 독일 기술력을 기반으로 정숙성, 승차감, 젖은 노면 제동력이 우수하며 합리적인 가격대로 가성비가 뛰어납니다.</p>
 
-<p><b>Q. 그랜저에 맞는 타이어 사이즈는?</b></p>
-<p>A. 현대 그랜저는 연식과 트림에 따라 215/55R17, 225/55R17, 225/45R18, 235/45R18 등의 사이즈가 적용됩니다. 차량 도어 안쪽 스티커에서 정확한 규격을 확인할 수 있습니다.</p>
+<p>&nbsp;</p>
+
+<p><b>Q. 그랜저에 맞는 타이어 사이즈는 무엇인가요?</b></p>
+<p>A. 현대 그랜저는 연식과 트림에 따라 215/55R17, 225/55R17, 225/45R18, 235/45R18 등이 적용됩니다. 운전석 도어 안쪽 스티커에서 정확한 규격을 확인할 수 있습니다.</p>
+
+<p>&nbsp;</p>
+
+<p><b>Q. 제너럴타이어와 콘티넨탈의 관계는?</b></p>
+<p>A. 제너럴타이어(General Tire)는 세계 4대 타이어 기업인 콘티넨탈 AG의 서브 브랜드입니다. 콘티넨탈의 기술력과 품질 관리 시스템을 공유하면서도 보다 합리적인 가격대를 제공합니다.</p>
+
+<p>&nbsp;</p>
 
 <p><b>Q. 타이어 교체 후 얼라인먼트는 꼭 해야 하나요?</b></p>
-<p>A. 네, 타이어 교체 후 4륜 얼라인먼트를 맞추는 것을 권장합니다. 얼라인먼트가 틀어져 있으면 편마모가 발생하고 주행 안정성이 떨어질 수 있습니다. 새 타이어의 수명을 최대한 활용하려면 교체 시 함께 작업하는 것이 좋습니다.</p>
+<p>A. 네, 강력히 권장합니다. 얼라인먼트가 틀어진 상태로 주행하면 편마모가 발생해 새 타이어 수명이 크게 단축되며, 직진 안정성과 연비에도 악영향을 줍니다.</p>
+
+<p>&nbsp;</p>
+
+<p><b>Q. 디지털 토크렌치로 체결하면 뭐가 다른가요?</b></p>
+<p>A. 제조사가 지정한 규정 토크로 정확하게 볼트를 조여줍니다. 과도 체결이나 부족 체결을 방지해 주행 중 볼트 풀림이나 파손 위험을 원천 차단합니다.</p>
 
 <p>&nbsp;</p>
 
 <h2>📍 매장 안내</h2>
 
-<p>타이어 교체부터 얼라인먼트까지 한 번에!<br>편하게 문의 주세요 😊</p>
+<p>타이어 교체부터 얼라인먼트까지 한 번에!<br>타이어 고민, 편하게 문의 주세요 😊</p>
 
-<p><b>타이어모어 울산학산점</b><br>📍 울산 중구 번영로 342-1<br>📞 052-265-0085<br>미쉐린·콘티넨탈 공식 인증 대리점</p></textarea>
+<p><b>타이어모어 울산학산점</b><br>📍 울산 중구 번영로 342-1<br>📞 052-265-0085<br>🏆 미쉐린·콘티넨탈 공식 인증 대리점</p></textarea>
   </div>
 </div>
 
 <!-- 미리보기 -->
 <div class="blog-preview">
   <h2 style="text-align:center; font-size:22px; margin-bottom:20px;">👇 블로그 미리보기</h2>
+  <p style="font-size:13px; color:#888; text-align:center; margin-bottom:20px;">ℹ️ JSON-LD (Article + FAQPage) + 이미지 12장 포함 — AI 검색 최적화 적용</p>
 
-  <p style="font-size:13px; color:#888; margin-bottom:10px;">ℹ️ JSON-LD 구조화 데이터 (Article + FAQPage) 포함됨 — AI 검색 최적화 적용</p>
+  <p style="color:#666; font-style:italic;"><b>현대 그랜저에 제너럴타이어 알티맥스 GS6 225/55R17 4본을 교체한 작업 후기입니다.</b> 콘티넨탈 기술 기반의 가성비 사계절 타이어로, 림 보호부터 얼라인먼트까지 전 과정을 소개합니다.</p>
 
-  <p style="color:#666; font-style:italic;">현대 그랜저에 제너럴타이어 알티맥스 GS6 225/55R17 4본을 교체한 작업 후기입니다. 콘티넨탈 기술 기반의 가성비 사계절 타이어로, 정숙성과 젖은 노면 제동력이 우수합니다.</p>
+  <img src="https://ccnt256-code.github.io/blog-images/grandeur_gs6_2026_1.jpg" alt="그랜저">
 
-  <p><span class="photo-marker">📸1</span> 그랜저 리프트 위 전체샷</p>
-
-  <p>안녕하세요 😊<br>미쉐린·콘티넨탈 공식 인증 대리점<br><b>타이어모어 울산학산점</b>입니다.</p>
+  <p>안녕하세요 😊 미쉐린·콘티넨탈 공식 인증 대리점 <b>타이어모어 울산학산점</b>입니다.</p>
 
   <h3>🚗 작업 정보</h3>
-  <div class="info-box">
-    <table style="width:100%; border-collapse:collapse;">
-    <tr><td style="padding:6px; font-weight:bold; width:30%;">차량</td><td>현대 그랜저</td></tr>
-    <tr><td style="padding:6px; font-weight:bold;">기존 타이어</td><td>넥센</td></tr>
-    <tr><td style="padding:6px; font-weight:bold;">신규 타이어</td><td>제너럴타이어 알티맥스 GS6 225/55R17 101W XL</td></tr>
-    <tr><td style="padding:6px; font-weight:bold;">작업 내용</td><td>4본 교체 + 림 보호 + 밸런싱 + 토크렌치 + 얼라인먼트</td></tr>
-    </table>
-  </div>
+  <div class="info-box">차량: 현대 그랜저 | 넥센 → 제너럴타이어 알티맥스 GS6 225/55R17 101W XL | 4본 교체 풀패키지</div>
+
+  <h3>🔍 기존 타이어 상태</h3>
+  <img src="https://ccnt256-code.github.io/blog-images/grandeur_gs6_2026_2.jpg" alt="기존 넥센">
 
   <h3>🛞 제너럴타이어 알티맥스 GS6란?</h3>
-  <p><span class="photo-marker">📸3</span></p>
-  <div class="tip-box">
-    ✅ 사계절 올시즌 — 여름·겨울 모두 안정적<br>
-    ✅ 정숙성과 승차감 우수<br>
-    ✅ 젖은 노면 제동력 강화 (실리카 컴파운드)<br>
-    ✅ 콘티넨탈 기술 기반의 합리적 가격대
-  </div>
+  <img src="https://ccnt256-code.github.io/blog-images/grandeur_gs6_2026_3.jpg" alt="새 타이어">
+  <div class="tip-box">콘티넨탈 AG 서브 브랜드 | 사계절 올시즌 | 정숙성+승차감 | 실리카 컴파운드 | 가성비</div>
 
-  <h3>🔧 작업 과정</h3>
-  <p><span class="photo-marker">📸4~6</span> 림 보호 → 탈거 → 장착</p>
-  <p><span class="photo-marker">📸7~9</span> 밸런싱 (0g OK + 30g 보정)</p>
-  <p><span class="photo-marker">📸10</span> 장착 완료 클로즈업</p>
-  <p><span class="photo-marker">📸11</span> 토크렌치 126.8 N·m</p>
-  <p><span class="photo-marker">📸12</span> 4륜 얼라인먼트</p>
+  <h3>🔧 STEP 1. 림 보호</h3>
+  <img src="https://ccnt256-code.github.io/blog-images/grandeur_gs6_2026_4.jpg" alt="림 보호">
+  <img src="https://ccnt256-code.github.io/blog-images/grandeur_gs6_2026_5.jpg" alt="기존 장착 상태">
+
+  <h3>STEP 2. 새 타이어 장착</h3>
+  <img src="https://ccnt256-code.github.io/blog-images/grandeur_gs6_2026_6.jpg" alt="장착 완료">
+
+  <h3>STEP 3. 정밀 밸런싱</h3>
+  <img src="https://ccnt256-code.github.io/blog-images/grandeur_gs6_2026_7.jpg" alt="밸런싱">
+  <img src="https://ccnt256-code.github.io/blog-images/grandeur_gs6_2026_8.jpg" alt="0g OK">
+  <img src="https://ccnt256-code.github.io/blog-images/grandeur_gs6_2026_9.jpg" alt="0g/30g">
+
+  <h3>STEP 4. 장착 완료</h3>
+  <img src="https://ccnt256-code.github.io/blog-images/grandeur_gs6_2026_10.jpg" alt="클로즈업">
+
+  <h3>STEP 5. 토크렌치 체결</h3>
+  <img src="https://ccnt256-code.github.io/blog-images/grandeur_gs6_2026_11.jpg" alt="토크렌치">
+
+  <h3>STEP 6. 4륜 얼라인먼트</h3>
+  <img src="https://ccnt256-code.github.io/blog-images/grandeur_gs6_2026_12.jpg" alt="얼라인먼트">
 
   <h3>❓ FAQ</h3>
-  <div class="faq-item"><strong>Q. 제너럴타이어 알티맥스 GS6는 어떤 타이어?</strong><br>A. 콘티넨탈 그룹 서브 브랜드, 사계절 올시즌, 가성비 우수</div>
-  <div class="faq-item"><strong>Q. 그랜저 타이어 사이즈는?</strong><br>A. 215/55R17, 225/55R17, 225/45R18, 235/45R18 등 (연식/트림별)</div>
-  <div class="faq-item"><strong>Q. 교체 후 얼라인먼트 필수?</strong><br>A. 권장. 편마모 방지 + 주행 안정성 향상</div>
+  <div class="faq-item"><strong>Q. 알티맥스 GS6는?</strong><br>A. 콘티넨탈 서브브랜드, 사계절 올시즌, 가성비</div>
+  <div class="faq-item"><strong>Q. 그랜저 사이즈는?</strong><br>A. 215/55R17, 225/55R17, 225/45R18 등</div>
+  <div class="faq-item"><strong>Q. 제너럴 vs 콘티넨탈?</strong><br>A. 콘티넨탈 AG 서브 브랜드, 같은 기술·품질</div>
+  <div class="faq-item"><strong>Q. 얼라인먼트 필수?</strong><br>A. 강력 권장. 편마모 방지+직진 안정성</div>
+  <div class="faq-item"><strong>Q. 토크렌치 왜?</strong><br>A. 규정 토크 체결로 볼트 풀림/파손 방지</div>
 
   <div class="shop-info">
     <b>타이어모어 울산학산점</b><br>
     📍 울산 중구 번영로 342-1 | 📞 052-265-0085<br>
-    미쉐린·콘티넨탈 공식 인증 대리점
+    🏆 미쉐린·콘티넨탈 공식 인증 대리점
   </div>
 </div>
 
