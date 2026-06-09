@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>네이버 블로그 미리보기 — 팰리세이드 타이어 교체</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, 'Malgun Gothic', sans-serif; background: #f5f5f5; }
+  
+  /* 상단 안내 (복사 대상 아님) */
+  .guide-box {
+    max-width: 720px; margin: 20px auto; padding: 20px;
+    background: #fff3cd; border: 2px solid #ffc107; border-radius: 12px;
+    font-size: 15px; line-height: 1.8;
+  }
+  .guide-box h2 { color: #856404; margin-bottom: 10px; }
+  .guide-box ol { padding-left: 20px; }
+  .guide-box .highlight { background: #ffc107; padding: 2px 6px; border-radius: 4px; font-weight: bold; }
+  
+  /* 태그/제목 복사 영역 */
+  .copy-box {
+    max-width: 720px; margin: 15px auto; padding: 15px 20px;
+    background: #d4edda; border: 2px solid #28a745; border-radius: 12px;
+    font-size: 14px; cursor: pointer; position: relative;
+  }
+  .copy-box:hover { background: #c3e6cb; }
+  .copy-box::after {
+    content: '📋 클릭하면 복사됨';
+    position: absolute; right: 15px; top: 15px;
+    font-size: 12px; color: #155724; opacity: 0.7;
+  }
+  .copy-box .label { font-weight: bold; color: #155724; margin-bottom: 5px; }
+  .copy-box .value { color: #333; }
+  
+  /* 본문 미리보기 영역 (이 영역을 복사) */
+  .preview-wrapper {
+    max-width: 720px; margin: 20px auto;
+    background: #e8f4fd; border: 2px solid #2196F3; border-radius: 12px;
+    overflow: hidden;
+  }
+  .preview-header {
+    background: #2196F3; color: white; padding: 12px 20px;
+    font-size: 15px; font-weight: bold;
+  }
+  
+  #blog-content {
+    background: white; padding: 30px 25px;
+    font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+    font-size: 16px; line-height: 1.9; color: #333;
+  }
+  #blog-content .intro {
+    font-size: 17px; color: #222; margin-bottom: 25px;
+    padding-bottom: 20px; border-bottom: 1px solid #eee;
+  }
+  #blog-content .section-title {
+    font-size: 20px; font-weight: bold; color: #1a1a1a;
+    margin: 35px 0 15px 0; padding-left: 12px;
+    border-left: 4px solid #2196F3;
+  }
+  #blog-content .photo-placeholder {
+    background: #f8f9fa; border: 2px dashed #dee2e6;
+    border-radius: 8px; padding: 20px; margin: 20px 0;
+    text-align: center; color: #868e96; font-size: 15px;
+  }
+  #blog-content .photo-placeholder .num {
+    font-size: 28px; display: block; margin-bottom: 5px;
+  }
+  #blog-content .info-box {
+    background: #f8f9fa; border-radius: 8px;
+    padding: 20px; margin: 20px 0;
+  }
+  #blog-content .info-row {
+    display: flex; padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  #blog-content .info-label {
+    font-weight: bold; color: #555; min-width: 120px;
+  }
+  #blog-content .info-value { color: #222; }
+  #blog-content p { margin-bottom: 16px; }
+  #blog-content .emphasis {
+    font-weight: bold; color: #1976D2;
+  }
+  #blog-content .closing {
+    margin-top: 30px; padding-top: 20px;
+    border-top: 2px solid #eee; text-align: center;
+    font-size: 15px; color: #666;
+  }
+  #blog-content .shop-info {
+    background: #f0f7ff; border-radius: 8px;
+    padding: 20px; margin-top: 15px; text-align: center;
+  }
+  #blog-content .shop-name {
+    font-size: 18px; font-weight: bold; color: #1565C0;
+    margin-bottom: 8px;
+  }
+  
+  /* 버튼 */
+  .select-btn {
+    display: block; max-width: 720px; margin: 15px auto;
+    padding: 15px; background: #2196F3; color: white;
+    border: none; border-radius: 8px; font-size: 16px;
+    font-weight: bold; cursor: pointer; text-align: center;
+  }
+  .select-btn:hover { background: #1976D2; }
+  
+  .tag-area {
+    max-width: 720px; margin: 15px auto; padding: 15px 20px;
+    background: #e8daef; border: 2px solid #8e44ad; border-radius: 12px;
+  }
+  .tag-area .label { font-weight: bold; color: #6c3483; margin-bottom: 8px; }
+  .tag-area .tags { color: #333; font-size: 14px; cursor: pointer; }
+  .tag-area:hover { background: #d7bde2; }
+  .tag-area::after { content: '📋 클릭하면 복사됨'; float: right; font-size: 12px; color: #6c3483; opacity: 0.7; }
+</style>
+</head>
+<body>
+
+<!-- 안내 -->
+<div class="guide-box">
+  <h2>📝 네이버 블로그 포스팅 가이드</h2>
+  <ol>
+    <li><span class="highlight">제목</span>을 클릭해서 복사 → 네이버 블로그 제목에 붙여넣기</li>
+    <li>아래 파란 영역의 <span class="highlight">본문 전체선택</span> 버튼 클릭</li>
+    <li>Ctrl+C로 복사 → SmartEditor 본문에 Ctrl+V</li>
+    <li>📸 표시된 위치에 사진 삽입</li>
+    <li><span class="highlight">태그</span>를 클릭해서 복사 → 태그란에 붙여넣기</li>
+    <li>발행!</li>
+  </ol>
+</div>
+
+<!-- 제목 -->
+<div class="copy-box" onclick="copyText(this, '팰리세이드 타이어 교체 후기 | 미쉐린 프라이머시 투어 245/50R20 | 울산 타이어모어')">
+  <div class="label">📌 제목</div>
+  <div class="value">팰리세이드 타이어 교체 후기 | 미쉐린 프라이머시 투어 245/50R20 | 울산 타이어모어</div>
+</div>
+
+<!-- 본문 전체선택 버튼 -->
+<button class="select-btn" onclick="selectContent()">📋 본문 전체선택 (클릭 후 Ctrl+C)</button>
+
+<!-- 본문 -->
+<div class="preview-wrapper">
+  <div class="preview-header">👇 아래가 블로그 본문입니다 (이 영역을 복사하세요)</div>
+  
+  <div id="blog-content">
+    
+    <div class="intro">
+      안녕하세요, <span style="font-weight:bold;">타이어모어 울산학산점</span>입니다 😊<br><br>
+      오늘은 <span style="font-weight:bold; color:#1565C0;">현대 팰리세이드</span>의 타이어 교체 작업을 소개해 드릴게요.<br>
+      대형 SUV인 만큼 타이어 선택이 중요한 차량인데요, 어떤 타이어로 교체했고 어떤 작업을 했는지 자세히 보여드리겠습니다!
+    </div>
+
+    <div class="photo-placeholder">
+      <span class="num">📸 1</span>
+      작업 전 팰리세이드 전체 모습
+    </div>
+
+    <!-- 작업 정보 -->
+    <div class="section-title">🚗 작업 정보</div>
+    
+    <div class="info-box">
+      <div class="info-row">
+        <span class="info-label">차량</span>
+        <span class="info-value">현대 팰리세이드 (화이트)</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">타이어</span>
+        <span class="info-value">미쉐린 Primacy Tour A/S 245/50R20 102V</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">교체 수량</span>
+        <span class="info-value">4본 전부 교체</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">작업 내용</span>
+        <span class="info-value">타이어 교체 + 림 보호 테이핑 + 밸런싱 + 토크렌치 체결 + 4륜 얼라인먼트</span>
+      </div>
+    </div>
+
+    <div class="photo-placeholder">
+      <span class="num">📸 2</span>
+      교체 전 기존 타이어 상태
+    </div>
+
+    <!-- 타이어 소개 -->
+    <div class="section-title">🔵 미쉐린 Primacy Tour A/S란?</div>
+    
+    <p>
+      미쉐린 <span class="emphasis">프라이머시 투어 A/S</span>는 미쉐린의 프리미엄 사계절 타이어입니다.<br><br>
+      팰리세이드 같은 대형 SUV에 특히 잘 맞는 타이어인데요,<br>
+      <span style="font-weight:bold;">정숙성</span>과 <span style="font-weight:bold;">승차감</span>이 뛰어나면서도 젖은 노면에서의 제동력까지 갖추고 있어요.
+    </p>
+    <p>
+      ✅ 뛰어난 정숙성 — 대형 SUV의 로드노이즈 확 줄여줌<br>
+      ✅ 우수한 젖은 노면 성능 — 장마철에도 안심<br>
+      ✅ 긴 수명 — 미쉐린 특유의 내마모성<br>
+      ✅ 사계절 대응 — 울산 날씨에 딱 맞는 선택
+    </p>
+
+    <div class="photo-placeholder">
+      <span class="num">📸 3</span>
+      새 미쉐린 타이어 클로즈업
+    </div>
+
+    <!-- 작업 과정 -->
+    <div class="section-title">🔧 작업 과정</div>
+    
+    <p style="font-weight:bold; font-size:17px; margin-bottom:10px;">1️⃣ 림 보호 테이핑</p>
+    <p>
+      타이어 교체 시 휠 림에 스크래치가 생길 수 있어요.<br>
+      저희는 작업 전 <span class="emphasis">림 보호 테이핑</span>을 꼼꼼히 해서 휠을 보호합니다.<br>
+      특히 팰리세이드의 20인치 대형 휠은 교체 비용이 높기 때문에 더 신경 쓰고 있어요.
+    </p>
+
+    <div class="photo-placeholder">
+      <span class="num">📸 4</span>
+      림 보호 테이핑 작업 사진
+    </div>
+
+    <p style="font-weight:bold; font-size:17px; margin-bottom:10px;">2️⃣ 타이어 장착 + 휠 밸런싱</p>
+    <p>
+      새 타이어 장착 후 <span class="emphasis">정밀 휠 밸런싱</span>을 진행했습니다.<br><br>
+      이번 작업에서는 밸런싱 결과 <span style="font-weight:bold; color:#e53935;">0g</span>! 💯<br>
+      추가 웨이트 없이 완벽한 밸런스가 나왔어요.<br>
+      미쉐린 타이어의 제조 품질이 확실히 좋습니다.
+    </p>
+
+    <div class="photo-placeholder">
+      <span class="num">📸 5</span>
+      밸런싱 장비 화면 (0g 표시)
+    </div>
+
+    <p style="font-weight:bold; font-size:17px; margin-bottom:10px;">3️⃣ 디지털 토크렌치 체결</p>
+    <p>
+      휠 볼트는 제조사 권장 토크값인 <span class="emphasis">131.4 N·m</span>으로 정확하게 체결했습니다.<br><br>
+      디지털 토크렌치로 하나하나 확인하면서 조이기 때문에<br>
+      과체결이나 미체결 걱정이 없어요.
+    </p>
+
+    <div class="photo-placeholder">
+      <span class="num">📸 6</span>
+      토크렌치 체결 작업 사진
+    </div>
+
+    <p style="font-weight:bold; font-size:17px; margin-bottom:10px;">4️⃣ 4륜 얼라인먼트</p>
+    <p>
+      타이어 교체 후에는 <span class="emphasis">4륜 얼라인먼트</span>가 필수입니다.<br><br>
+      얼라인먼트가 틀어져 있으면 새 타이어도 편마모가 생기고,<br>
+      핸들 쏠림이나 주행 불안정의 원인이 됩니다.<br><br>
+      저희는 타이어 교체 시 얼라인먼트까지 기본으로 포함해서 작업하고 있어요.
+    </p>
+
+    <div class="photo-placeholder">
+      <span class="num">📸 7</span>
+      얼라인먼트 장비 / 작업 사진
+    </div>
+
+    <div class="photo-placeholder">
+      <span class="num">📸 8</span>
+      작업 완료 후 팰리세이드 모습
+    </div>
+
+    <!-- 마무리 -->
+    <div class="section-title">✨ 작업을 마치며</div>
+    
+    <p>
+      팰리세이드는 차체가 크고 무거운 만큼, 타이어 선택이 승차감과 안전에 직접적인 영향을 줍니다.<br><br>
+      미쉐린 프라이머시 투어 A/S는 정숙성과 안전성 모두 만족시키는 타이어라<br>
+      팰리세이드 오너분들께 자신 있게 추천드려요!<br><br>
+      타이어 교체, 얼라인먼트, 밸런싱까지<br>
+      <span class="emphasis">한 번에 꼼꼼하게</span> 작업해 드리겠습니다 😊
+    </p>
+
+    <div class="closing">
+      <div class="shop-info">
+        <div class="shop-name">🏪 타이어모어 울산학산점</div>
+        <p>
+          미쉐린 · 콘티넨탈 공식 인증 대리점<br>
+          📍 울산 중구 번영로 342-1<br>
+          📞 052-265-0085<br><br>
+          <span style="font-size:14px; color:#888;">방문 전 전화 주시면 재고 확인 도와드립니다!</span>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- 태그 -->
+<div class="tag-area" onclick="copyText(this, '팰리세이드타이어,팰리세이드타이어교체,미쉐린,프라이머시투어,PrimacyTourAS,울산타이어,울산타이어교체,타이어모어,타이어모어울산학산점,2455020,현대팰리세이드,대형SUV타이어,미쉐린공식대리점,휠밸런싱,4륜얼라인먼트,울산중구타이어')">
+  <div class="label">🏷️ 태그 (클릭해서 복사)</div>
+  <div class="tags">팰리세이드타이어, 팰리세이드타이어교체, 미쉐린, 프라이머시투어, PrimacyTourAS, 울산타이어, 울산타이어교체, 타이어모어, 타이어모어울산학산점, 2455020, 현대팰리세이드, 대형SUV타이어, 미쉐린공식대리점, 휠밸런싱, 4륜얼라인먼트, 울산중구타이어</div>
+</div>
+
+<script>
+function selectContent() {
+  const el = document.getElementById('blog-content');
+  const range = document.createRange();
+  range.selectNodeContents(el);
+  const sel = window.getSelection();
+  sel.removeAllRanges();
+  sel.addRange(range);
+  
+  // 버튼 텍스트 변경
+  event.target.textContent = '✅ 선택됨! Ctrl+C로 복사하세요';
+  setTimeout(() => {
+    event.target.textContent = '📋 본문 전체선택 (클릭 후 Ctrl+C)';
+  }, 3000);
+}
+
+function copyText(el, text) {
+  navigator.clipboard.writeText(text).then(() => {
+    const original = el.style.background;
+    el.style.background = '#c8e6c9';
+    setTimeout(() => { el.style.background = original; }, 1000);
+  });
+}
+</script>
+
+</body>
+</html>
