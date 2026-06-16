@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>네이버 블로그 미리보기 — 팰리세이드 미쉐린 프라이머시 투어</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Malgun Gothic', '맑은 고딕', sans-serif; background: #f5f5f5; padding: 20px; max-width: 800px; margin: 0 auto; color: #333; }
+h1 { font-size: 20px; text-align: center; margin-bottom: 24px; color: #222; }
+
+.copy-box { border-radius: 12px; padding: 20px; margin-bottom: 20px; cursor: pointer; position: relative; transition: box-shadow 0.2s; }
+.copy-box:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.15); }
+.copy-box .label { font-size: 13px; font-weight: bold; margin-bottom: 8px; }
+.copy-box .hint { font-size: 11px; color: #666; margin-top: 8px; }
+
+.title-box { background: #e8f5e9; border: 2px solid #4caf50; }
+.title-box .label { color: #2e7d32; }
+.title-box .content { font-size: 18px; font-weight: bold; color: #1b5e20; }
+
+.tag-box { background: #f3e5f5; border: 2px solid #9c27b0; }
+.tag-box .label { color: #6a1b9a; }
+.tag-box .content { font-size: 14px; color: #4a148c; line-height: 1.8; }
+
+.body-box { background: #e3f2fd; border: 2px solid #1976d2; padding: 0; overflow: hidden; }
+.body-box .label { color: #0d47a1; padding: 20px 20px 8px; }
+.body-box .hint { padding: 0 20px 12px; }
+.body-box textarea { width: 100%; min-height: 200px; border: none; padding: 16px 20px; font-size: 13px; font-family: monospace; background: #fff; resize: vertical; }
+
+.preview-section { background: #fff; border-radius: 12px; padding: 32px 24px; margin-top: 24px; box-shadow: 0 1px 6px rgba(0,0,0,0.08); }
+
+/* Blog post styles */
+.blog-post { line-height: 1.9; font-size: 16px; color: #333; }
+.blog-post p { margin-bottom: 18px; }
+.blog-post .info-box { background: #f8f9fa; border-left: 4px solid #1976d2; padding: 16px 20px; margin: 24px 0; border-radius: 0 8px 8px 0; line-height: 2.0; }
+.blog-post .photo-placeholder { background: #fff3e0; border: 2px dashed #ff9800; border-radius: 8px; padding: 20px; text-align: center; margin: 20px 0; color: #e65100; font-weight: bold; font-size: 14px; }
+.blog-post .section-title { font-size: 18px; font-weight: bold; color: #1565c0; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 2px solid #e3f2fd; }
+.blog-post .shop-info { background: #e8f5e9; border-radius: 12px; padding: 20px 24px; margin-top: 32px; line-height: 2.0; text-align: center; }
+.blog-post .divider { text-align: center; color: #ccc; margin: 28px 0; font-size: 20px; letter-spacing: 8px; }
+
+.copied-toast { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: #333; color: #fff; padding: 12px 24px; border-radius: 8px; font-size: 14px; display: none; z-index: 999; }
+
+.usage-guide { background: #fff8e1; border: 1px solid #ffc107; border-radius: 8px; padding: 16px; margin-bottom: 20px; font-size: 13px; line-height: 1.7; }
+.usage-guide strong { color: #f57f17; }
+</style>
+</head>
+<body>
+
+<h1>📝 네이버 블로그 미리보기</h1>
+
+<div class="usage-guide">
+<strong>📋 사용법:</strong><br>
+1️⃣ 🟢 제목 클릭 → 복사 → 네이버 제목란 붙여넣기<br>
+2️⃣ 🔵 본문 영역 전체선택(Ctrl+A) → 복사(Ctrl+C) → SmartEditor 붙여넣기(Ctrl+V)<br>
+3️⃣ 📸 표시된 위치에 사진 삽입<br>
+4️⃣ 🟣 태그 클릭 → 복사 → 태그란 붙여넣기
+</div>
+
+<!-- 제목 -->
+<div class="copy-box title-box" onclick="copyText(this, '울산 팰리세이드 미쉐린 프라이머시 투어 교체 | 마모 완료 후 같은 타이어 재장착한 이유')">
+  <div class="label">🟢 제목 (클릭하면 복사)</div>
+  <div class="content">울산 팰리세이드 미쉐린 프라이머시 투어 교체 | 마모 완료 후 같은 타이어 재장착한 이유</div>
+  <div class="hint">👆 클릭하면 자동 복사됩니다</div>
+</div>
+
+<!-- 본문 HTML -->
+<div class="body-box">
+  <div class="label">🔵 본문 (전체선택 → 복사 → SmartEditor 붙여넣기)</div>
+  <div class="hint">아래 텍스트 영역을 Ctrl+A → Ctrl+C 하세요</div>
+  <textarea id="bodyHtml" onclick="this.select()" readonly>안녕하세요, 타이어모어 울산학산점 서휘입니다 😊
+
+오늘은 팰리세이드 오너분이 타이어 마모가 다 되어서 교체하러 방문해 주셨어요.
+미쉐린 정품등록도 하시고, 미쉐린 이벤트까지 꼼꼼하게 확인하신 후에 오신 분이라
+타이어에 관심도 많으시고 차량 관리를 정말 잘 하시는 분이시더라고요 ㅎㅎ
+
+📸 [사진 1] 차량 전체샷 — 팰리세이드 입고 모습
+
+━━━━━━━━━━━━━━━━━━━━
+
+🚗 차량: 현대 팰리세이드
+🔧 기존 타이어: 미쉐린 프라이머시 투어 A/S 245/50R20
+✅ 새 타이어: 미쉐린 프라이머시 투어 A/S 245/50R20
+📋 작업: 4본 전량 교체 + 림 보호 테이핑 + 휠 밸런싱
+
+━━━━━━━━━━━━━━━━━━━━
+
+■ 기존 타이어 상태 확인
+
+탈거한 타이어 4본을 확인해 보니
+트레드가 거의 마모 한계선까지 내려와 있었습니다.
+고르게 닳아 있어서 평소 관리를 잘 하신 게 느껴졌어요.
+
+그래도 이 정도면 빗길 제동력이나 접지력이 확 떨어지는 상태라
+교체 시기가 딱 맞았습니다 👍
+
+📸 [사진 2] 탈거한 미쉐린 프라이머시 투어 4본 — 마모 상태
+
+━━━━━━━━━━━━━━━━━━━━
+
+■ 같은 타이어로 재장착한 이유
+
+기존에 장착되어 있던 미쉐린 프라이머시 투어 A/S —
+팰리세이드 같은 대형 SUV에서 정숙성과 승차감 밸런스가 정말 좋은 타이어입니다.
+
+고객님도 "이전 타이어가 조용하고 좋았다"고 하셔서
+동일 모델로 다시 장착하기로 했습니다.
+한번 써보고 만족하셔서 같은 걸로 다시 선택하시는 분들이 꽤 많아요 ㅎㅎ
+
+━━━━━━━━━━━━━━━━━━━━
+
+■ 작업 과정
+
+20인치 글로시 다크 휠이라 스크래치에 민감한 마감이에요.
+그래서 작업 전에 림 보호 블루 테이핑을 먼저 해줍니다.
+테이핑 하나로 휠 상태가 확 달라지거든요.
+
+📸 [사진 4] 림 보호 블루 테이핑 — 20인치 휠 보호
+
+새 타이어를 체인저에 올리고 장착 진행합니다.
+비드 크림 도포 후 비드 시팅까지 깔끔하게 완료!
+
+📸 [사진 3] 새 미쉐린 프라이머시 투어 장착 중
+
+밸런싱까지 맞추고, 규정 토크로 체결해서 마무리했습니다.
+
+━━━━━━━━━━━━━━━━━━━━
+
+■ 마무리
+
+새 타이어 장착하고 나니 트레드 패턴이 선명하게 살아나서
+보기만 해도 시원하네요 😊
+
+팰리세이드에 프라이머시 투어 — 역시 잘 어울리는 조합입니다.
+정숙하고 편안한 주행 오래오래 즐기시길 바랍니다!
+
+미쉐린 정품등록 혜택, 이벤트 정보 궁금하신 분들도
+편하게 문의 주세요~
+
+━━━━━━━━━━━━━━━━━━━━
+
+🏪 타이어모어 울산학산점
+미쉐린 · 콘티넨탈 공식 인증 대리점
+📍 울산 중구 번영로 342-1
+📞 052-265-0085</textarea>
+</div>
+
+<!-- 태그 -->
+<div class="copy-box tag-box" onclick="copyText(this, '팰리세이드,팰리세이드타이어,미쉐린,미쉐린프라이머시투어,245/50R20,울산타이어,울산타이어교체,타이어모어,타이어모어울산학산점,울산중구타이어,미쉐린공식대리점,미쉐린정품등록,대형SUV타이어,팰리세이드미쉐린,휠밸런싱,림보호')">
+  <div class="label">🟣 태그 (클릭하면 복사)</div>
+  <div class="content">팰리세이드, 팰리세이드타이어, 미쉐린, 미쉐린프라이머시투어, 245/50R20, 울산타이어, 울산타이어교체, 타이어모어, 타이어모어울산학산점, 울산중구타이어, 미쉐린공식대리점, 미쉐린정품등록, 대형SUV타이어, 팰리세이드미쉐린, 휠밸런싱, 림보호</div>
+  <div class="hint">👆 클릭하면 자동 복사됩니다</div>
+</div>
+
+<!-- 미리보기 -->
+<h2 style="font-size:16px; margin: 32px 0 12px; color:#666;">👁️ 실제 블로그 미리보기</h2>
+<div class="preview-section">
+<div class="blog-post">
+
+<p>안녕하세요, 타이어모어 울산학산점 서휘입니다 😊</p>
+
+<p>오늘은 팰리세이드 오너분이 타이어 마모가 다 되어서 교체하러 방문해 주셨어요.<br>
+미쉐린 정품등록도 하시고, 미쉐린 이벤트까지 꼼꼼하게 확인하신 후에 오신 분이라<br>
+타이어에 관심도 많으시고 차량 관리를 정말 잘 하시는 분이시더라고요 ㅎㅎ</p>
+
+<div class="photo-placeholder">📸 [사진 1] 차량 전체샷 — 팰리세이드 입고 모습</div>
+
+<div class="divider">━ ━ ━</div>
+
+<div class="info-box">
+🚗 <b>차량:</b> 현대 팰리세이드<br>
+🔧 <b>기존 타이어:</b> 미쉐린 프라이머시 투어 A/S 245/50R20<br>
+✅ <b>새 타이어:</b> 미쉐린 프라이머시 투어 A/S 245/50R20<br>
+📋 <b>작업:</b> 4본 전량 교체 + 림 보호 테이핑 + 휠 밸런싱
+</div>
+
+<div class="divider">━ ━ ━</div>
+
+<div class="section-title">기존 타이어 상태 확인</div>
+
+<p>탈거한 타이어 4본을 확인해 보니<br>
+트레드가 거의 마모 한계선까지 내려와 있었습니다.<br>
+고르게 닳아 있어서 평소 관리를 잘 하신 게 느껴졌어요.</p>
+
+<p>그래도 이 정도면 빗길 제동력이나 접지력이 확 떨어지는 상태라<br>
+교체 시기가 딱 맞았습니다 👍</p>
+
+<div class="photo-placeholder">📸 [사진 2] 탈거한 미쉐린 프라이머시 투어 4본 — 마모 상태</div>
+
+<div class="divider">━ ━ ━</div>
+
+<div class="section-title">같은 타이어로 재장착한 이유</div>
+
+<p>기존에 장착되어 있던 미쉐린 프라이머시 투어 A/S —<br>
+팰리세이드 같은 대형 SUV에서 정숙성과 승차감 밸런스가 정말 좋은 타이어입니다.</p>
+
+<p>고객님도 "이전 타이어가 조용하고 좋았다"고 하셔서<br>
+동일 모델로 다시 장착하기로 했습니다.<br>
+한번 써보고 만족하셔서 같은 걸로 다시 선택하시는 분들이 꽤 많아요 ㅎㅎ</p>
+
+<div class="divider">━ ━ ━</div>
+
+<div class="section-title">작업 과정</div>
+
+<p>20인치 글로시 다크 휠이라 스크래치에 민감한 마감이에요.<br>
+그래서 작업 전에 림 보호 블루 테이핑을 먼저 해줍니다.<br>
+테이핑 하나로 휠 상태가 확 달라지거든요.</p>
+
+<div class="photo-placeholder">📸 [사진 4] 림 보호 블루 테이핑 — 20인치 휠 보호</div>
+
+<p>새 타이어를 체인저에 올리고 장착 진행합니다.<br>
+비드 크림 도포 후 비드 시팅까지 깔끔하게 완료!</p>
+
+<div class="photo-placeholder">📸 [사진 3] 새 미쉐린 프라이머시 투어 장착 중</div>
+
+<p>밸런싱까지 맞추고, 규정 토크로 체결해서 마무리했습니다.</p>
+
+<div class="divider">━ ━ ━</div>
+
+<div class="section-title">마무리</div>
+
+<p>새 타이어 장착하고 나니 트레드 패턴이 선명하게 살아나서<br>
+보기만 해도 시원하네요 😊</p>
+
+<p>팰리세이드에 프라이머시 투어 — 역시 잘 어울리는 조합입니다.<br>
+정숙하고 편안한 주행 오래오래 즐기시길 바랍니다!</p>
+
+<p>미쉐린 정품등록 혜택, 이벤트 정보 궁금하신 분들도<br>
+편하게 문의 주세요~</p>
+
+<div class="divider">━ ━ ━</div>
+
+<div class="shop-info">
+🏪 <b>타이어모어 울산학산점</b><br>
+미쉐린 · 콘티넨탈 공식 인증 대리점<br>
+📍 울산 중구 번영로 342-1<br>
+📞 052-265-0085
+</div>
+
+</div>
+</div>
+
+<div id="toast" class="copied-toast">✅ 복사되었습니다!</div>
+
+<script>
+function copyText(el, text) {
+  navigator.clipboard.writeText(text).then(() => {
+    const toast = document.getElementById('toast');
+    toast.style.display = 'block';
+    setTimeout(() => { toast.style.display = 'none'; }, 1500);
+  });
+}
+</script>
+
+</body>
+</html>
