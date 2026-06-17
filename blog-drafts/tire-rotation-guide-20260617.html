@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>미리보기 — 타이어 로테이션(위치 교환) 완벽 가이드 2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif; background: #f5f5f5; padding: 20px; }
+  .container { max-width: 860px; margin: 0 auto; }
+  h1.page-title { text-align: center; font-size: 1.4em; margin-bottom: 24px; color: #333; }
+  
+  /* SEO Box */
+  .seo-box {
+    background: #fff8dc; border: 2px solid #e6c200; border-radius: 8px;
+    padding: 18px 20px; margin-bottom: 20px; cursor: pointer; position: relative;
+  }
+  .seo-box h2 { font-size: 1em; color: #b8860b; margin-bottom: 10px; }
+  .seo-box pre { white-space: pre-wrap; font-size: 0.85em; line-height: 1.6; color: #333; }
+  .seo-box .copy-hint { position: absolute; top: 12px; right: 16px; font-size: 0.75em; color: #b8860b; }
+  .seo-box.copied .copy-hint { color: #2e7d32; }
+  
+  /* HTML Box */
+  .html-box {
+    background: #e8f5e9; border: 2px solid #4caf50; border-radius: 8px;
+    padding: 18px 20px; margin-bottom: 20px;
+  }
+  .html-box h2 { font-size: 1em; color: #2e7d32; margin-bottom: 10px; }
+  .html-box textarea {
+    width: 100%; height: 300px; font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.8em; border: 1px solid #a5d6a7; border-radius: 4px; padding: 10px;
+    resize: vertical; background: #fff;
+  }
+  
+  /* Preview */
+  .preview-box {
+    background: #fff; border: 1px solid #ddd; border-radius: 8px;
+    padding: 30px; margin-top: 20px;
+  }
+  .preview-box h2.preview-title { font-size: 1em; color: #666; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #eee; }
+  
+  .toast {
+    position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+    background: #333; color: #fff; padding: 10px 24px; border-radius: 20px;
+    font-size: 0.85em; opacity: 0; transition: opacity 0.3s; z-index: 9999; pointer-events: none;
+  }
+  .toast.show { opacity: 1; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1 class="page-title">📝 티스토리 블로그 미리보기</h1>
+  
+  <!-- SEO 설정 -->
+  <div class="seo-box" id="seoBox" onclick="copySEO()">
+    <span class="copy-hint">📋 클릭하면 복사</span>
+    <h2>⭐ 티스토리 SEO 설정</h2>
+    <pre id="seoText">[제목] 타이어 로테이션(위치 교환) 완벽 가이드 2026 | 주기·방법·비용 총정리
+[설명] 타이어 로테이션이란? 전륜·후륜·사륜 구동별 교환 패턴, 적정 주기(8,000~10,000km), 비용(2~4만 원), DIY 방법까지 한 번에 정리했습니다. 타이어 수명을 20% 이상 늘리는 필수 관리법!
+[태그] 타이어로테이션,타이어위치교환,타이어관리,타이어수명,전륜구동타이어,후륜구동타이어,사륜구동타이어,타이어교체주기,타이어비용,울산타이어
+[카테고리] 타이어 관리/정비</pre>
+  </div>
+  
+  <!-- HTML 본문 -->
+  <div class="html-box">
+    <h2>📄 전체 HTML (클릭하면 전체 선택)</h2>
+    <textarea id="htmlContent" onclick="this.select()" readonly></textarea>
+  </div>
+  
+  <!-- 미리보기 -->
+  <div class="preview-box">
+    <h2 class="preview-title">👁️ 실제 미리보기</h2>
+    <div id="previewArea"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast">복사 완료!</div>
+
+<script>
+const blogHTML = `<!--
+★ 티스토리 SEO 설정 ★
+[제목] 타이어 로테이션(위치 교환) 완벽 가이드 2026 | 주기·방법·비용 총정리
+[설명] 타이어 로테이션이란? 전륜·후륜·사륜 구동별 교환 패턴, 적정 주기(8,000~10,000km), 비용(2~4만 원), DIY 방법까지 한 번에 정리했습니다. 타이어 수명을 20% 이상 늘리는 필수 관리법!
+[태그] 타이어로테이션,타이어위치교환,타이어관리,타이어수명,전륜구동타이어,후륜구동타이어,사륜구동타이어,타이어교체주기,타이어비용,울산타이어
+[카테고리] 타이어 관리/정비
+-->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "타이어 로테이션(위치 교환) 완벽 가이드 2026 | 주기·방법·비용 총정리",
+  "description": "타이어 로테이션이란? 전륜·후륜·사륜 구동별 교환 패턴, 적정 주기, 비용, DIY 방법까지 한 번에 정리한 완벽 가이드.",
+  "author": {
+    "@type": "Organization",
+    "name": "타이어모어 울산학산점"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "타이어모어 울산학산점"
+  },
+  "datePublished": "2026-06-17",
+  "dateModified": "2026-06-17",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://usmichelin.tistory.com/"
+  },
+  "image": "https://ccnt256-code.github.io/blog-images/tire-rotation-guide-20260617.jpg"
+}
+<\\/script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "타이어 로테이션이란 무엇인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "타이어 로테이션은 차량의 앞·뒤(또는 좌·우) 타이어 위치를 주기적으로 교환하여 마모를 균일하게 만드는 정비 방법입니다. 이를 통해 타이어 수명을 20% 이상 연장할 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "타이어 로테이션 주기는 얼마나 되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "일반적으로 8,000~10,000km마다 또는 6개월에 한 번 로테이션을 권장합니다. 전륜구동 차량은 앞 타이어 마모가 빠르므로 더 짧은 주기(5,000~8,000km)가 좋습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "타이어 로테이션 비용은 얼마인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "전문 정비소 기준 2~4만 원 정도이며, 타이어 구매처에서 무료로 제공하는 경우도 많습니다. 비용 대비 타이어 수명 연장 효과가 크므로 가성비 좋은 정비입니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "방향성 타이어도 로테이션이 가능한가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "가능합니다. 다만 방향성 타이어는 회전 방향이 정해져 있어 같은 쪽(좌→좌, 우→우) 앞뒤로만 교환해야 합니다. 좌우 교차는 타이어를 림에서 탈거 후 재장착해야 합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "앞뒤 타이어 사이즈가 다른 차량도 로테이션이 되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "앞뒤 타이어 규격이 다른 스태거드(staggered) 셋업 차량은 일반적인 앞뒤 로테이션이 불가합니다. 같은 축 내 좌우 교환만 가능하며, 이 경우에도 방향성 타이어라면 교환이 제한됩니다."
+      }
+    }
+  ]
+}
+<\\/script>
+
+<div style="max-width:760px; margin:0 auto; font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif; color:#333; line-height:1.85; font-size:16px;">
+
+<p style="font-size:15px; color:#888; margin-bottom:6px;">📅 2026.06.17 · 타이어모어 울산학산점</p>
+
+<p style="background:#f0f7ff; border-left:4px solid #1a73e8; padding:16px 20px; border-radius:0 8px 8px 0; font-size:15.5px; margin-bottom:28px; line-height:1.8;">
+<strong>타이어 로테이션(위치 교환)</strong>은 차량 타이어의 위치를 주기적으로 바꿔 마모를 균일하게 만드는 필수 정비입니다. <strong>8,000~10,000km마다</strong> 실시하면 타이어 수명을 <strong>20% 이상 연장</strong>할 수 있고, 비용은 <strong>2~4만 원</strong> 수준으로 가성비 최고의 차량 관리법이죠. 이 글에서 구동 방식별 교환 패턴, 적정 주기, 비용, 주의사항까지 한 번에 알려드립니다.
+</p>
+
+<img src="https://ccnt256-code.github.io/blog-images/tire-rotation-guide-20260617.jpg" alt="타이어 로테이션 가이드 - 구동 방식별 교환 패턴" style="width:100%; border-radius:10px; margin-bottom:28px;" />
+
+<!-- 광고 위치 728x90 -->
+
+<h2 style="font-size:22px; color:#1a73e8; margin:36px 0 16px; padding-bottom:8px; border-bottom:2px solid #e3f2fd;">🔄 타이어 로테이션이란?</h2>
+
+<p>타이어 로테이션은 말 그대로 <strong>타이어의 장착 위치를 바꿔주는 것</strong>입니다. 왜 이런 작업이 필요할까요?</p>
+
+<p>자동차는 구조적으로 <strong>네 바퀴에 가해지는 하중이 다릅니다</strong>. 대부분의 차량은 엔진이 앞에 있어 앞쪽이 더 무겁고, 전륜구동(FF) 차량은 여기에 구동력과 조향까지 앞바퀴가 담당하니 마모가 훨씬 빠릅니다. 실제로 전륜구동 차량의 앞 타이어는 뒷 타이어보다 <strong>약 2배 빠르게 마모</strong>된다는 통계도 있어요.</p>
+
+<p>로테이션을 하지 않으면 앞 타이어만 먼저 닳아서, 아직 멀쩡한 뒷 타이어와 함께 4개를 모두 교체해야 하는 상황이 옵니다. <strong>로테이션 한 번이면 이 낭비를 막을 수 있다</strong>는 거죠.</p>
+
+<h2 style="font-size:22px; color:#1a73e8; margin:36px 0 16px; padding-bottom:8px; border-bottom:2px solid #e3f2fd;">📋 타이어가 불균일하게 마모되는 이유는?</h2>
+
+<ul style="margin:12px 0 20px 20px; line-height:2;">
+<li><strong>하중 차이</strong>: 엔진이 앞에 있어 프론트 액슬에 더 많은 무게가 실림</li>
+<li><strong>구동력</strong>: 전륜구동(FF)은 앞바퀴가 동력 전달 + 조향 담당 → 마모 가속</li>
+<li><strong>제동력</strong>: 브레이킹 시 차체 무게가 앞으로 쏠려 앞 타이어에 부담 집중</li>
+<li><strong>조향 마찰</strong>: 핸들을 꺾을 때마다 앞 타이어에 횡방향 마찰 발생</li>
+<li><strong>도로 환경</strong>: 우회전이 많은 한국 도로 특성상 좌측 앞 타이어 마모가 더 빠름</li>
+<li><strong>정렬 불량</strong>: 휠 얼라인먼트가 틀어지면 특정 타이어만 편마모 발생</li>
+</ul>
+
+<h2 style="font-size:22px; color:#1a73e8; margin:36px 0 16px; padding-bottom:8px; border-bottom:2px solid #e3f2fd;">🚗 구동 방식별 로테이션 패턴은?</h2>
+
+<p>타이어 로테이션의 핵심은 <strong>구동 방식에 맞는 올바른 패턴</strong>을 적용하는 것입니다. 잘못된 패턴은 오히려 역효과를 낼 수 있어요.</p>
+
+<table style="width:100%; border-collapse:collapse; margin:20px 0; font-size:14.5px;">
+<thead>
+<tr style="background:#1a73e8; color:#fff;">
+<th style="padding:12px 10px; text-align:center; border:1px solid #ddd;">구동 방식</th>
+<th style="padding:12px 10px; text-align:center; border:1px solid #ddd;">교환 패턴</th>
+<th style="padding:12px 10px; text-align:center; border:1px solid #ddd;">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background:#f8f9fa;">
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd; font-weight:bold;">전륜구동 (FF)</td>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd;">포워드 크로스</td>
+<td style="padding:12px 10px; border:1px solid #ddd;">앞 타이어 → 뒤 같은 쪽으로 이동<br>뒤 타이어 → 앞 반대쪽으로 교차 이동</td>
+</tr>
+<tr>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd; font-weight:bold;">후륜구동 (FR)</td>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd;">리어워드 크로스</td>
+<td style="padding:12px 10px; border:1px solid #ddd;">뒤 타이어 → 앞 같은 쪽으로 이동<br>앞 타이어 → 뒤 반대쪽으로 교차 이동</td>
+</tr>
+<tr style="background:#f8f9fa;">
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd; font-weight:bold;">사륜구동 (AWD/4WD)</td>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd;">X 패턴 교차</td>
+<td style="padding:12px 10px; border:1px solid #ddd;">좌앞 ↔ 우뒤, 우앞 ↔ 좌뒤<br>대각선으로 완전 교차</td>
+</tr>
+<tr>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd; font-weight:bold;">방향성 타이어</td>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd;">앞뒤 직선 교환</td>
+<td style="padding:12px 10px; border:1px solid #ddd;">같은 쪽 앞뒤로만 교환<br>(좌앞↔좌뒤, 우앞↔우뒤)</td>
+</tr>
+<tr style="background:#f8f9fa;">
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd; font-weight:bold;">앞뒤 사이즈 다른 차량</td>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd;">좌우 교환만</td>
+<td style="padding:12px 10px; border:1px solid #ddd;">같은 축(앞끼리, 뒤끼리) 좌우만 교환<br>방향성 타이어면 로테이션 불가</td>
+</tr>
+</tbody>
+</table>
+
+<p style="background:#fff3e0; padding:14px 18px; border-radius:8px; font-size:14.5px; margin:16px 0;">
+💡 <strong>팁:</strong> 내 차가 어떤 구동 방식인지 모르겠다면? 차량 매뉴얼을 확인하거나, 정비소에 방문하시면 바로 알려드립니다. 보통 국산 세단(아반떼, 쏘나타 등)은 전륜구동, 제네시스·BMW 등은 후륜구동이 많아요.
+</p>
+
+<h2 style="font-size:22px; color:#1a73e8; margin:36px 0 16px; padding-bottom:8px; border-bottom:2px solid #e3f2fd;">⏰ 타이어 로테이션 적정 주기는?</h2>
+
+<p>타이어 제조사와 차량 제조사마다 권장 주기가 약간 다르지만, 일반적인 기준은 다음과 같습니다:</p>
+
+<table style="width:100%; border-collapse:collapse; margin:20px 0; font-size:14.5px;">
+<thead>
+<tr style="background:#43a047; color:#fff;">
+<th style="padding:12px 10px; text-align:center; border:1px solid #ddd;">구분</th>
+<th style="padding:12px 10px; text-align:center; border:1px solid #ddd;">권장 주기</th>
+<th style="padding:12px 10px; text-align:center; border:1px solid #ddd;">비고</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background:#f8f9fa;">
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd;">일반 기준</td>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd; font-weight:bold;">8,000~10,000km</td>
+<td style="padding:12px 10px; border:1px solid #ddd;">또는 6개월에 한 번</td>
+</tr>
+<tr>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd;">전륜구동 차량</td>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd; font-weight:bold;">5,000~8,000km</td>
+<td style="padding:12px 10px; border:1px solid #ddd;">앞 타이어 마모가 빨라 더 짧은 주기 권장</td>
+</tr>
+<tr style="background:#f8f9fa;">
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd;">고성능 차량</td>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd; font-weight:bold;">5,000km</td>
+<td style="padding:12px 10px; border:1px solid #ddd;">고출력·고토크로 마모 빠름</td>
+</tr>
+<tr>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd;">SUV/트럭</td>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd; font-weight:bold;">8,000~12,000km</td>
+<td style="padding:12px 10px; border:1px solid #ddd;">차체 무거워 로테이션 효과 큼</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>쉽게 기억하는 방법:</strong> 엔진오일 교환할 때 타이어 로테이션도 함께! 대부분의 차량이 비슷한 주기이기 때문에 같이 하면 잊지 않고 관리할 수 있습니다.</p>
+
+<h2 style="font-size:22px; color:#1a73e8; margin:36px 0 16px; padding-bottom:8px; border-bottom:2px solid #e3f2fd;">💰 타이어 로테이션 비용은 얼마나 들까?</h2>
+
+<table style="width:100%; border-collapse:collapse; margin:20px 0; font-size:14.5px;">
+<thead>
+<tr style="background:#ff8f00; color:#fff;">
+<th style="padding:12px 10px; text-align:center; border:1px solid #ddd;">장소</th>
+<th style="padding:12px 10px; text-align:center; border:1px solid #ddd;">비용</th>
+<th style="padding:12px 10px; text-align:center; border:1px solid #ddd;">비고</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background:#f8f9fa;">
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd;">타이어 전문점</td>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd; font-weight:bold;">2~4만 원</td>
+<td style="padding:12px 10px; border:1px solid #ddd;">로테이션 + 밸런스 포함 시 3~5만 원</td>
+</tr>
+<tr>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd;">카센터/정비소</td>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd; font-weight:bold;">3~5만 원</td>
+<td style="padding:12px 10px; border:1px solid #ddd;">다른 정비와 함께하면 할인 가능</td>
+</tr>
+<tr style="background:#f8f9fa;">
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd;">타이어 구매처</td>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd; font-weight:bold; color:#d32f2f;">무료~1만 원</td>
+<td style="padding:12px 10px; border:1px solid #ddd;">구매 매장에서 무상 서비스로 제공하는 경우 많음</td>
+</tr>
+<tr>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd;">DIY (직접)</td>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd; font-weight:bold;">0원</td>
+<td style="padding:12px 10px; border:1px solid #ddd;">잭, 잭 스탠드, 휠너트 렌치 필요</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>타이어 수명 연장 효과를 비용으로 환산하면?</strong> 타이어 4개 세트 평균 40~80만 원, 수명 20% 연장 시 약 8~16만 원 절약! 로테이션 2~3회 비용(약 6~12만 원)으로 한 세트 수명을 최대한 활용할 수 있으니 <strong>확실히 남는 장사</strong>입니다. 🙂</p>
+
+<h2 style="font-size:22px; color:#1a73e8; margin:36px 0 16px; padding-bottom:8px; border-bottom:2px solid #e3f2fd;">🔧 타이어 로테이션, 직접 할 수 있을까? (DIY 가이드)</h2>
+
+<p>기본적인 공구만 있다면 집에서도 가능합니다. 다만 <strong>안전이 가장 중요</strong>하니 아래 순서를 꼭 지켜주세요.</p>
+
+<h3 style="font-size:18px; color:#333; margin:24px 0 12px;">필요한 장비</h3>
+<ul style="margin:8px 0 16px 20px; line-height:2;">
+<li>차량용 잭 (유압 잭 권장)</li>
+<li>잭 스탠드 (리지드 스탠드) — <strong>반드시 필요!</strong> 잭만으로는 위험</li>
+<li>휠너트 렌치 (십자 렌치 또는 토크 렌치)</li>
+<li>장갑, 작업복</li>
+</ul>
+
+<h3 style="font-size:18px; color:#333; margin:24px 0 12px;">DIY 로테이션 순서</h3>
+<ol style="margin:8px 0 20px 20px; line-height:2.2;">
+<li>평평하고 단단한 바닥에 차량 주차, 사이드 브레이크 체결</li>
+<li>모든 휠너트를 살짝(1/4바퀴) 풀어놓기 (차량 들어올리기 전에!)</li>
+<li>잭으로 차량 한쪽을 올리고, 잭 스탠드로 고정</li>
+<li>내 차 구동 방식에 맞는 패턴대로 타이어 위치 변경</li>
+<li>휠너트를 <strong>별(★) 순서로 대각선 체결</strong> (균일한 조임 위해)</li>
+<li>토크 렌치로 적정 토크(보통 100~120Nm)로 마무리 체결</li>
+<li>잭 스탠드 제거 후 차량 내리기</li>
+<li>주행 후 50~100km 뒤 휠너트 재확인</li>
+</ol>
+
+<p style="background:#ffebee; padding:14px 18px; border-radius:8px; font-size:14.5px; margin:16px 0; border-left:4px solid #d32f2f;">
+⚠️ <strong>주의:</strong> 잭 스탠드 없이 잭만으로 차 밑에 들어가는 것은 <strong>매우 위험</strong>합니다. 자신이 없다면 전문점에 맡기세요. 2~4만 원이면 안전하게 해결됩니다!
+</p>
+
+<h2 style="font-size:22px; color:#1a73e8; margin:36px 0 16px; padding-bottom:8px; border-bottom:2px solid #e3f2fd;">⚠️ 로테이션 시 꼭 알아야 할 주의사항</h2>
+
+<ol style="margin:12px 0 20px 20px; line-height:2.2;">
+<li><strong>방향성 타이어 확인</strong>: 타이어 옆면에 화살표(→)가 있으면 방향성 타이어. 같은 쪽 앞뒤로만 교환 가능</li>
+<li><strong>앞뒤 규격 확인</strong>: 앞 225/45R17, 뒤 255/40R17처럼 다르면 앞뒤 교환 불가 (좌우만 가능)</li>
+<li><strong>마모 상태 점검</strong>: 편마모가 심하면 로테이션 전에 <strong>휠 얼라인먼트</strong>를 먼저!</li>
+<li><strong>공기압 재조정</strong>: 앞뒤 권장 공기압이 다른 차량은 로테이션 후 반드시 재설정</li>
+<li><strong>TPMS 재설정</strong>: 타이어 공기압 센서(TPMS)가 있는 차량은 위치 변경 후 리셋 필요</li>
+<li><strong>휠 밸런스</strong>: 로테이션과 함께 밸런스 점검을 권장 (핸들 떨림 방지)</li>
+</ol>
+
+<h2 style="font-size:22px; color:#1a73e8; margin:36px 0 16px; padding-bottom:8px; border-bottom:2px solid #e3f2fd;">📊 로테이션 하면 vs 안 하면, 차이가 얼마나 날까?</h2>
+
+<table style="width:100%; border-collapse:collapse; margin:20px 0; font-size:14.5px;">
+<thead>
+<tr style="background:#5c6bc0; color:#fff;">
+<th style="padding:12px 10px; text-align:center; border:1px solid #ddd;">항목</th>
+<th style="padding:12px 10px; text-align:center; border:1px solid #ddd;">로테이션 O</th>
+<th style="padding:12px 10px; text-align:center; border:1px solid #ddd;">로테이션 X</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background:#f8f9fa;">
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd;">타이어 수명</td>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd; font-weight:bold; color:#2e7d32;">약 60,000~80,000km</td>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd; color:#d32f2f;">약 40,000~50,000km</td>
+</tr>
+<tr>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd;">마모 균일도</td>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd; font-weight:bold; color:#2e7d32;">균일</td>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd; color:#d32f2f;">앞 타이어 집중 마모</td>
+</tr>
+<tr style="background:#f8f9fa;">
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd;">교체 비용 (3년 기준)</td>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd; font-weight:bold; color:#2e7d32;">1세트 (40~80만 원)</td>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd; color:#d32f2f;">1.5~2세트 (60~160만 원)</td>
+</tr>
+<tr>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd;">주행 안정성</td>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd; font-weight:bold; color:#2e7d32;">4륜 균일 → 안정적</td>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd; color:#d32f2f;">앞뒤 그립 차이 → 불안정</td>
+</tr>
+<tr style="background:#f8f9fa;">
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd;">빗길 제동</td>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd; font-weight:bold; color:#2e7d32;">양호</td>
+<td style="padding:12px 10px; text-align:center; border:1px solid #ddd; color:#d32f2f;">마모된 앞 타이어로 제동거리 증가</td>
+</tr>
+</tbody>
+</table>
+
+<h2 style="font-size:22px; color:#1a73e8; margin:36px 0 16px; padding-bottom:8px; border-bottom:2px solid #e3f2fd;">❓ 자주 묻는 질문 (FAQ)</h2>
+
+<div style="margin:16px 0;">
+<p style="font-weight:bold; color:#1a73e8; margin-bottom:6px;">Q. 타이어 로테이션이란 무엇인가요?</p>
+<p style="margin-bottom:20px; padding-left:16px;">차량의 앞·뒤(또는 좌·우) 타이어 위치를 주기적으로 교환하여 마모를 균일하게 만드는 정비 방법입니다. 이를 통해 타이어 수명을 20% 이상 연장할 수 있습니다.</p>
+
+<p style="font-weight:bold; color:#1a73e8; margin-bottom:6px;">Q. 타이어 로테이션 주기는 얼마나 되나요?</p>
+<p style="margin-bottom:20px; padding-left:16px;">일반적으로 8,000~10,000km마다 또는 6개월에 한 번 로테이션을 권장합니다. 전륜구동 차량은 앞 타이어 마모가 빠르므로 더 짧은 주기(5,000~8,000km)가 좋습니다.</p>
+
+<p style="font-weight:bold; color:#1a73e8; margin-bottom:6px;">Q. 타이어 로테이션 비용은 얼마인가요?</p>
+<p style="margin-bottom:20px; padding-left:16px;">전문 정비소 기준 2~4만 원 정도이며, 타이어 구매처에서 무료로 제공하는 경우도 많습니다. 비용 대비 타이어 수명 연장 효과가 크므로 가성비 좋은 정비입니다.</p>
+
+<p style="font-weight:bold; color:#1a73e8; margin-bottom:6px;">Q. 방향성 타이어도 로테이션이 가능한가요?</p>
+<p style="margin-bottom:20px; padding-left:16px;">가능합니다. 다만 방향성 타이어는 회전 방향이 정해져 있어 같은 쪽(좌→좌, 우→우) 앞뒤로만 교환해야 합니다. 좌우 교차는 타이어를 림에서 탈거 후 재장착해야 합니다.</p>
+
+<p style="font-weight:bold; color:#1a73e8; margin-bottom:6px;">Q. 앞뒤 타이어 사이즈가 다른 차량도 로테이션이 되나요?</p>
+<p style="margin-bottom:20px; padding-left:16px;">앞뒤 타이어 규격이 다른 스태거드(staggered) 셋업 차량은 일반적인 앞뒤 로테이션이 불가합니다. 같은 축 내 좌우 교환만 가능하며, 방향성 타이어라면 교환이 제한됩니다.</p>
+
+<p style="font-weight:bold; color:#1a73e8; margin-bottom:6px;">Q. 로테이션 할 때 휠 밸런스도 꼭 해야 하나요?</p>
+<p style="margin-bottom:20px; padding-left:16px;">필수는 아니지만 강력 권장합니다. 타이어 위치가 바뀌면 밸런스도 달라질 수 있어, 고속 주행 시 핸들 떨림이 발생할 수 있습니다. 로테이션 + 밸런스 세트로 맡기는 것이 가장 좋습니다.</p>
+
+<p style="font-weight:bold; color:#1a73e8; margin-bottom:6px;">Q. 새 타이어는 앞에 장착? 뒤에 장착?</p>
+<p style="margin-bottom:20px; padding-left:16px;"><strong>새 타이어는 반드시 뒤에 장착</strong>하는 것이 안전의 원칙입니다. 구동 방식과 무관하게, 뒤 타이어가 먼저 그립을 잃으면 오버스티어(차량 회전)가 발생하여 제어가 매우 어렵습니다. 앞 타이어가 먼저 미끄러지는 언더스티어는 상대적으로 제어가 쉽습니다.</p>
+</div>
+
+<h2 style="font-size:22px; color:#1a73e8; margin:36px 0 16px; padding-bottom:8px; border-bottom:2px solid #e3f2fd;">✅ 정리: 타이어 로테이션 체크리스트</h2>
+
+<div style="background:#e8f5e9; padding:20px 24px; border-radius:10px; margin:16px 0;">
+<ul style="margin:0; padding-left:20px; line-height:2.2;">
+<li>☑️ <strong>주기:</strong> 8,000~10,000km 또는 6개월 (엔진오일 교환 시 함께)</li>
+<li>☑️ <strong>패턴:</strong> 내 차 구동 방식에 맞는 교환 패턴 적용</li>
+<li>☑️ <strong>방향성 타이어:</strong> 같은 쪽 앞뒤로만 교환</li>
+<li>☑️ <strong>앞뒤 사이즈 다른 경우:</strong> 같은 축 좌우만 교환</li>
+<li>☑️ <strong>공기압:</strong> 로테이션 후 앞뒤 권장 공기압 재설정</li>
+<li>☑️ <strong>TPMS:</strong> 센서 리셋 확인</li>
+<li>☑️ <strong>밸런스:</strong> 가능하면 함께 점검</li>
+<li>☑️ <strong>비용:</strong> 2~4만 원 (타이어 구매처 무료 서비스 활용)</li>
+</ul>
+</div>
+
+<!-- 광고 위치 728x90 -->
+
+<hr style="border:none; border-top:1px solid #eee; margin:36px 0;">
+
+<p style="font-size:14px; color:#888; text-align:center; line-height:1.8;">
+타이어모어 울산학산점 | 미쉐린·콘티넨탈 공식 인증 대리점<br>
+📍 울산 중구 번영로 342-1 · ☎ 052-265-0085<br>
+타이어 로테이션, 교체, 휠 얼라인먼트까지 한 번에 해결하세요!
+</p>
+
+<div style="margin-top:24px; padding:16px; background:#f5f5f5; border-radius:8px;">
+<p style="font-size:13px; color:#999; margin-bottom:8px;">🏷️ SEO 키워드</p>
+<p style="font-size:13px; color:#666;">타이어 로테이션, 타이어 위치 교환, 타이어 로테이션 주기, 타이어 로테이션 비용, 타이어 로테이션 방법, 전륜구동 타이어 교환, 후륜구동 타이어 교환, 사륜구동 타이어 교환, 방향성 타이어 로테이션, 타이어 수명 늘리기, 울산 타이어, 타이어모어</p>
+</div>
+
+<div style="margin-top:16px; padding:16px; background:#e3f2fd; border-radius:8px;">
+<p style="font-size:14px; color:#1a73e8; font-weight:bold; margin-bottom:8px;">📌 함께 읽으면 좋은 글</p>
+<ul style="margin:0; padding-left:20px; font-size:14px; line-height:2;">
+<li><a href="https://usmichelin.tistory.com/" style="color:#1a73e8;">타이어 공기압 적정 수치와 관리 방법</a></li>
+<li><a href="https://usmichelin.tistory.com/" style="color:#1a73e8;">타이어 마모 한계선 확인법 — 교체 시기 판단 가이드</a></li>
+<li><a href="https://usmichelin.tistory.com/" style="color:#1a73e8;">휠 얼라인먼트란? 증상과 점검 주기 총정리</a></li>
+</ul>
+</div>
+
+</div>`;
+
+document.getElementById('htmlContent').value = blogHTML;
+document.getElementById('previewArea').innerHTML = blogHTML;
+
+function copySEO() {
+  const text = document.getElementById('seoText').innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    document.getElementById('seoBox').classList.add('copied');
+    showToast('SEO 설정이 복사되었습니다!');
+    setTimeout(() => document.getElementById('seoBox').classList.remove('copied'), 2000);
+  });
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2000);
+}
+</script>
+</body>
+</html>
