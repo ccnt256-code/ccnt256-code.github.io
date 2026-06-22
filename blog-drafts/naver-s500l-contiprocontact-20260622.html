@@ -39,10 +39,11 @@
   <div class="value">울산 벤츠 S500L 타이어 교체 | 승차감 좋은 타이어 추천해달라셔서 콘티넨탈 MO 장착</div>
 </div>
 
-<!-- 본문 -->
-<div class="content-box">
-  <div class="label">📋 본문 (아래 미리보기 영역을 Ctrl+A → Ctrl+C → SmartEditor에 Ctrl+V)</div>
-  <div class="instructions">⬇️ 아래 흰색 영역의 텍스트를 전체선택(Ctrl+A) 후 복사하면 서식이 유지됩니다</div>
+<!-- 본문 복사 버튼 -->
+<div class="content-box" onclick="copyBlogBody()" style="cursor:pointer;">
+  <div class="label">📋 본문 복사 (클릭하면 본문이 복사됩니다)</div>
+  <div class="instructions">클릭 한 번 → SmartEditor에 Ctrl+V 하면 서식 유지됩니다</div>
+  <button onclick="copyBlogBody()" style="margin-top:10px; padding:12px 30px; background:#1976d2; color:#fff; border:none; border-radius:6px; font-size:16px; font-weight:bold; cursor:pointer;">📋 본문 복사하기</button>
 </div>
 
 <!-- 태그 -->
@@ -220,6 +221,36 @@ function copyText(text, label) {
   navigator.clipboard.writeText(text).then(() => {
     alert(label + ' 복사 완료!');
   });
+}
+
+function copyBlogBody() {
+  const body = document.getElementById('blogBody');
+  const range = document.createRange();
+  range.selectNodeContents(body);
+  const sel = window.getSelection();
+  sel.removeAllRanges();
+  sel.addRange(range);
+
+  // 리치 텍스트(서식) 복사
+  try {
+    const html = body.innerHTML;
+    const blob = new Blob([html], { type: 'text/html' });
+    const textBlob = new Blob([body.innerText], { type: 'text/plain' });
+    navigator.clipboard.write([
+      new ClipboardItem({
+        'text/html': blob,
+        'text/plain': textBlob
+      })
+    ]).then(() => {
+      sel.removeAllRanges();
+      alert('✅ 본문 복사 완료!\\nSmartEditor에 Ctrl+V 하세요.');
+    });
+  } catch(e) {
+    // 폴백: execCommand
+    document.execCommand('copy');
+    sel.removeAllRanges();
+    alert('✅ 본문 복사 완료!\\nSmartEditor에 Ctrl+V 하세요.');
+  }
 }
 </script>
 
