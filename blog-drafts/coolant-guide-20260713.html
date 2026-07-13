@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>미리보기 — 냉각수(부동액) 관리 가이드</title>
+<style>
+body { font-family: 'Malgun Gothic', sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+.seo-box { background: #fff9c4; border: 2px solid #f9a825; border-radius: 8px; padding: 20px; margin-bottom: 20px; }
+.seo-box h3 { margin-top: 0; color: #e65100; }
+.seo-item { margin: 8px 0; cursor: pointer; padding: 6px 10px; border-radius: 4px; }
+.seo-item:hover { background: #fff3e0; }
+.seo-item .label { font-weight: bold; color: #e65100; margin-right: 8px; }
+.html-box { background: #e8f5e9; border: 2px solid #43a047; border-radius: 8px; padding: 20px; margin-bottom: 20px; }
+.html-box h3 { margin-top: 0; color: #2e7d32; }
+.html-box textarea { width: 100%; height: 200px; font-family: monospace; font-size: 12px; }
+.preview-box { background: white; border: 1px solid #ddd; border-radius: 8px; padding: 30px; }
+.preview-box h2 { color: #333; border-bottom: 2px solid #1976d2; padding-bottom: 10px; }
+.preview-box h3 { color: #1976d2; margin-top: 30px; }
+.preview-box table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+.preview-box th, .preview-box td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+.preview-box th { background: #1976d2; color: white; }
+.preview-box tr:nth-child(even) { background: #f5f5f5; }
+.preview-box .faq-item { background: #f5f5f5; border-radius: 8px; padding: 15px; margin: 10px 0; }
+.preview-box .faq-q { font-weight: bold; color: #1976d2; }
+.copied { color: green; font-size: 12px; display: none; margin-left: 10px; }
+.info-box { background: #e3f2fd; border-left: 4px solid #1976d2; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+.warning-box { background: #fff3e0; border-left: 4px solid #ff9800; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+.tip-box { background: #e8f5e9; border-left: 4px solid #4caf50; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+</style>
+<script>
+function copyText(el) {
+  const text = el.querySelector('.value').textContent;
+  navigator.clipboard.writeText(text);
+  const copied = el.querySelector('.copied');
+  copied.style.display = 'inline';
+  setTimeout(() => copied.style.display = 'none', 2000);
+}
+function selectAll(textarea) {
+  textarea.select();
+}
+</script>
+</head>
+<body>
+
+<!-- SEO 설정 -->
+<div class="seo-box">
+<h3>★ 티스토리 SEO 설정 ★</h3>
+<div class="seo-item" onclick="copyText(this)">
+  <span class="label">[제목]</span>
+  <span class="value">자동차 냉각수(부동액) 교체 시기·관리 완벽 가이드 2026 — 종류·혼합 금지·자가 점검법 총정리</span>
+  <span class="copied">✅ 복사됨</span>
+</div>
+<div class="seo-item" onclick="copyText(this)">
+  <span class="label">[설명]</span>
+  <span class="value">자동차 냉각수(부동액)는 언제 교체해야 할까요? 냉각수 종류별 차이, LLC vs SLLC, 색상별 혼합 금지 이유, 자가 점검법, 교체 비용까지 한눈에 정리했습니다. 여름철 오버히트 예방 필수 가이드.</span>
+  <span class="copied">✅ 복사됨</span>
+</div>
+<div class="seo-item" onclick="copyText(this)">
+  <span class="label">[태그]</span>
+  <span class="value">냉각수, 부동액, 냉각수교체시기, 부동액종류, LLC, SLLC, 냉각수혼합금지, 냉각수자가점검, 오버히트예방, 타이어모어울산</span>
+  <span class="copied">✅ 복사됨</span>
+</div>
+<div class="seo-item" onclick="copyText(this)">
+  <span class="label">[카테고리]</span>
+  <span class="value">자동차 관리</span>
+  <span class="copied">✅ 복사됨</span>
+</div>
+</div>
+
+<!-- HTML 소스 -->
+<div class="html-box">
+<h3>📋 HTML 소스 (클릭하면 전체 선택)</h3>
+<textarea onclick="selectAll(this)" readonly>
+<!--
+★ 티스토리 SEO 설정 ★
+[제목] 자동차 냉각수(부동액) 교체 시기·관리 완벽 가이드 2026 — 종류·혼합 금지·자가 점검법 총정리
+[설명 (meta description)] 자동차 냉각수(부동액)는 언제 교체해야 할까요? 냉각수 종류별 차이, LLC vs SLLC, 색상별 혼합 금지 이유, 자가 점검법, 교체 비용까지 한눈에 정리했습니다. 여름철 오버히트 예방 필수 가이드.
+[태그] 냉각수, 부동액, 냉각수교체시기, 부동액종류, LLC, SLLC, 냉각수혼합금지, 냉각수자가점검, 오버히트예방, 타이어모어울산
+[카테고리] 자동차 관리
+-->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "자동차 냉각수(부동액) 교체 시기·관리 완벽 가이드 2026 — 종류·혼합 금지·자가 점검법 총정리",
+  "description": "자동차 냉각수(부동액)는 언제 교체해야 할까요? 냉각수 종류별 차이, LLC vs SLLC, 색상별 혼합 금지 이유, 자가 점검법, 교체 비용까지 한눈에 정리했습니다.",
+  "author": {"@type": "Organization", "name": "타이어모어 울산학산점"},
+  "publisher": {"@type": "Organization", "name": "타이어모어 울산학산점"},
+  "datePublished": "2026-07-13",
+  "dateModified": "2026-07-13",
+  "mainEntityOfPage": {"@type": "WebPage"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "냉각수와 부동액은 같은 건가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "엄밀히 다릅니다. 부동액(에틸렌글리콜 원액)은 물과 혼합해야 냉각수가 됩니다. 보통 부동액 50% + 증류수 50%로 섞어 사용하며, 시중 제품 대부분은 이미 혼합된 '냉각수(쿨런트)' 형태로 판매됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "냉각수 교체 시기는 언제인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "일반 부동액(LLC)은 2년 또는 4만km마다, 수퍼 부동액(SLLC)은 4~5년 또는 8~10만km마다 교체가 권장됩니다. 최근 차량은 출고 시 SLLC를 사용하는 경우가 많아 첫 교체가 4년 후인 경우도 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "다른 색상의 냉각수를 섞어도 되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "절대 섞으면 안 됩니다. 녹색(IAT), 분홍/빨강(OAT), 파란색(HOAT) 등 종류마다 화학 성분이 다르며, 혼합 시 침전물이 생겨 냉각 통로를 막거나 부식을 일으킬 수 있습니다. 반드시 같은 종류·같은 색상으로 보충해야 합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "냉각수가 부족하면 수돗물을 넣어도 되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "긴급 상황에서 일시적으로 수돗물을 보충할 수 있지만, 장기간 사용은 금물입니다. 수돗물의 미네랄 성분이 냉각 시스템에 스케일(물때)을 형성하고 부식을 촉진합니다. 응급 조치 후 가급적 빠른 시일 내에 정품 냉각수로 교체하세요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "냉각수 교체 비용은 얼마인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "정비소 기준 냉각수 교체 비용은 공임 포함 약 5만~10만 원 수준입니다. 부동액 종류(LLC vs SLLC), 차종(엔진 크기), 그리고 시스템 전체 세척(플러시) 여부에 따라 차이가 있습니다. SLLC는 부동액 자체 가격이 LLC보다 1.5~2배 높지만 교체 주기가 길어 장기적으로 비슷합니다."
+      }
+    }
+  ]
+}
+</script>
+
+<p style="font-size:18px;line-height:1.8;color:#333;">
+<strong>자동차 냉각수(부동액)는 엔진 과열(오버히트)을 막는 핵심 소모품입니다.</strong> 여름철 엔진 온도가 올라가는 시기에 냉각수 관리를 소홀히 하면 엔진 손상이라는 큰 비용으로 돌아올 수 있습니다. 이 글에서는 냉각수의 역할, 종류별 차이(LLC vs SLLC), 색상별 혼합 금지 이유, 자가 점검법, 그리고 교체 비용까지 한눈에 정리해 드립니다.
+</p>
+
+<p align="center">
+<img src="https://ccnt256-code.github.io/blog-images/coolant-guide-20260713.jpg" alt="자동차 엔진룸 냉각수 리저버 탱크" style="max-width:100%;border-radius:12px;" />
+</p>
+
+<!-- 광고 위치 -->
+
+<h2 style="color:#1976d2;border-bottom:2px solid #1976d2;padding-bottom:10px;">냉각수(부동액)란? — 엔진을 지키는 보이지 않는 수호자</h2>
+
+<p style="line-height:1.8;">
+냉각수(쿨런트, Coolant)는 엔진 내부를 순환하면서 <strong>연소 과정에서 발생하는 열을 흡수하고 라디에이터를 통해 방열</strong>하는 액체입니다. 단순히 "물"을 넣으면 되는 것 아닌가 싶지만, 순수한 물은 100°C에서 끓고 0°C에서 얼어붙기 때문에 사계절 운행하는 자동차에는 적합하지 않습니다.
+</p>
+
+<div style="background:#e3f2fd;border-left:4px solid #1976d2;padding:15px;margin:15px 0;border-radius:0 8px 8px 0;">
+<strong>💡 냉각수 vs 부동액, 뭐가 다른가요?</strong><br>
+• <strong>부동액</strong> = 에틸렌글리콜(또는 프로필렌글리콜) 원액. 얼지 않는 성질이 있어 '부동(不凍)액'<br>
+• <strong>냉각수</strong> = 부동액 + 증류수(보통 50:50 혼합) + 방청 첨가제<br>
+시중에 판매되는 대부분의 제품은 이미 혼합된 냉각수(Ready-to-Use) 형태입니다.
+</div>
+
+<h3 style="color:#1976d2;">냉각수가 하는 일</h3>
+
+<ul style="line-height:2;">
+<li><strong>냉각:</strong> 엔진 적정 온도(약 85~105°C) 유지</li>
+<li><strong>동결 방지:</strong> 겨울철 -35°C 이하에서도 동결을 막음</li>
+<li><strong>비등점 상승:</strong> 순수한 물(100°C)보다 높은 약 108~130°C에서 끓음</li>
+<li><strong>방청·부식 방지:</strong> 엔진 블록, 워터펌프, 라디에이터 내부 부식 억제</li>
+<li><strong>윤활:</strong> 워터펌프 씰 등 부품의 마모 감소</li>
+</ul>
+
+<h2 style="color:#1976d2;border-bottom:2px solid #1976d2;padding-bottom:10px;">냉각수 종류 — LLC vs SLLC, 색상별 차이 총정리</h2>
+
+<p style="line-height:1.8;">
+냉각수는 사용하는 <strong>방청 첨가제(억제제)</strong> 종류에 따라 크게 3가지로 나뉩니다. 종류마다 색상이 다르고, <strong>절대 섞으면 안 되는</strong> 이유가 바로 이 첨가제 차이 때문입니다.
+</p>
+
+<table style="width:100%;border-collapse:collapse;margin:15px 0;">
+<thead>
+<tr>
+<th style="background:#1976d2;color:white;padding:12px;border:1px solid #ddd;">구분</th>
+<th style="background:#1976d2;color:white;padding:12px;border:1px solid #ddd;">IAT (무기산)</th>
+<th style="background:#1976d2;color:white;padding:12px;border:1px solid #ddd;">OAT (유기산)</th>
+<th style="background:#1976d2;color:white;padding:12px;border:1px solid #ddd;">HOAT (혼합형)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding:10px;border:1px solid #ddd;"><strong>명칭</strong></td>
+<td style="padding:10px;border:1px solid #ddd;">LLC (Long Life Coolant)</td>
+<td style="padding:10px;border:1px solid #ddd;">SLLC (Super Long Life Coolant)</td>
+<td style="padding:10px;border:1px solid #ddd;">Hybrid OAT</td>
+</tr>
+<tr style="background:#f5f5f5;">
+<td style="padding:10px;border:1px solid #ddd;"><strong>색상</strong></td>
+<td style="padding:10px;border:1px solid #ddd;">🟢 녹색</td>
+<td style="padding:10px;border:1px solid #ddd;">🔴 분홍/빨강</td>
+<td style="padding:10px;border:1px solid #ddd;">🔵 파란색/보라색</td>
+</tr>
+<tr>
+<td style="padding:10px;border:1px solid #ddd;"><strong>방청 방식</strong></td>
+<td style="padding:10px;border:1px solid #ddd;">무기산 피막 형성</td>
+<td style="padding:10px;border:1px solid #ddd;">유기산 선택적 보호</td>
+<td style="padding:10px;border:1px solid #ddd;">무기산 + 유기산 혼합</td>
+</tr>
+<tr style="background:#f5f5f5;">
+<td style="padding:10px;border:1px solid #ddd;"><strong>교체 주기</strong></td>
+<td style="padding:10px;border:1px solid #ddd;">2년 / 4만km</td>
+<td style="padding:10px;border:1px solid #ddd;">4~5년 / 8~10만km</td>
+<td style="padding:10px;border:1px solid #ddd;">3~5년 / 6~8만km</td>
+</tr>
+<tr>
+<td style="padding:10px;border:1px solid #ddd;"><strong>주요 사용 차량</strong></td>
+<td style="padding:10px;border:1px solid #ddd;">2000년대 이전 차량, 구형 국산차</td>
+<td style="padding:10px;border:1px solid #ddd;">도요타, 현대/기아 신형, GM 계열</td>
+<td style="padding:10px;border:1px solid #ddd;">유럽차(BMW, 벤츠, VW), 일부 국산차</td>
+</tr>
+<tr style="background:#f5f5f5;">
+<td style="padding:10px;border:1px solid #ddd;"><strong>가격대</strong></td>
+<td style="padding:10px;border:1px solid #ddd;">1~2만 원/4L</td>
+<td style="padding:10px;border:1px solid #ddd;">2~4만 원/4L</td>
+<td style="padding:10px;border:1px solid #ddd;">2~5만 원/4L</td>
+</tr>
+</tbody>
+</table>
+
+<div style="background:#fff3e0;border-left:4px solid #ff9800;padding:15px;margin:15px 0;border-radius:0 8px 8px 0;">
+<strong>⚠️ 색상이 다른 냉각수 혼합 = 절대 금지!</strong><br>
+다른 종류의 냉각수를 섞으면 첨가제끼리 화학 반응을 일으켜 <strong>침전물(겔화)</strong>이 생깁니다. 이 침전물이 냉각 통로와 라디에이터를 막아 <strong>오버히트 → 엔진 손상</strong>으로 이어질 수 있습니다. 보충할 때는 반드시 <strong>동일 종류·동일 색상</strong>의 냉각수를 사용하세요.
+</div>
+
+<h3 style="color:#1976d2;">내 차의 냉각수 종류 확인하는 방법</h3>
+
+<ol style="line-height:2;">
+<li><strong>차량 매뉴얼(사용설명서)</strong> — 냉각수 사양이 명시되어 있습니다</li>
+<li><strong>보닛 열고 리저버 탱크 확인</strong> — 냉각수 색상으로 대략적인 종류 파악</li>
+<li><strong>정비소 문의</strong> — 차종 알려주면 맞는 규격을 안내받을 수 있습니다</li>
+</ol>
+
+<h2 style="color:#1976d2;border-bottom:2px solid #1976d2;padding-bottom:10px;">냉각수 교체 시기는 언제? — 주기별 점검 기준</h2>
+
+<p style="line-height:1.8;">
+냉각수 교체 시기는 <strong>사용하는 냉각수 종류</strong>에 따라 다릅니다. 아래 기준표를 참고하되, 실제 차량 상태에 따라 더 빨리 교체해야 할 수도 있습니다.
+</p>
+
+<table style="width:100%;border-collapse:collapse;margin:15px 0;">
+<thead>
+<tr>
+<th style="background:#1976d2;color:white;padding:12px;border:1px solid #ddd;">냉각수 종류</th>
+<th style="background:#1976d2;color:white;padding:12px;border:1px solid #ddd;">교체 주기</th>
+<th style="background:#1976d2;color:white;padding:12px;border:1px solid #ddd;">보충 주기</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding:10px;border:1px solid #ddd;">LLC (녹색)</td>
+<td style="padding:10px;border:1px solid #ddd;">2년 / 4만km (먼저 도달 시)</td>
+<td style="padding:10px;border:1px solid #ddd;">6개월마다 점검</td>
+</tr>
+<tr style="background:#f5f5f5;">
+<td style="padding:10px;border:1px solid #ddd;">SLLC (분홍/빨강)</td>
+<td style="padding:10px;border:1px solid #ddd;">4~5년 / 8~10만km</td>
+<td style="padding:10px;border:1px solid #ddd;">1년마다 점검</td>
+</tr>
+<tr>
+<td style="padding:10px;border:1px solid #ddd;">HOAT (파란색)</td>
+<td style="padding:10px;border:1px solid #ddd;">3~5년 / 6~8만km</td>
+<td style="padding:10px;border:1px solid #ddd;">1년마다 점검</td>
+</tr>
+</tbody>
+</table>
+
+<h3 style="color:#1976d2;">이런 증상이 있으면 즉시 교체하세요!</h3>
+
+<ul style="line-height:2;">
+<li>💧 <strong>냉각수 색이 탁하거나 갈변</strong> — 첨가제 수명 다한 것</li>
+<li>🌡️ <strong>수온계가 평소보다 높게 올라감</strong> — 냉각 효율 저하</li>
+<li>💨 <strong>냉각수에서 이상한 냄새</strong> — 부식·변질 징후</li>
+<li>🔧 <strong>리저버 탱크에 이물질·침전물</strong> — 시스템 오염</li>
+<li>📉 <strong>냉각수 양이 지속적으로 줄어듦</strong> — 누수 가능성</li>
+<li>🧊 <strong>히터 작동이 약해짐</strong> — 냉각수 순환 불량</li>
+</ul>
+
+<h2 style="color:#1976d2;border-bottom:2px solid #1976d2;padding-bottom:10px;">냉각수 자가 점검법 — 5분이면 OK</h2>
+
+<p style="line-height:1.8;">
+냉각수 점검은 별도 장비 없이도 누구나 할 수 있습니다. 단, <strong>반드시 엔진이 식은 상태(시동 끈 후 최소 30분)</strong>에서 점검하세요. 뜨거운 상태에서 라디에이터 캡을 열면 고온 냉각수가 분출되어 화상을 입을 수 있습니다.
+</p>
+
+<h3 style="color:#1976d2;">Step 1. 냉각수 양(수위) 확인</h3>
+
+<p style="line-height:1.8;">
+엔진룸의 <strong>냉각수 리저버 탱크(보조탱크)</strong>를 찾으세요. 반투명 플라스틱 탱크에 'F(Full)'과 'L(Low)' 표시가 있습니다.
+</p>
+
+<ul style="line-height:2;">
+<li>✅ F와 L 사이 → 정상</li>
+<li>⚠️ L 이하 → 같은 종류 냉각수로 보충</li>
+<li>🚨 탱크가 비어있음 → 누수 가능성, 정비소 점검</li>
+</ul>
+
+<h3 style="color:#1976d2;">Step 2. 색상·상태 확인</h3>
+
+<ul style="line-height:2;">
+<li>✅ 투명하고 원래 색상 유지 → 정상</li>
+<li>⚠️ 탁하거나 녹슨 색 → 교체 필요</li>
+<li>🚨 기름 떠있음 → 엔진 헤드가스켓 누유 의심, 즉시 정비</li>
+</ul>
+
+<h3 style="color:#1976d2;">Step 3. 누수 여부 확인</h3>
+
+<ul style="line-height:2;">
+<li>주차 후 차량 아래에 <strong>녹색/분홍색 액체 흔적</strong>이 있으면 냉각수 누수</li>
+<li>라디에이터 호스, 워터펌프 주변, 히터 코어 연결부를 육안으로 점검</li>
+<li>달콤한 냄새가 차 안에서 나면 히터 코어 누수 가능성</li>
+</ul>
+
+<div style="background:#e8f5e9;border-left:4px solid #4caf50;padding:15px;margin:15px 0;border-radius:0 8px 8px 0;">
+<strong>💡 TIP: 냉각수 테스터기(비중계) 활용</strong><br>
+온라인이나 자동차 용품점에서 5,000~10,000원에 살 수 있는 냉각수 비중계(볼 테스터)를 사용하면 <strong>동결 보호 온도</strong>를 직접 확인할 수 있습니다. 비중계의 볼이 떠오르는 개수로 냉각수의 농도와 동결점을 알 수 있어요.
+</div>
+
+<h2 style="color:#1976d2;border-bottom:2px solid #1976d2;padding-bottom:10px;">냉각수 교체 방법 — DIY vs 정비소</h2>
+
+<h3 style="color:#1976d2;">정비소 교체 (권장)</h3>
+
+<p style="line-height:1.8;">
+냉각수 교체는 단순히 빼고 채우는 작업이 아닙니다. <strong>시스템 전체를 세척(플러시)</strong>하고, 에어빼기 작업까지 해야 완전한 교체가 됩니다. 특히 최신 차량은 냉각 시스템 구조가 복잡해서 전문 장비가 필요한 경우가 많습니다.
+</p>
+
+<table style="width:100%;border-collapse:collapse;margin:15px 0;">
+<thead>
+<tr>
+<th style="background:#1976d2;color:white;padding:12px;border:1px solid #ddd;">항목</th>
+<th style="background:#1976d2;color:white;padding:12px;border:1px solid #ddd;">비용 (2026년 기준)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding:10px;border:1px solid #ddd;">냉각수 교체 (부동액 + 공임)</td>
+<td style="padding:10px;border:1px solid #ddd;">5만~8만 원</td>
+</tr>
+<tr style="background:#f5f5f5;">
+<td style="padding:10px;border:1px solid #ddd;">냉각수 교체 + 시스템 플러시</td>
+<td style="padding:10px;border:1px solid #ddd;">8만~15만 원</td>
+</tr>
+<tr>
+<td style="padding:10px;border:1px solid #ddd;">라디에이터 호스 교체 (필요 시)</td>
+<td style="padding:10px;border:1px solid #ddd;">5만~15만 원 (부위별)</td>
+</tr>
+<tr style="background:#f5f5f5;">
+<td style="padding:10px;border:1px solid #ddd;">서모스탯 교체 (필요 시)</td>
+<td style="padding:10px;border:1px solid #ddd;">8만~20만 원</td>
+</tr>
+</tbody>
+</table>
+
+<h3 style="color:#1976d2;">DIY 교체 (경험자 한정)</h3>
+
+<p style="line-height:1.8;">
+직접 교체할 경우 아래 순서를 따르세요. 단, <strong>폐냉각수는 반드시 분리수거</strong>해야 합니다. 에틸렌글리콜은 환경오염 물질이므로 하수구에 버리면 안 됩니다.
+</p>
+
+<ol style="line-height:2;">
+<li>엔진 완전히 식힌 후 작업 시작 (30분 이상)</li>
+<li>라디에이터 하단 드레인 밸브를 열어 기존 냉각수 배출</li>
+<li>증류수로 시스템 세척 (시동 → 수온 정상 → 배출 반복)</li>
+<li>드레인 밸브 닫고 새 냉각수 주입</li>
+<li>시동 걸고 히터 최대로 → 에어빼기 (10~15분)</li>
+<li>수온 안정 후 냉각수 수위 재확인·보충</li>
+<li>다음 날 다시 수위 점검</li>
+</ol>
+
+<div style="background:#fff3e0;border-left:4px solid #ff9800;padding:15px;margin:15px 0;border-radius:0 8px 8px 0;">
+<strong>⚠️ DIY 교체 시 주의사항</strong><br>
+• 반드시 <strong>차량 매뉴얼에 명시된 규격</strong>의 냉각수를 사용하세요<br>
+• 에어빼기를 제대로 하지 않으면 에어락(공기 방울)이 생겨 과열됩니다<br>
+• 폐냉각수는 지정 폐기물 수거업체나 정비소에 위탁 처리하세요<br>
+• 에틸렌글리콜은 달콤한 냄새와 맛이 있어 <strong>반려동물에게 치명적</strong>입니다. 보관·폐기에 주의!
+</div>
+
+<h2 style="color:#1976d2;border-bottom:2px solid #1976d2;padding-bottom:10px;">여름철 냉각수 관리가 특히 중요한 이유</h2>
+
+<p style="line-height:1.8;">
+여름철에는 외기온이 35°C 이상 올라가고, 에어컨 사용으로 엔진 부하가 증가합니다. 냉각수가 제 역할을 못하면 <strong>오버히트(과열)</strong>가 발생하고, 최악의 경우 <strong>엔진 실린더 헤드 변형</strong>이나 <strong>헤드 가스켓 파손</strong>으로 수백만 원의 수리비가 들 수 있습니다.
+</p>
+
+<h3 style="color:#1976d2;">여름철 오버히트 예방 체크리스트</h3>
+
+<ul style="line-height:2;">
+<li>✅ 냉각수 양이 F~L 사이인지 확인</li>
+<li>✅ 냉각수 색상이 깨끗한지 확인</li>
+<li>✅ 라디에이터 앞면에 이물질(벌레, 먼지) 끼지 않았는지 확인</li>
+<li>✅ 라디에이터 팬이 정상 작동하는지 확인 (에어컨 켤 때 팬 돌아가는 소리)</li>
+<li>✅ 냉각수 호스에 균열·팽창·경화 없는지 확인</li>
+<li>✅ 수온계가 중간 부근에서 안정적인지 주행 중 확인</li>
+</ul>
+
+<div style="background:#ffebee;border-left:4px solid #d32f2f;padding:15px;margin:15px 0;border-radius:0 8px 8px 0;">
+<strong>🚨 주행 중 수온 경고등이 켜지면?</strong><br>
+1. <strong>즉시 에어컨 끄고 히터 최대로</strong> (엔진 열을 실내로 분산)<br>
+2. 안전한 곳에 <strong>정차 후 시동 OFF</strong><br>
+3. <strong>절대 바로 라디에이터 캡을 열지 마세요</strong> (화상 위험!)<br>
+4. 30분 이상 식힌 후 냉각수 양 확인<br>
+5. 견인 서비스 호출 또는 냉각수 보충 후 가까운 정비소로 이동
+</div>
+
+<h2 style="color:#1976d2;border-bottom:2px solid #1976d2;padding-bottom:10px;">냉각수 관련 자주 묻는 질문 (FAQ)</h2>
+
+<div style="background:#f5f5f5;border-radius:8px;padding:15px;margin:10px 0;">
+<p style="font-weight:bold;color:#1976d2;">Q. 냉각수와 부동액은 같은 건가요?</p>
+<p style="line-height:1.8;">엄밀히 다릅니다. <strong>부동액(에틸렌글리콜 원액)</strong>은 물과 혼합해야 냉각수가 됩니다. 보통 부동액 50% + 증류수 50%로 섞어 사용하며, 시중 제품 대부분은 이미 혼합된 '냉각수(쿨런트)' 형태로 판매됩니다.</p>
+</div>
+
+<div style="background:#f5f5f5;border-radius:8px;padding:15px;margin:10px 0;">
+<p style="font-weight:bold;color:#1976d2;">Q. 냉각수 교체 시기는 언제인가요?</p>
+<p style="line-height:1.8;">일반 부동액(LLC)은 <strong>2년 또는 4만km</strong>마다, 수퍼 부동액(SLLC)은 <strong>4~5년 또는 8~10만km</strong>마다 교체가 권장됩니다. 최근 차량은 출고 시 SLLC를 사용하는 경우가 많아 첫 교체가 4년 후인 경우도 있습니다.</p>
+</div>
+
+<div style="background:#f5f5f5;border-radius:8px;padding:15px;margin:10px 0;">
+<p style="font-weight:bold;color:#1976d2;">Q. 다른 색상의 냉각수를 섞어도 되나요?</p>
+<p style="line-height:1.8;"><strong>절대 섞으면 안 됩니다.</strong> 녹색(IAT), 분홍/빨강(OAT), 파란색(HOAT) 등 종류마다 화학 성분이 다르며, 혼합 시 침전물이 생겨 냉각 통로를 막거나 부식을 일으킬 수 있습니다. 반드시 같은 종류·같은 색상으로 보충해야 합니다.</p>
+</div>
+
+<div style="background:#f5f5f5;border-radius:8px;padding:15px;margin:10px 0;">
+<p style="font-weight:bold;color:#1976d2;">Q. 냉각수가 부족하면 수돗물을 넣어도 되나요?</p>
+<p style="line-height:1.8;">긴급 상황에서 일시적으로 수돗물을 보충할 수 있지만, <strong>장기간 사용은 금물</strong>입니다. 수돗물의 미네랄 성분이 냉각 시스템에 스케일(물때)을 형성하고 부식을 촉진합니다. 응급 조치 후 가급적 빠른 시일 내에 정품 냉각수로 교체하세요.</p>
+</div>
+
+<div style="background:#f5f5f5;border-radius:8px;padding:15px;margin:10px 0;">
+<p style="font-weight:bold;color:#1976d2;">Q. 냉각수 교체 비용은 얼마인가요?</p>
+<p style="line-height:1.8;">정비소 기준 냉각수 교체 비용은 공임 포함 약 <strong>5만~10만 원</strong> 수준입니다. 부동액 종류(LLC vs SLLC), 차종(엔진 크기), 그리고 시스템 전체 세척(플러시) 여부에 따라 차이가 있습니다. SLLC는 부동액 자체 가격이 LLC보다 1.5~2배 높지만 교체 주기가 길어 장기적으로 비슷합니다.</p>
+</div>
+
+<h2 style="color:#1976d2;border-bottom:2px solid #1976d2;padding-bottom:10px;">냉각수 관리 핵심 요약</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:15px 0;">
+<thead>
+<tr>
+<th style="background:#1976d2;color:white;padding:12px;border:1px solid #ddd;">항목</th>
+<th style="background:#1976d2;color:white;padding:12px;border:1px solid #ddd;">핵심 포인트</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding:10px;border:1px solid #ddd;"><strong>종류 확인</strong></td>
+<td style="padding:10px;border:1px solid #ddd;">매뉴얼 확인 → 같은 규격만 사용</td>
+</tr>
+<tr style="background:#f5f5f5;">
+<td style="padding:10px;border:1px solid #ddd;"><strong>혼합 금지</strong></td>
+<td style="padding:10px;border:1px solid #ddd;">다른 색상/종류 절대 섞지 않기</td>
+</tr>
+<tr>
+<td style="padding:10px;border:1px solid #ddd;"><strong>점검 주기</strong></td>
+<td style="padding:10px;border:1px solid #ddd;">최소 6개월~1년마다 수위·색상 확인</td>
+</tr>
+<tr style="background:#f5f5f5;">
+<td style="padding:10px;border:1px solid #ddd;"><strong>교체 주기</strong></td>
+<td style="padding:10px;border:1px solid #ddd;">LLC 2년/4만km, SLLC 4~5년/8~10만km</td>
+</tr>
+<tr>
+<td style="padding:10px;border:1px solid #ddd;"><strong>비상 시</strong></td>
+<td style="padding:10px;border:1px solid #ddd;">수돗물 임시 보충 가능, 빠른 교체 필수</td>
+</tr>
+</tbody>
+</table>
+
+<p style="line-height:1.8;margin-top:30px;">
+냉각수는 눈에 잘 띄지 않는 소모품이지만, <strong>관리를 소홀히 하면 엔진이라는 자동차의 심장을 직접 위협</strong>합니다. 특히 여름철에는 한 번쯤 보닛을 열고 냉각수 상태를 확인하는 습관을 들이시면 큰 고장을 미리 예방할 수 있습니다.
+</p>
+
+<p style="line-height:1.8;">
+냉각수 점검이나 교체가 필요하시면 <strong>타이어모어 울산학산점</strong>에서 도움 드리겠습니다. 😊
+</p>
+
+<p style="text-align:center;margin-top:30px;padding:20px;background:#f5f5f5;border-radius:8px;">
+<strong>타이어모어 울산학산점</strong><br>
+📍 울산 중구 번영로 342-1<br>
+📞 052-265-0085<br>
+미쉐린·콘티넨탈 공식 인증 대리점
+</p>
+
+<!-- 쿠팡 파트너스 배너 -->
+<div style="text-align:center;margin:30px 0;">
+<a href="https://link.coupang.com/a/feNvHGcAy4" target="_blank" referrerpolicy="unsafe-url"><img src="https://img2c.coupangcdn.com/image/affiliate/banner/4a5f12cb631e913a72b6b67a19a90745@2x.jpg" alt="7200mAh 휴대용 무선 차량용 에어펌프 타이어 공기압 주입기 다용도, 블랙, 1개" width="120" height="240"></a>
+<p style="font-size:12px;color:#999;margin-top:5px;">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+</div>
+
+<p style="font-size:13px;color:#888;margin-top:20px;">
+<strong>SEO 키워드:</strong> 냉각수, 부동액, 냉각수 교체 시기, 부동액 종류, LLC, SLLC, 냉각수 혼합 금지, 냉각수 점검, 오버히트 예방, 냉각수 교체 비용, 자동차 냉각수 관리, 여름철 냉각수, 냉각수 색상, 냉각수 보충, 타이어모어 울산
+</p>
+</textarea>
+</div>
+
+<!-- 미리보기 -->
+<div class="preview-box">
+<h2>📖 미리보기</h2>
+<div id="preview-content">
+<!-- 본문 미리보기는 위 textarea의 내용과 동일 -->
+<p style="font-size:14px;color:#666;">↑ 위 HTML 소스가 실제 블로그에 적용될 내용입니다.</p>
+</div>
+</div>
+
+</body>
+</html>
