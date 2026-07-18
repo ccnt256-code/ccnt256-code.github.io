@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>미리보기 — 디퍼렌셜 오일 교체 가이드</title>
+<style>
+  body { font-family: 'Malgun Gothic', sans-serif; max-width: 820px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+  .seo-box { background: #fff9e6; border: 2px solid #f0c040; border-radius: 8px; padding: 16px; margin-bottom: 20px; }
+  .seo-box h3 { margin-top: 0; color: #b8860b; }
+  .seo-item { margin: 8px 0; cursor: pointer; padding: 6px; border-radius: 4px; }
+  .seo-item:hover { background: #fff3cd; }
+  .seo-item .label { font-weight: bold; color: #666; font-size: 13px; }
+  .seo-item .value { color: #333; }
+  .html-box { background: #e8f5e9; border: 2px solid #4caf50; border-radius: 8px; padding: 16px; margin-bottom: 20px; }
+  .html-box h3 { margin-top: 0; color: #2e7d32; }
+  .html-box textarea { width: 100%; height: 300px; font-family: monospace; font-size: 12px; }
+  .preview-box { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 24px; }
+  .preview-box h2 { color: #333; border-bottom: 2px solid #1a73e8; padding-bottom: 8px; }
+  .preview-box img { max-width: 100%; height: auto; border-radius: 6px; margin: 16px 0; }
+  .preview-box table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+  .preview-box th, .preview-box td { border: 1px solid #ddd; padding: 10px 12px; text-align: left; }
+  .preview-box th { background: #f8f9fa; font-weight: bold; }
+  .copied { background: #c8e6c9 !important; transition: background 0.3s; }
+  .info-box { background: #e3f2fd; border-left: 4px solid #1976d2; padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0; }
+  .warning-box { background: #fff3e0; border-left: 4px solid #f57c00; padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0; }
+  .faq-item { background: #fafafa; border: 1px solid #eee; border-radius: 6px; padding: 16px; margin: 12px 0; }
+  .faq-item strong { color: #1a73e8; }
+</style>
+<script>
+function copyText(el) {
+  const text = el.querySelector('.value').textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    el.classList.add('copied');
+    setTimeout(() => el.classList.remove('copied'), 1000);
+  });
+}
+function selectAll(textarea) {
+  textarea.select();
+}
+</script>
+</head>
+<body>
+
+<h1>📝 티스토리 포스팅 미리보기</h1>
+
+<div class="seo-box">
+  <h3>★ SEO 설정 (클릭하면 복사)</h3>
+  <div class="seo-item" onclick="copyText(this)">
+    <span class="label">제목:</span>
+    <span class="value">자동차 디퍼렌셜 오일(데후 오일) 교체 시기·관리 완벽 가이드 2026 — 종류·교체 비용·이상 증상·자가 점검법 총정리</span>
+  </div>
+  <div class="seo-item" onclick="copyText(this)">
+    <span class="label">설명:</span>
+    <span class="value">디퍼렌셜 오일(데후 오일)이란? 교체 주기 5~7만km, 교체 비용 5~15만원, 이상 증상(소음·진동), 자가 점검법까지 한 번에 정리했습니다. 후륜·4륜 차량 오너 필독 가이드.</span>
+  </div>
+  <div class="seo-item" onclick="copyText(this)">
+    <span class="label">태그:</span>
+    <span class="value">디퍼렌셜오일, 데후오일, 디퍼렌셜오일교체, 데후오일교체시기, 자동차오일종류, 디퍼렌셜오일교체비용, 후륜구동오일, 4륜구동오일, 자동차정비, 자동차관리, 소모품교체, 타이어모어울산학산점</span>
+  </div>
+  <div class="seo-item" onclick="copyText(this)">
+    <span class="label">카테고리:</span>
+    <span class="value">자동차 관리</span>
+  </div>
+</div>
+
+<div class="html-box">
+  <h3>📋 전체 HTML (클릭하면 전체선택 → Ctrl+C)</h3>
+  <textarea onclick="selectAll(this)" readonly id="html-source"></textarea>
+</div>
+
+<div class="preview-box" id="preview-content">
+<!-- 실제 블로그 HTML 시작 -->
+</div>
+
+<script>
+const blogHTML = `<!--
+★ 티스토리 SEO 설정 ★
+[제목] 자동차 디퍼렌셜 오일(데후 오일) 교체 시기·관리 완벽 가이드 2026 — 종류·교체 비용·이상 증상·자가 점검법 총정리
+[설명 (meta description)] 디퍼렌셜 오일(데후 오일)이란? 교체 주기 5~7만km, 교체 비용 5~15만원, 이상 증상(소음·진동), 자가 점검법까지 한 번에 정리했습니다. 후륜·4륜 차량 오너 필독 가이드.
+[태그] 디퍼렌셜오일, 데후오일, 디퍼렌셜오일교체, 데후오일교체시기, 자동차오일종류, 디퍼렌셜오일교체비용, 후륜구동오일, 4륜구동오일, 자동차정비, 자동차관리, 소모품교체, 타이어모어울산학산점
+[카테고리] 자동차 관리
+-->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "자동차 디퍼렌셜 오일(데후 오일) 교체 시기·관리 완벽 가이드 2026",
+  "description": "디퍼렌셜 오일(데후 오일)이란? 교체 주기 5~7만km, 교체 비용 5~15만원, 이상 증상(소음·진동), 자가 점검법까지 한 번에 정리했습니다.",
+  "author": {"@type": "Organization", "name": "타이어모어 울산학산점"},
+  "publisher": {"@type": "Organization", "name": "타이어모어 울산학산점"},
+  "datePublished": "2026-07-18",
+  "dateModified": "2026-07-18",
+  "mainEntityOfPage": {"@type": "WebPage"}
+}
+<\\/script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "디퍼렌셜 오일(데후 오일)은 얼마나 자주 교체해야 하나요?",
+      "acceptedAnswer": {"@type": "Answer", "text": "일반 주행 조건에서 5만~7만km마다, 가혹 조건(산악 주행, 견인, 잦은 급가속)에서는 3만~5만km마다 교체를 권장합니다. 차종별 정비 매뉴얼을 우선 확인하세요."}
+    },
+    {
+      "@type": "Question",
+      "name": "디퍼렌셜 오일 교체 비용은 얼마인가요?",
+      "acceptedAnswer": {"@type": "Answer", "text": "국산차 기준 5만~8만원, 수입차는 8만~15만원 수준입니다. 4륜 구동 차량은 전·후 디퍼렌셜 + 트랜스퍼 케이스까지 포함하면 15만~25만원 이상 소요될 수 있습니다."}
+    },
+    {
+      "@type": "Question",
+      "name": "디퍼렌셜 오일을 교체하지 않으면 어떻게 되나요?",
+      "acceptedAnswer": {"@type": "Answer", "text": "오일이 열화되면 기어 마모가 가속되고, 코너링 시 우웅·윙 소음이 발생하며, 심하면 디퍼렌셜 어셈블리 전체를 교체해야 할 수 있습니다. 수리 비용은 100만원~300만원 이상입니다."}
+    },
+    {
+      "@type": "Question",
+      "name": "전륜구동(FF) 차량도 디퍼렌셜 오일을 교체해야 하나요?",
+      "acceptedAnswer": {"@type": "Answer", "text": "전륜구동 차량은 디퍼렌셜이 트랜스미션과 일체형이므로 별도 교체가 필요 없는 경우가 많습니다. 다만 미션 오일(ATF) 교체 시 함께 관리됩니다."}
+    },
+    {
+      "@type": "Question",
+      "name": "디퍼렌셜 오일 상태를 직접 확인할 수 있나요?",
+      "acceptedAnswer": {"@type": "Answer", "text": "네. 드레인 플러그를 열어 소량 채취 후 색상(투명한 황금색 → 검게 변색), 냄새(타는 냄새), 이물질(금속 가루) 유무를 확인하면 됩니다. 다만 리프트 작업이 필요해 정비소 방문을 권장합니다."}
+    }
+  ]
+}
+<\\/script>
+
+<p><strong>디퍼렌셜 오일(데후 오일)은 후륜구동·4륜구동 차량의 동력 전달 핵심 부품인 디퍼렌셜 기어를 보호하는 윤활유입니다.</strong> 교체 주기는 일반 주행 5~7만km, 가혹 조건 3~5만km이며, 제때 교체하지 않으면 기어 손상으로 100만원 이상의 수리비가 발생할 수 있습니다. 이 글에서는 디퍼렌셜 오일의 역할부터 교체 비용, 이상 증상, 자가 점검법까지 한 번에 정리합니다.</p>
+
+<p>&nbsp;</p>
+
+<img src="https://ccnt256-code.github.io/blog-images/differential-oil-guide-20260718-1.jpg" alt="자동차 후륜 디퍼렌셜 어셈블리 근접 촬영" width="100%">
+
+<p>&nbsp;</p>
+
+<h2>디퍼렌셜 오일(데후 오일)이란?</h2>
+
+<p>디퍼렌셜(Differential)은 좌우 바퀴의 회전 속도 차이를 조절하는 기어 장치입니다. 코너를 돌 때 안쪽 바퀴는 적게, 바깥 바퀴는 많이 회전해야 하는데, 이 역할을 디퍼렌셜이 합니다.</p>
+
+<p><strong>디퍼렌셜 오일(= 데후 오일, 디프 오일)</strong>은 이 기어 장치 내부를 채우는 윤활유로, 세 가지 핵심 기능을 합니다:</p>
+
+<ul>
+<li><strong>윤활:</strong> 링 기어와 피니언 기어 사이의 마찰을 줄여 마모 방지</li>
+<li><strong>냉각:</strong> 고속 회전 시 발생하는 열을 흡수·분산</li>
+<li><strong>보호:</strong> 금속 표면에 유막을 형성해 부식 방지</li>
+</ul>
+
+<div class="info-box">
+💡 <strong>엔진 오일과 다른 점:</strong> 엔진 오일은 엔진 내부를, 미션 오일은 변속기를, 디퍼렌셜 오일은 차동 기어를 보호합니다. 각각 요구 점도와 첨가제가 다르므로 혼용하면 안 됩니다.
+</div>
+
+<p>&nbsp;</p>
+
+<h2>어떤 차량에 디퍼렌셜 오일이 필요한가요?</h2>
+
+<table>
+<thead>
+<tr><th>구동 방식</th><th>디퍼렌셜 위치</th><th>별도 교체 필요</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>후륜구동(FR)</strong></td><td>후방 액슬</td><td>✅ 필수</td></tr>
+<tr><td><strong>4륜구동(AWD/4WD)</strong></td><td>전방 + 후방 + 트랜스퍼 케이스</td><td>✅ 필수 (2~3곳)</td></tr>
+<tr><td><strong>전륜구동(FF)</strong></td><td>트랜스미션 일체형</td><td>❌ 미션 오일로 관리</td></tr>
+</tbody>
+</table>
+
+<p>후륜구동이나 4륜구동 차량을 운행 중이라면 디퍼렌셜 오일 관리가 필수입니다. 특히 <strong>SUV, 픽업트럭, 스포츠카</strong>는 대부분 후방 디퍼렌셜이 독립되어 있어 별도 오일 교체가 필요합니다.</p>
+
+<p>&nbsp;</p>
+
+<img src="https://ccnt256-code.github.io/blog-images/differential-oil-guide-20260718-2.jpg" alt="디퍼렌셜 오일 교체 작업 모습" width="100%">
+
+<p>&nbsp;</p>
+
+<h2>디퍼렌셜 오일 종류와 규격</h2>
+
+<p>디퍼렌셜 오일은 <strong>API GL 등급</strong>으로 분류합니다. 현재 대부분의 승용차에는 GL-5가 사용됩니다.</p>
+
+<table>
+<thead>
+<tr><th>등급</th><th>용도</th><th>특징</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>GL-4</strong></td><td>수동변속기, 일부 구형 디퍼렌셜</td><td>중하중 기어에 적합, 극압 첨가제 적음</td></tr>
+<tr><td><strong>GL-5</strong></td><td>대부분의 현대 디퍼렌셜</td><td>고하중 하이포이드 기어용, 극압 첨가제 강화</td></tr>
+<tr><td><strong>합성유</strong></td><td>고성능·고부하 차량</td><td>내열성 우수, 교체 주기 연장, 가격 높음</td></tr>
+</tbody>
+</table>
+
+<div class="warning-box">
+⚠️ <strong>LSD(리미티드 슬립 디퍼렌셜) 장착 차량</strong>은 반드시 LSD 전용 오일 또는 LSD 첨가제를 사용해야 합니다. 일반 GL-5를 넣으면 채터링(덜덜거림) 현상이 발생할 수 있습니다.
+</div>
+
+<p>&nbsp;</p>
+
+<h2>디퍼렌셜 오일 교체 주기는?</h2>
+
+<p>제조사마다 권장 주기가 다르지만, 일반적인 기준은 다음과 같습니다:</p>
+
+<table>
+<thead>
+<tr><th>주행 조건</th><th>교체 주기</th><th>해당 조건</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>일반 주행</strong></td><td>5만~7만km</td><td>도심·고속도로 일반 주행</td></tr>
+<tr><td><strong>가혹 조건</strong></td><td>3만~5만km</td><td>산악 주행, 트레일러 견인, 잦은 급가속·급제동</td></tr>
+<tr><td><strong>오프로드</strong></td><td>2만~3만km</td><td>비포장 도로, 수심 통과(침수 위험)</td></tr>
+</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<h3>수입차 "무교환" 논란 — 정말 안 갈아도 될까?</h3>
+
+<p>일부 수입차 제조사(BMW, 벤츠 등)는 디퍼렌셜 오일을 <strong>"평생 무교환(lifetime fill)"</strong>으로 명시합니다. 하지만 현장 정비사들의 경험과 여러 전문가 의견을 종합하면:</p>
+
+<ul>
+<li>독일 제조사의 "lifetime"은 보증 기간(대략 10만~15만km) 기준</li>
+<li>실제로 10만km 이상 주행 차량의 디퍼렌셜 오일을 빼 보면 상당히 열화된 경우가 많음</li>
+<li><strong>8만~10만km마다 1회 이상 교체를 권장</strong>하는 정비사가 대다수</li>
+</ul>
+
+<p>"무교환"을 맹신하기보다, 주행 거리와 운전 환경을 고려해 주기적으로 점검하는 것이 안전합니다.</p>
+
+<p>&nbsp;</p>
+
+<img src="https://ccnt256-code.github.io/blog-images/differential-oil-guide-20260718-3.jpg" alt="디퍼렌셜 기어 세트 근접 촬영" width="100%">
+
+<p>&nbsp;</p>
+
+<h2>디퍼렌셜 오일 교체 비용은 얼마?</h2>
+
+<table>
+<thead>
+<tr><th>구분</th><th>비용 (2026년 기준)</th><th>비고</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>국산차 (후륜 1곳)</strong></td><td>5만~8만원</td><td>오일 + 공임 포함</td></tr>
+<tr><td><strong>수입차 (후륜 1곳)</strong></td><td>8만~15만원</td><td>순정 오일 사용 시</td></tr>
+<tr><td><strong>4륜 구동 (전체)</strong></td><td>15만~25만원</td><td>전·후 디퍼렌셜 + 트랜스퍼 케이스</td></tr>
+<tr><td><strong>LSD 장착 차량</strong></td><td>+2만~5만원</td><td>LSD 전용 오일/첨가제 추가</td></tr>
+</tbody>
+</table>
+
+<p>엔진 오일 교체(3만~8만원)와 비슷한 수준이지만, 교체를 미루면 디퍼렌셜 어셈블리 전체 교체로 <strong>100만~300만원 이상</strong>의 비용이 발생할 수 있습니다. 가성비 면에서 제때 교체하는 것이 훨씬 경제적입니다.</p>
+
+<p>&nbsp;</p>
+
+<h2>디퍼렌셜 오일 교체가 필요한 이상 증상 5가지</h2>
+
+<p>아래 증상이 나타나면 디퍼렌셜 오일 상태를 점검해 봐야 합니다:</p>
+
+<p><strong>1. 뒤쪽에서 "우웅~" 또는 "윙~" 하는 소음</strong></p>
+<p>주행 중 후방에서 지속적인 허밍(humming) 소리가 나면 디퍼렌셜 오일 부족 또는 열화가 의심됩니다. 속도에 따라 음이 변한다면 더욱 주의가 필요합니다.</p>
+
+<p><strong>2. 코너링 시 "갈갈" 소음 또는 진동</strong></p>
+<p>회전 시 갈리는 듯한 소리나 진동이 느껴지면 기어 이빨의 윤활이 부족한 상태입니다. LSD 장착 차량에서 특히 잘 나타납니다.</p>
+
+<p><strong>3. 가속력 감소</strong></p>
+<p>디퍼렌셜 오일이 열화되면 기어 마찰이 증가해 동력 전달 효율이 떨어집니다. 체감하기 어려운 수준이지만, 연비 저하와 함께 나타나는 경우가 많습니다.</p>
+
+<p><strong>4. 디퍼렌셜 하우징 주변 오일 누유</strong></p>
+<p>차량 하부에 갈색~검은색 오일 자국이 보이면 가스켓이나 시일 손상으로 누유가 발생한 것입니다. 이 경우 오일 교체와 함께 시일 교체도 필요합니다.</p>
+
+<p><strong>5. 오일 색 변화 및 타는 냄새</strong></p>
+<p>정상적인 디퍼렌셜 오일은 투명한 황금색~호박색입니다. 검게 변색되었거나 탄 냄새가 나면 즉시 교체가 필요합니다.</p>
+
+<p>&nbsp;</p>
+
+<h2>디퍼렌셜 오일 자가 점검법</h2>
+
+<p>정비소를 방문하기 전에 간단하게 상태를 확인할 수 있는 방법입니다:</p>
+
+<p><strong>① 시각 점검 (누유 확인)</strong></p>
+<p>차량을 평탄한 곳에 주차한 후, 뒤쪽 차체 하부(후방 액슬 부근)에 오일이 묻어 있는지 확인합니다. 바닥에 오일 방울 자국이 있다면 누유 가능성이 높습니다.</p>
+
+<p><strong>② 소리 점검 (주행 테스트)</strong></p>
+<p>창문을 닫고 라디오를 끈 상태에서 40~60km/h로 주행합니다. 후방에서 일정한 허밍음이 들리는지, 코너링 시 이상 소리가 나는지 집중해 들어보세요.</p>
+
+<p><strong>③ 오일 상태 확인 (정비소 권장)</strong></p>
+<p>리프트에 올려 드레인 플러그를 열어 소량 채취한 후:</p>
+<ul>
+<li>색상: 투명한 황금색이면 정상 / 검은색이면 교체 필요</li>
+<li>냄새: 유황 또는 타는 냄새가 나면 즉시 교체</li>
+<li>이물질: 금속 가루(반짝이)가 보이면 기어 마모 진행 중</li>
+</ul>
+
+<div class="warning-box">
+⚠️ 오일 상태 확인은 리프트 작업이 필요하므로, 가까운 정비소를 방문해 점검받는 것이 안전합니다.
+</div>
+
+<p>&nbsp;</p>
+
+<img src="https://ccnt256-code.github.io/blog-images/differential-oil-guide-20260718-4.jpg" alt="정비소에서 리프트에 올린 SUV 하부 점검" width="100%">
+
+<p>&nbsp;</p>
+
+<h2>디퍼렌셜 오일 교체 과정</h2>
+
+<p>정비소에서 이루어지는 일반적인 교체 과정입니다:</p>
+
+<ol>
+<li><strong>리프트 작업:</strong> 차량을 리프트에 올려 디퍼렌셜 하우징에 접근</li>
+<li><strong>드레인:</strong> 드레인 플러그를 열어 기존 오일을 완전히 배출</li>
+<li><strong>세척:</strong> 필요 시 내부를 세척 (금속 가루가 많을 경우)</li>
+<li><strong>오일 주입:</strong> 규격에 맞는 새 오일을 필 플러그까지 주입</li>
+<li><strong>시일 점검:</strong> 가스켓, 시일 상태 확인 및 필요 시 교체</li>
+<li><strong>시운전:</strong> 교체 후 이상 소음이 사라졌는지 확인</li>
+</ol>
+
+<p>작업 시간은 보통 <strong>30분~1시간</strong> 정도 소요됩니다.</p>
+
+<p>&nbsp;</p>
+
+<h2>디퍼렌셜 오일 관리 팁</h2>
+
+<ul>
+<li>✅ <strong>정비 매뉴얼 확인:</strong> 차종별 권장 오일 규격과 교체 주기를 먼저 확인</li>
+<li>✅ <strong>엔진 오일 교체 시 함께:</strong> 정비소 방문 김에 디퍼렌셜 오일도 점검 요청</li>
+<li>✅ <strong>침수 후 즉시 교체:</strong> 물이 들어가면 오일 성능이 급격히 저하</li>
+<li>✅ <strong>트레일러 견인 후:</strong> 고부하 주행 후에는 교체 주기를 앞당기기</li>
+<li>✅ <strong>이상 소음 발견 즉시:</strong> 소음이 나면 미루지 말고 바로 점검</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>자주 묻는 질문 (FAQ)</h2>
+
+<div class="faq-item">
+<p><strong>Q. 디퍼렌셜 오일(데후 오일)은 얼마나 자주 교체해야 하나요?</strong></p>
+<p>A. 일반 주행 조건에서 5만~7만km마다, 가혹 조건(산악 주행, 견인, 잦은 급가속)에서는 3만~5만km마다 교체를 권장합니다. 차종별 정비 매뉴얼을 우선 확인하세요.</p>
+</div>
+
+<div class="faq-item">
+<p><strong>Q. 디퍼렌셜 오일 교체 비용은 얼마인가요?</strong></p>
+<p>A. 국산차 기준 5만~8만원, 수입차는 8만~15만원 수준입니다. 4륜 구동 차량은 전·후 디퍼렌셜 + 트랜스퍼 케이스까지 포함하면 15만~25만원 이상 소요될 수 있습니다.</p>
+</div>
+
+<div class="faq-item">
+<p><strong>Q. 디퍼렌셜 오일을 교체하지 않으면 어떻게 되나요?</strong></p>
+<p>A. 오일이 열화되면 기어 마모가 가속되고, 코너링 시 우웅·윙 소음이 발생하며, 심하면 디퍼렌셜 어셈블리 전체를 교체해야 할 수 있습니다. 수리 비용은 100만원~300만원 이상입니다.</p>
+</div>
+
+<div class="faq-item">
+<p><strong>Q. 전륜구동(FF) 차량도 디퍼렌셜 오일을 교체해야 하나요?</strong></p>
+<p>A. 전륜구동 차량은 디퍼렌셜이 트랜스미션과 일체형이므로 별도 교체가 필요 없는 경우가 많습니다. 다만 미션 오일(ATF) 교체 시 함께 관리됩니다.</p>
+</div>
+
+<div class="faq-item">
+<p><strong>Q. 디퍼렌셜 오일 상태를 직접 확인할 수 있나요?</strong></p>
+<p>A. 네. 드레인 플러그를 열어 소량 채취 후 색상(투명한 황금색 → 검게 변색), 냄새(타는 냄새), 이물질(금속 가루) 유무를 확인하면 됩니다. 다만 리프트 작업이 필요해 정비소 방문을 권장합니다.</p>
+</div>
+
+<p>&nbsp;</p>
+
+<h2>마무리 — 디퍼렌셜 오일, 잊기 쉽지만 중요합니다</h2>
+
+<p>엔진 오일은 꼬박꼬박 교체하면서 디퍼렌셜 오일은 존재 자체를 모르는 분들이 많습니다. 하지만 후륜·4륜 구동 차량에게 디퍼렌셜 오일은 엔진 오일만큼이나 중요한 소모품입니다.</p>
+
+<p><strong>"혹시 내 차도 해당될까?"</strong> 싶으시면, 다음 정비소 방문 시 디퍼렌셜 오일 상태 점검을 한 번 요청해 보세요. 5분이면 확인 가능하고, 수백만 원짜리 수리비를 예방할 수 있습니다.</p>
+
+<p>&nbsp;</p>
+
+<div style="background:#f0f4f8; border-radius:8px; padding:16px; margin:20px 0;">
+<p style="margin:0; font-size:14px; color:#666;">
+<strong>🏢 타이어모어 울산학산점</strong><br>
+📍 울산 중구 번영로 342-1<br>
+📞 052-265-0085<br>
+🔧 미쉐린·콘티넨탈 공식 인증 대리점<br>
+타이어 교체부터 디퍼렌셜 오일 점검까지, 궁금하신 점은 편하게 문의하세요!
+</p>
+</div>
+
+<p>&nbsp;</p>
+
+<p style="font-size:13px; color:#999;">📌 <strong>SEO 키워드:</strong> 디퍼렌셜 오일, 데후 오일, 디퍼렌셜 오일 교체 시기, 데후 오일 교체 비용, 디퍼렌셜 오일 종류, 후륜구동 오일, 4륜구동 오일 교체, 디퍼렌셜 소음, 자동차 소모품 교체, 자동차 정비 가이드</p>`;
+
+document.getElementById('html-source').value = blogHTML;
+document.getElementById('preview-content').innerHTML = blogHTML;
+</script>
+
+</body>
+</html>
