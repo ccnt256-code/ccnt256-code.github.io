@@ -381,7 +381,9 @@ const blogHTML = `<!--
 <p style="font-size:13px; color:#999;">📌 <strong>SEO 키워드:</strong> 디퍼렌셜 오일, 데후 오일, 디퍼렌셜 오일 교체 시기, 데후 오일 교체 비용, 디퍼렌셜 오일 종류, 후륜구동 오일, 4륜구동 오일 교체, 디퍼렌셜 소음, 자동차 소모품 교체, 자동차 정비 가이드</p>`;
 
 document.getElementById('html-source').value = blogHTML;
-document.getElementById('preview-content').innerHTML = blogHTML;
+document.getElementById('preview-content').innerHTML = blogHTML
+  .replace(/<script[\s\S]*?<\/script>/gi, '')
+  .replace(/<!--[\s\S]*?-->/g, '');
 </script>
 
 </body>
