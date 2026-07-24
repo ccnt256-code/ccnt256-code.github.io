@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>티스토리 미리보기 — 에어필터</title>
+<style>
+body{font-family:sans-serif;max-width:900px;margin:0 auto;padding:20px;}
+.seo-box{background:#fffde7;border:2px solid #f9a825;border-radius:8px;padding:16px;margin-bottom:20px;}
+.seo-box h3{margin-top:0;color:#e65100;}
+.seo-item{margin:8px 0;padding:8px;background:#fff8e1;border-radius:4px;cursor:pointer;}
+.seo-item:hover{background:#fff3cd;}
+.html-box{background:#e8f5e9;border:2px solid #388e3c;border-radius:8px;padding:16px;margin-bottom:20px;}
+.html-box h3{margin-top:0;color:#1b5e20;}
+textarea{width:100%;height:300px;font-family:monospace;font-size:12px;border:1px solid #ccc;border-radius:4px;padding:8px;}
+.preview{border:1px solid #ddd;border-radius:8px;padding:20px;}
+</style>
+<script>
+function copyText(el){
+  const text = el.querySelector('.copy-val').textContent;
+  navigator.clipboard.writeText(text).then(()=>{
+    const orig = el.style.background;
+    el.style.background='#c8e6c9';
+    setTimeout(()=>el.style.background=orig,800);
+  });
+}
+function selectAll(ta){ta.select();}
+</script>
+</head>
+<body>
+
+<div class="seo-box">
+<h3>📋 티스토리 SEO 설정 (클릭하면 복사)</h3>
+<div class="seo-item" onclick="copyText(this)">
+  <strong>제목:</strong><br>
+  <span class="copy-val">자동차 에어필터 교체 시기·방법 완벽 가이드 2026 — 증상·비용·셀프 교체까지 총정리</span>
+</div>
+<div class="seo-item" onclick="copyText(this)">
+  <strong>설명 (meta description):</strong><br>
+  <span class="copy-val">자동차 에어필터 교체 시기는 언제일까요? 에어필터 막힘 증상, 교체 비용(1~3만원), 셀프 교체 방법, 엔진/에어컨 필터 차이까지 2026년 최신 정보를 총정리했습니다.</span>
+</div>
+<div class="seo-item" onclick="copyText(this)">
+  <strong>태그:</strong><br>
+  <span class="copy-val">에어필터교체, 자동차에어필터, 에어클리너, 엔진에어필터, 에어컨필터, 자동차점검, 소모품교체, 엔진출력, 연비향상</span>
+</div>
+<div class="seo-item" onclick="copyText(this)">
+  <strong>카테고리:</strong><br>
+  <span class="copy-val">자동차 관리</span>
+</div>
+</div>
+
+<div class="html-box">
+<h3>📄 HTML 본문 (클릭 후 전체선택 → 복사)</h3>
+<textarea onclick="selectAll(this)" readonly>&lt;!--
+★ 티스토리 SEO 설정 ★
+[제목] 자동차 에어필터 교체 시기·방법 완벽 가이드 2026 — 증상·비용·셀프 교체까지 총정리
+[설명 (meta description)] 자동차 에어필터 교체 시기는 언제일까요? 에어필터 막힘 증상, 교체 비용(1~3만원), 셀프 교체 방법, 엔진/에어컨 필터 차이까지 2026년 최신 정보를 총정리했습니다.
+[태그] 에어필터교체, 자동차에어필터, 에어클리너, 엔진에어필터, 에어컨필터, 자동차점검, 소모품교체, 엔진출력, 연비향상, 울산타이어
+[카테고리] 자동차 관리
+--&gt;
+
+&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "자동차 에어필터 교체 시기·방법 완벽 가이드 2026 — 증상·비용·셀프 교체까지 총정리",
+  "description": "자동차 에어필터 교체 시기는 언제일까요? 에어필터 막힘 증상, 교체 비용(1~3만원), 셀프 교체 방법, 엔진/에어컨 필터 차이까지 2026년 최신 정보를 총정리했습니다.",
+  "author": {"@type": "Organization", "name": "타이어모어 울산학산점"},
+  "publisher": {"@type": "Organization", "name": "타이어모어 울산학산점"},
+  "datePublished": "2026-07-24",
+  "dateModified": "2026-07-24",
+  "mainEntityOfPage": {"@type": "WebPage"}
+}
+&lt;/script&gt;
+
+&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "자동차 에어필터 교체 시기는?",
+      "acceptedAnswer": {"@type": "Answer", "text": "일반적으로 주행거리 1만~1.5만km 또는 1년마다 교체를 권장합니다. 먼지가 많은 도심 주행이라면 더 자주 교체해야 합니다."}
+    },
+    {
+      "@type": "Question",
+      "name": "에어필터 교체 비용은 얼마인가요?",
+      "acceptedAnswer": {"@type": "Answer", "text": "부품값 1~2만원, 공임 5천~1만원으로 총 1.5~3만원 선입니다. 셀프 교체 시 부품값만 들어갑니다."}
+    },
+    {
+      "@type": "Question",
+      "name": "에어필터와 에어컨 필터의 차이는?",
+      "acceptedAnswer": {"@type": "Answer", "text": "에어필터(엔진 에어필터)는 엔진으로 들어오는 공기를 걸러주고, 에어컨 필터(캐빈 필터)는 차량 실내 공기를 정화합니다. 둘 다 정기 교체가 필요합니다."}
+    },
+    {
+      "@type": "Question",
+      "name": "에어필터를 안 갈면 어떻게 되나요?",
+      "acceptedAnswer": {"@type": "Answer", "text": "엔진 출력 저하, 연비 악화, 시동 불량, 매연 증가 등의 증상이 나타납니다. 심하면 엔진 손상으로 이어질 수 있어 정기 교체가 중요합니다."}
+    }
+  ]
+}
+&lt;/script&gt;
+
+&lt;p&gt;자동차 에어필터는 교체 비용이 1~3만원으로 저렴하지만, 교체 시기를 놓치면 연비 저하·엔진 출력 감소·매연 증가로 이어집니다. &lt;strong&gt;주행거리 1만~1.5만km 또는 1년마다 교체&lt;/strong&gt;를 기억하세요.&lt;/p&gt;
+
+&lt;img src="https://ccnt256-code.github.io/blog-images/tistory-airfilter-20260724.jpg" alt="자동차 에어필터 교체 가이드" style="max-width:100%;margin:20px 0;border-radius:8px;"&gt;
+
+&lt;h2&gt;자동차 에어필터란? — 엔진의 '마스크' 역할&lt;/h2&gt;
+
+&lt;p&gt;엔진은 연료를 태워 동력을 만드는데, 이 과정에서 &lt;strong&gt;공기(산소)가 반드시 필요&lt;/strong&gt;합니다. 에어필터(Air Filter, 에어클리너)는 엔진으로 유입되는 공기에서 먼지, 이물질, 꽃가루 등을 걸러주는 장치입니다.&lt;/p&gt;
+
+&lt;p&gt;마치 우리가 미세먼지 심한 날 마스크를 쓰는 것처럼, 에어필터는 엔진의 '마스크' 역할을 합니다. 필터가 막히면 깨끗한 공기가 충분히 들어오지 못해 엔진 성능이 저하되고 연비가 떨어집니다.&lt;/p&gt;
+
+&lt;p&gt;에어필터는 크게 두 종류입니다:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;엔진 에어필터:&lt;/strong&gt; 엔진 흡기 계통 — 연소용 공기 정화&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;에어컨 필터 (캐빈 필터):&lt;/strong&gt; 실내 공기 정화 — 탑승자 호흡 공기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;두 필터 모두 정기 교체 대상이지만, 오늘은 엔진 에어필터를 중심으로 알아봅니다.&lt;/p&gt;
+
+&lt;h2&gt;자동차 에어필터 교체 시기 — 언제 갈아야 할까?&lt;/h2&gt;
+
+&lt;p&gt;제조사마다 권장 교체 주기는 다르지만, 일반적인 기준은 다음과 같습니다:&lt;/p&gt;
+
+&lt;table style="width:100%;border-collapse:collapse;margin:12px 0;"&gt;
+&lt;tr style="background:#f5f5f5;"&gt;&lt;th style="padding:8px;border:1px solid #ddd;text-align:left;"&gt;교체 기준&lt;/th&gt;&lt;th style="padding:8px;border:1px solid #ddd;text-align:left;"&gt;권장 주기&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style="padding:8px;border:1px solid #ddd;"&gt;주행 거리&lt;/td&gt;&lt;td style="padding:8px;border:1px solid #ddd;"&gt;&lt;strong&gt;1만~1.5만 km&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style="padding:8px;border:1px solid #ddd;"&gt;경과 시간&lt;/td&gt;&lt;td style="padding:8px;border:1px solid #ddd;"&gt;&lt;strong&gt;12개월(1년)&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style="padding:8px;border:1px solid #ddd;"&gt;도심 주행 많은 경우&lt;/td&gt;&lt;td style="padding:8px;border:1px solid #ddd;"&gt;&lt;strong&gt;6~8개월 또는 8천 km&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style="padding:8px;border:1px solid #ddd;"&gt;공사 현장·비포장 도로&lt;/td&gt;&lt;td style="padding:8px;border:1px solid #ddd;"&gt;&lt;strong&gt;5천 km 이내&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;주행 환경이 나쁠수록 더 자주 교체해야 합니다. 울산처럼 산업단지가 많거나 공사가 잦은 지역에서 운전하신다면 권장 주기보다 &lt;strong&gt;20~30% 앞당겨&lt;/strong&gt; 교체하는 것이 좋습니다.&lt;/p&gt;
+
+&lt;h2&gt;에어필터 교체 시기 증상 — 이런 증상이 보이면 즉시 교체!&lt;/h2&gt;
+
+&lt;p&gt;주행거리나 시간과 관계없이 아래 증상이 나타나면 에어필터를 점검하세요:&lt;/p&gt;
+
+&lt;p&gt;✅ &lt;strong&gt;연비가 갑자기 나빠졌다&lt;/strong&gt; — 공기 부족으로 연료가 더 많이 소모됩니다.&lt;/p&gt;
+&lt;p&gt;✅ &lt;strong&gt;시동이 잘 걸리지 않는다&lt;/strong&gt; — 엔진 연소 효율이 떨어진 것입니다.&lt;/p&gt;
+&lt;p&gt;✅ &lt;strong&gt;가속 페달을 밟아도 출력이 약하다&lt;/strong&gt; — 엔진이 원하는 만큼 공기를 못 받는 증상입니다.&lt;/p&gt;
+&lt;p&gt;✅ &lt;strong&gt;매연(흑연)이 심해졌다&lt;/strong&gt; — 불완전 연소의 신호입니다.&lt;/p&gt;
+&lt;p&gt;✅ &lt;strong&gt;엔진 소음이 커졌다&lt;/strong&gt; — 엔진에 부담이 가중된 것입니다.&lt;/p&gt;
+&lt;p&gt;✅ &lt;strong&gt;필터가 눈에 띄게 검거나 막혀 있다&lt;/strong&gt; — 육안으로 확인해 즉시 교체하세요.&lt;/p&gt;
+
+&lt;h2&gt;에어필터 교체 비용 — 공임 포함 얼마?&lt;/h2&gt;
+
+&lt;p&gt;에어필터 교체는 비교적 저렴한 정비입니다. 차종과 브랜드에 따라 다르지만 일반적인 비용은:&lt;/p&gt;
+
+&lt;table style="width:100%;border-collapse:collapse;margin:12px 0;"&gt;
+&lt;tr style="background:#f5f5f5;"&gt;&lt;th style="padding:8px;border:1px solid #ddd;text-align:left;"&gt;항목&lt;/th&gt;&lt;th style="padding:8px;border:1px solid #ddd;text-align:left;"&gt;비용&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style="padding:8px;border:1px solid #ddd;"&gt;국산차 에어필터 부품값&lt;/td&gt;&lt;td style="padding:8px;border:1px solid #ddd;"&gt;8,000 ~ 20,000원&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style="padding:8px;border:1px solid #ddd;"&gt;수입차 에어필터 부품값&lt;/td&gt;&lt;td style="padding:8px;border:1px solid #ddd;"&gt;20,000 ~ 60,000원&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style="padding:8px;border:1px solid #ddd;"&gt;공임 (일반 정비소)&lt;/td&gt;&lt;td style="padding:8px;border:1px solid #ddd;"&gt;5,000 ~ 10,000원&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style="padding:8px;border:1px solid #ddd;"&gt;딜러 공임&lt;/td&gt;&lt;td style="padding:8px;border:1px solid #ddd;"&gt;15,000 ~ 30,000원&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;셀프 교체 시에는 부품값만 들어가므로 1만원 안팎으로 해결 가능합니다. 대부분의 국산차는 에어필터 위치 접근성이 좋아 공구 없이도 교체할 수 있습니다.&lt;/p&gt;
+
+&lt;h2&gt;에어필터 셀프 교체 방법 — 5분이면 완료!&lt;/h2&gt;
+
+&lt;p&gt;에어필터 셀프 교체는 생각보다 쉽습니다. 대부분 공구 없이 가능합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;필요한 것:&lt;/strong&gt; 새 에어필터 (차종에 맞는 규격)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;교체 순서:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;엔진 후드를 엽니다.&lt;/li&gt;
+&lt;li&gt;에어 덕트(흡기 호스)와 연결된 &lt;strong&gt;에어클리너 박스&lt;/strong&gt;를 찾습니다. 보통 엔진 한쪽 구석에 직사각형/원통형 플라스틱 박스로 있습니다.&lt;/li&gt;
+&lt;li&gt;클립이나 나사를 풀고 박스 뚜껑을 엽니다.&lt;/li&gt;
+&lt;li&gt;기존 에어필터를 꺼내고, 안에 쌓인 먼지를 마른 천으로 가볍게 닦아냅니다.&lt;/li&gt;
+&lt;li&gt;새 에어필터를 방향에 맞게 넣습니다.&lt;/li&gt;
+&lt;li&gt;뚜껑을 닫고 클립/나사를 다시 조입니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;교체 후 시동을 걸어 이상 없으면 완료! 전체 과정이 5분 이내입니다. 단, 차종에 따라 공구(육각렌치 등)가 필요하거나 접근이 어려운 경우도 있으니, 처음이라면 정비소에 맡기는 것도 좋습니다.&lt;/p&gt;
+
+&lt;h2&gt;에어컨 필터 교체 시기도 함께 챙기세요&lt;/h2&gt;
+
+&lt;p&gt;에어필터를 교체할 때 &lt;strong&gt;에어컨 필터(캐빈 에어 필터)&lt;/strong&gt;도 함께 점검하세요. 에어컨 필터는 실내 공기를 정화하는 역할로, 막히면 에어컨 냉각 효율 저하, 불쾌한 냄새, 꽃가루·먼지 유입 등의 문제가 생깁니다.&lt;/p&gt;
+
+&lt;p&gt;에어컨 필터 교체 주기는 &lt;strong&gt;6개월~1년 또는 1만 km&lt;/strong&gt;가 기준입니다. 여름철 에어컨을 많이 쓰는 시기 전·후에 교체해주면 쾌적한 실내 환경을 유지할 수 있습니다.&lt;/p&gt;
+
+&lt;h2&gt;FAQ — 자동차 에어필터 자주 묻는 질문&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Q. 에어필터를 안 갈면 정말 차에 문제가 생기나요?&lt;/strong&gt;&lt;br&gt;
+A. 단기적으로는 연비 저하와 출력 감소 정도지만, 장기간 방치하면 엔진 내부로 이물질이 유입되어 실린더·피스톤 손상으로 이어질 수 있습니다. 수십만 원짜리 수리를 막는 1~2만 원의 예방 정비입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Q. 에어필터는 청소해서 재사용할 수 없나요?&lt;/strong&gt;&lt;br&gt;
+A. 일반 종이 에어필터는 청소 후 재사용이 어렵습니다. 단, K&N 같은 면(Cotton) 소재의 고성능 에어필터는 세척 후 오일을 다시 도포해 재사용 가능합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Q. 직접 교체해도 보증에 영향이 없나요?&lt;/strong&gt;&lt;br&gt;
+A. 에어필터는 소모품으로, 직접 교체해도 보증에 영향을 주지 않습니다. 다만 교체 기록을 보관하는 것이 좋습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Q. 어떤 브랜드 에어필터가 좋은가요?&lt;/strong&gt;&lt;br&gt;
+A. 국산차는 순정 부품(만도, 현대모비스) 또는 동급 OEM 제품이 안전합니다. 수입차는 순정 권장이며, 만족도가 높은 브랜드로는 MANN+HUMMEL, BOSCH, Mahle 등이 있습니다.&lt;/p&gt;
+
+&lt;hr&gt;
+&lt;p style="font-size:13px;color:#888;"&gt;울산 중구 번영로 342-1 타이어모어 울산학산점 | 문의: 052-265-0085&lt;/p&gt;
+&lt;p style="font-size:12px;color:#aaa;"&gt;※ 이 포스팅은 자동차 관리 정보를 공유하기 위해 작성되었습니다. 정확한 교체 주기는 차량 매뉴얼 또는 전문 정비소에 문의하세요.&lt;/p&gt;</textarea>
+</div>
+
+<div class="preview">
+<h2>👁️ 미리보기</h2>
+<!--
+★ 티스토리 SEO 설정 ★
+[제목] 자동차 에어필터 교체 시기·방법 완벽 가이드 2026 — 증상·비용·셀프 교체까지 총정리
+[설명 (meta description)] 자동차 에어필터 교체 시기는 언제일까요? 에어필터 막힘 증상, 교체 비용(1~3만원), 셀프 교체 방법, 엔진/에어컨 필터 차이까지 2026년 최신 정보를 총정리했습니다.
+[태그] 에어필터교체, 자동차에어필터, 에어클리너, 엔진에어필터, 에어컨필터, 자동차점검, 소모품교체, 엔진출력, 연비향상, 울산타이어
+[카테고리] 자동차 관리
+-->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "자동차 에어필터 교체 시기·방법 완벽 가이드 2026 — 증상·비용·셀프 교체까지 총정리",
+  "description": "자동차 에어필터 교체 시기는 언제일까요? 에어필터 막힘 증상, 교체 비용(1~3만원), 셀프 교체 방법, 엔진/에어컨 필터 차이까지 2026년 최신 정보를 총정리했습니다.",
+  "author": {"@type": "Organization", "name": "타이어모어 울산학산점"},
+  "publisher": {"@type": "Organization", "name": "타이어모어 울산학산점"},
+  "datePublished": "2026-07-24",
+  "dateModified": "2026-07-24",
+  "mainEntityOfPage": {"@type": "WebPage"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "자동차 에어필터 교체 시기는?",
+      "acceptedAnswer": {"@type": "Answer", "text": "일반적으로 주행거리 1만~1.5만km 또는 1년마다 교체를 권장합니다. 먼지가 많은 도심 주행이라면 더 자주 교체해야 합니다."}
+    },
+    {
+      "@type": "Question",
+      "name": "에어필터 교체 비용은 얼마인가요?",
+      "acceptedAnswer": {"@type": "Answer", "text": "부품값 1~2만원, 공임 5천~1만원으로 총 1.5~3만원 선입니다. 셀프 교체 시 부품값만 들어갑니다."}
+    },
+    {
+      "@type": "Question",
+      "name": "에어필터와 에어컨 필터의 차이는?",
+      "acceptedAnswer": {"@type": "Answer", "text": "에어필터(엔진 에어필터)는 엔진으로 들어오는 공기를 걸러주고, 에어컨 필터(캐빈 필터)는 차량 실내 공기를 정화합니다. 둘 다 정기 교체가 필요합니다."}
+    },
+    {
+      "@type": "Question",
+      "name": "에어필터를 안 갈면 어떻게 되나요?",
+      "acceptedAnswer": {"@type": "Answer", "text": "엔진 출력 저하, 연비 악화, 시동 불량, 매연 증가 등의 증상이 나타납니다. 심하면 엔진 손상으로 이어질 수 있어 정기 교체가 중요합니다."}
+    }
+  ]
+}
+</script>
+
+<p>자동차 에어필터는 교체 비용이 1~3만원으로 저렴하지만, 교체 시기를 놓치면 연비 저하·엔진 출력 감소·매연 증가로 이어집니다. <strong>주행거리 1만~1.5만km 또는 1년마다 교체</strong>를 기억하세요.</p>
+
+<img src="https://ccnt256-code.github.io/blog-images/tistory-airfilter-20260724.jpg" alt="자동차 에어필터 교체 가이드" style="max-width:100%;margin:20px 0;border-radius:8px;">
+
+<h2>자동차 에어필터란? — 엔진의 '마스크' 역할</h2>
+
+<p>엔진은 연료를 태워 동력을 만드는데, 이 과정에서 <strong>공기(산소)가 반드시 필요</strong>합니다. 에어필터(Air Filter, 에어클리너)는 엔진으로 유입되는 공기에서 먼지, 이물질, 꽃가루 등을 걸러주는 장치입니다.</p>
+
+<p>마치 우리가 미세먼지 심한 날 마스크를 쓰는 것처럼, 에어필터는 엔진의 '마스크' 역할을 합니다. 필터가 막히면 깨끗한 공기가 충분히 들어오지 못해 엔진 성능이 저하되고 연비가 떨어집니다.</p>
+
+<p>에어필터는 크게 두 종류입니다:</p>
+<ul>
+<li><strong>엔진 에어필터:</strong> 엔진 흡기 계통 — 연소용 공기 정화</li>
+<li><strong>에어컨 필터 (캐빈 필터):</strong> 실내 공기 정화 — 탑승자 호흡 공기</li>
+</ul>
+<p>두 필터 모두 정기 교체 대상이지만, 오늘은 엔진 에어필터를 중심으로 알아봅니다.</p>
+
+<h2>자동차 에어필터 교체 시기 — 언제 갈아야 할까?</h2>
+
+<p>제조사마다 권장 교체 주기는 다르지만, 일반적인 기준은 다음과 같습니다:</p>
+
+<table style="width:100%;border-collapse:collapse;margin:12px 0;">
+<tr style="background:#f5f5f5;"><th style="padding:8px;border:1px solid #ddd;text-align:left;">교체 기준</th><th style="padding:8px;border:1px solid #ddd;text-align:left;">권장 주기</th></tr>
+<tr><td style="padding:8px;border:1px solid #ddd;">주행 거리</td><td style="padding:8px;border:1px solid #ddd;"><strong>1만~1.5만 km</strong></td></tr>
+<tr><td style="padding:8px;border:1px solid #ddd;">경과 시간</td><td style="padding:8px;border:1px solid #ddd;"><strong>12개월(1년)</strong></td></tr>
+<tr><td style="padding:8px;border:1px solid #ddd;">도심 주행 많은 경우</td><td style="padding:8px;border:1px solid #ddd;"><strong>6~8개월 또는 8천 km</strong></td></tr>
+<tr><td style="padding:8px;border:1px solid #ddd;">공사 현장·비포장 도로</td><td style="padding:8px;border:1px solid #ddd;"><strong>5천 km 이내</strong></td></tr>
+</table>
+
+<p>주행 환경이 나쁠수록 더 자주 교체해야 합니다. 울산처럼 산업단지가 많거나 공사가 잦은 지역에서 운전하신다면 권장 주기보다 <strong>20~30% 앞당겨</strong> 교체하는 것이 좋습니다.</p>
+
+<h2>에어필터 교체 시기 증상 — 이런 증상이 보이면 즉시 교체!</h2>
+
+<p>주행거리나 시간과 관계없이 아래 증상이 나타나면 에어필터를 점검하세요:</p>
+
+<p>✅ <strong>연비가 갑자기 나빠졌다</strong> — 공기 부족으로 연료가 더 많이 소모됩니다.</p>
+<p>✅ <strong>시동이 잘 걸리지 않는다</strong> — 엔진 연소 효율이 떨어진 것입니다.</p>
+<p>✅ <strong>가속 페달을 밟아도 출력이 약하다</strong> — 엔진이 원하는 만큼 공기를 못 받는 증상입니다.</p>
+<p>✅ <strong>매연(흑연)이 심해졌다</strong> — 불완전 연소의 신호입니다.</p>
+<p>✅ <strong>엔진 소음이 커졌다</strong> — 엔진에 부담이 가중된 것입니다.</p>
+<p>✅ <strong>필터가 눈에 띄게 검거나 막혀 있다</strong> — 육안으로 확인해 즉시 교체하세요.</p>
+
+<h2>에어필터 교체 비용 — 공임 포함 얼마?</h2>
+
+<p>에어필터 교체는 비교적 저렴한 정비입니다. 차종과 브랜드에 따라 다르지만 일반적인 비용은:</p>
+
+<table style="width:100%;border-collapse:collapse;margin:12px 0;">
+<tr style="background:#f5f5f5;"><th style="padding:8px;border:1px solid #ddd;text-align:left;">항목</th><th style="padding:8px;border:1px solid #ddd;text-align:left;">비용</th></tr>
+<tr><td style="padding:8px;border:1px solid #ddd;">국산차 에어필터 부품값</td><td style="padding:8px;border:1px solid #ddd;">8,000 ~ 20,000원</td></tr>
+<tr><td style="padding:8px;border:1px solid #ddd;">수입차 에어필터 부품값</td><td style="padding:8px;border:1px solid #ddd;">20,000 ~ 60,000원</td></tr>
+<tr><td style="padding:8px;border:1px solid #ddd;">공임 (일반 정비소)</td><td style="padding:8px;border:1px solid #ddd;">5,000 ~ 10,000원</td></tr>
+<tr><td style="padding:8px;border:1px solid #ddd;">딜러 공임</td><td style="padding:8px;border:1px solid #ddd;">15,000 ~ 30,000원</td></tr>
+</table>
+
+<p>셀프 교체 시에는 부품값만 들어가므로 1만원 안팎으로 해결 가능합니다. 대부분의 국산차는 에어필터 위치 접근성이 좋아 공구 없이도 교체할 수 있습니다.</p>
+
+<h2>에어필터 셀프 교체 방법 — 5분이면 완료!</h2>
+
+<p>에어필터 셀프 교체는 생각보다 쉽습니다. 대부분 공구 없이 가능합니다.</p>
+
+<p><strong>필요한 것:</strong> 새 에어필터 (차종에 맞는 규격)</p>
+
+<p><strong>교체 순서:</strong></p>
+<ol>
+<li>엔진 후드를 엽니다.</li>
+<li>에어 덕트(흡기 호스)와 연결된 <strong>에어클리너 박스</strong>를 찾습니다. 보통 엔진 한쪽 구석에 직사각형/원통형 플라스틱 박스로 있습니다.</li>
+<li>클립이나 나사를 풀고 박스 뚜껑을 엽니다.</li>
+<li>기존 에어필터를 꺼내고, 안에 쌓인 먼지를 마른 천으로 가볍게 닦아냅니다.</li>
+<li>새 에어필터를 방향에 맞게 넣습니다.</li>
+<li>뚜껑을 닫고 클립/나사를 다시 조입니다.</li>
+</ol>
+
+<p>교체 후 시동을 걸어 이상 없으면 완료! 전체 과정이 5분 이내입니다. 단, 차종에 따라 공구(육각렌치 등)가 필요하거나 접근이 어려운 경우도 있으니, 처음이라면 정비소에 맡기는 것도 좋습니다.</p>
+
+<h2>에어컨 필터 교체 시기도 함께 챙기세요</h2>
+
+<p>에어필터를 교체할 때 <strong>에어컨 필터(캐빈 에어 필터)</strong>도 함께 점검하세요. 에어컨 필터는 실내 공기를 정화하는 역할로, 막히면 에어컨 냉각 효율 저하, 불쾌한 냄새, 꽃가루·먼지 유입 등의 문제가 생깁니다.</p>
+
+<p>에어컨 필터 교체 주기는 <strong>6개월~1년 또는 1만 km</strong>가 기준입니다. 여름철 에어컨을 많이 쓰는 시기 전·후에 교체해주면 쾌적한 실내 환경을 유지할 수 있습니다.</p>
+
+<h2>FAQ — 자동차 에어필터 자주 묻는 질문</h2>
+
+<p><strong>Q. 에어필터를 안 갈면 정말 차에 문제가 생기나요?</strong><br>
+A. 단기적으로는 연비 저하와 출력 감소 정도지만, 장기간 방치하면 엔진 내부로 이물질이 유입되어 실린더·피스톤 손상으로 이어질 수 있습니다. 수십만 원짜리 수리를 막는 1~2만 원의 예방 정비입니다.</p>
+
+<p><strong>Q. 에어필터는 청소해서 재사용할 수 없나요?</strong><br>
+A. 일반 종이 에어필터는 청소 후 재사용이 어렵습니다. 단, K&N 같은 면(Cotton) 소재의 고성능 에어필터는 세척 후 오일을 다시 도포해 재사용 가능합니다.</p>
+
+<p><strong>Q. 직접 교체해도 보증에 영향이 없나요?</strong><br>
+A. 에어필터는 소모품으로, 직접 교체해도 보증에 영향을 주지 않습니다. 다만 교체 기록을 보관하는 것이 좋습니다.</p>
+
+<p><strong>Q. 어떤 브랜드 에어필터가 좋은가요?</strong><br>
+A. 국산차는 순정 부품(만도, 현대모비스) 또는 동급 OEM 제품이 안전합니다. 수입차는 순정 권장이며, 만족도가 높은 브랜드로는 MANN+HUMMEL, BOSCH, Mahle 등이 있습니다.</p>
+
+<hr>
+<p style="font-size:13px;color:#888;">울산 중구 번영로 342-1 타이어모어 울산학산점 | 문의: 052-265-0085</p>
+<p style="font-size:12px;color:#aaa;">※ 이 포스팅은 자동차 관리 정보를 공유하기 위해 작성되었습니다. 정확한 교체 주기는 차량 매뉴얼 또는 전문 정비소에 문의하세요.</p>
+</div>
+</body></html>
