@@ -9,7 +9,9 @@ body{max-width:820px;margin:20px auto;padding:0 16px;font-family:-apple-system,B
 .seo-box{background:#fff8dc;border:2px solid #e6c300;border-radius:8px;padding:16px 20px;margin-bottom:20px;cursor:pointer}
 .seo-box h3{margin:0 0 8px;color:#b8860b;font-size:15px}
 .seo-box p{margin:4px 0;font-size:14px;color:#555}
-.seo-box:hover{background:#fff3b0}
+.seo-item{padding:8px 12px;margin:6px 0;border-radius:6px;cursor:pointer;transition:background 0.2s}
+.seo-item:hover{background:#fff3b0}
+.seo-item.copied{background:#d4edda;transition:background 0.3s}
 .seo-box .hint{font-size:12px;color:#999;margin-top:8px}
 .html-box{background:#e8f5e9;border:2px solid #4caf50;border-radius:8px;padding:16px 20px;margin-bottom:20px}
 .html-box h3{margin:0 0 8px;color:#2e7d32;font-size:15px}
@@ -31,13 +33,20 @@ body{max-width:820px;margin:20px auto;padding:0 16px;font-family:-apple-system,B
 <div class="copy-toast" id="toast">📋 복사되었습니다!</div>
 
 <!-- SEO 설정 박스 -->
-<div class="seo-box" onclick="copySeoText()">
-<h3>★ 티스토리 SEO 설정 (클릭하면 복사)</h3>
-<div id="seoContent">
+<div class="seo-box">
+<h3>★ 티스토리 SEO 설정 (각 항목 클릭하면 개별 복사)</h3>
+<div class="seo-item" onclick="copyItem(this, '자동차 연비 향상 완벽 가이드 2026 — 타이어 공기압·주행 습관·소모품 관리로 기름값 아끼는 법 총정리')">
 <p><strong>[제목]</strong> 자동차 연비 향상 완벽 가이드 2026 — 타이어 공기압·주행 습관·소모품 관리로 기름값 아끼는 법 총정리</p>
+</div>
+<div class="seo-item" onclick="copyItem(this, '자동차 연비 향상 방법을 총정리합니다. 타이어 공기압 관리, 저연비 타이어 선택, 주행 습관 개선, 소모품 교체 시기까지 — 실천만으로 연비 15~30% 개선이 가능한 핵심 관리법을 한눈에 확인하세요.')">
 <p><strong>[설명]</strong> 자동차 연비 향상 방법을 총정리합니다. 타이어 공기압 관리, 저연비 타이어 선택, 주행 습관 개선, 소모품 교체 시기까지 — 실천만으로 연비 15~30% 개선이 가능한 핵심 관리법을 한눈에 확인하세요.</p>
+</div>
+<div class="seo-item" onclick="copyItem(this, '자동차연비향상,연비좋아지는방법,타이어공기압연비,저연비타이어추천,에너지효율등급타이어,연비운전습관,기름값절약,자동차소모품관리,타이어연비관계,타이어모어울산')">
 <p><strong>[태그]</strong> 자동차연비향상,연비좋아지는방법,타이어공기압연비,저연비타이어추천,에너지효율등급타이어,연비운전습관,기름값절약,자동차소모품관리,타이어연비관계,타이어모어울산</p>
+</div>
+<div class="seo-item" onclick="copyItem(this, '자동차 관리')">
 <p><strong>[카테고리]</strong> 자동차 관리</p>
+</div>
 </div>
 <p class="hint">👆 클릭하면 전체 내용이 클립보드에 복사됩니다</p>
 </div>
@@ -371,12 +380,13 @@ body{max-width:820px;margin:20px auto;padding:0 16px;font-family:-apple-system,B
 var ta = document.getElementById('fullHtml');
 document.getElementById('previewArea').innerHTML = ta.value;
 
-function copySeoText() {
-  var text = document.getElementById('seoContent').innerText;
+function copyItem(el, text) {
   navigator.clipboard.writeText(text).then(function() {
+    el.classList.add('copied');
     var toast = document.getElementById('toast');
     toast.style.display = 'block';
     setTimeout(function(){ toast.style.display = 'none'; }, 2000);
+    setTimeout(function(){ el.classList.remove('copied'); }, 1500);
   });
 }
 </script>
