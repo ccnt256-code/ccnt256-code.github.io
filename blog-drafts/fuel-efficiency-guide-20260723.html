@@ -13,7 +13,7 @@ body{max-width:820px;margin:20px auto;padding:0 16px;font-family:-apple-system,B
 .seo-box .hint{font-size:12px;color:#999;margin-top:8px}
 .html-box{background:#e8f5e9;border:2px solid #4caf50;border-radius:8px;padding:16px 20px;margin-bottom:20px}
 .html-box h3{margin:0 0 8px;color:#2e7d32;font-size:15px}
-.html-box textarea{width:100%;height:120px;font-size:12px;font-family:monospace;border:1px solid #ccc;border-radius:4px;padding:8px;resize:vertical}
+.html-box textarea{width:100%;height:200px;font-size:12px;font-family:monospace;border:1px solid #ccc;border-radius:4px;padding:8px;resize:vertical;box-sizing:border-box}
 .html-box textarea:focus{outline:2px solid #4caf50}
 .html-box .hint{font-size:12px;color:#999;margin-top:8px}
 .preview-area{background:#fff;border-radius:8px;padding:24px;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
@@ -23,12 +23,6 @@ body{max-width:820px;margin:20px auto;padding:0 16px;font-family:-apple-system,B
 .preview-area table{width:100%;border-collapse:collapse;margin:16px 0}
 .preview-area th,.preview-area td{border:1px solid #ddd;padding:10px 12px;text-align:left}
 .preview-area th{background:#f8f8f8;font-weight:600}
-.preview-area .faq-section{background:#f0f7ff;border-radius:8px;padding:20px;margin:20px 0}
-.preview-area .faq-section h3{color:#1565c0;margin-top:0}
-.preview-area .faq-item{margin-bottom:16px}
-.preview-area .faq-item strong{color:#1565c0}
-.preview-area .info-box{background:#fff3e0;border-left:4px solid #ff9800;padding:12px 16px;margin:16px 0;border-radius:0 6px 6px 0}
-.preview-area .tip-box{background:#e8f5e9;border-left:4px solid #4caf50;padding:12px 16px;margin:16px 0;border-radius:0 6px 6px 0}
 .copy-toast{position:fixed;top:20px;right:20px;background:#333;color:#fff;padding:10px 20px;border-radius:6px;display:none;z-index:999;font-size:14px}
 </style>
 </head>
@@ -37,9 +31,9 @@ body{max-width:820px;margin:20px auto;padding:0 16px;font-family:-apple-system,B
 <div class="copy-toast" id="toast">📋 복사되었습니다!</div>
 
 <!-- SEO 설정 박스 -->
-<div class="seo-box" onclick="copyText(this.querySelector('.copy-target').innerText)">
+<div class="seo-box" onclick="copySeoText()">
 <h3>★ 티스토리 SEO 설정 (클릭하면 복사)</h3>
-<div class="copy-target">
+<div id="seoContent">
 <p><strong>[제목]</strong> 자동차 연비 향상 완벽 가이드 2026 — 타이어 공기압·주행 습관·소모품 관리로 기름값 아끼는 법 총정리</p>
 <p><strong>[설명]</strong> 자동차 연비 향상 방법을 총정리합니다. 타이어 공기압 관리, 저연비 타이어 선택, 주행 습관 개선, 소모품 교체 시기까지 — 실천만으로 연비 15~30% 개선이 가능한 핵심 관리법을 한눈에 확인하세요.</p>
 <p><strong>[태그]</strong> 자동차연비향상,연비좋아지는방법,타이어공기압연비,저연비타이어추천,에너지효율등급타이어,연비운전습관,기름값절약,자동차소모품관리,타이어연비관계,타이어모어울산</p>
@@ -51,18 +45,7 @@ body{max-width:820px;margin:20px auto;padding:0 16px;font-family:-apple-system,B
 <!-- HTML 전체 복사 박스 -->
 <div class="html-box">
 <h3>📝 HTML 전체 복사 (티스토리 HTML 모드에 붙여넣기)</h3>
-<textarea id="fullHtml" onclick="this.select()" readonly></textarea>
-<p class="hint">👆 클릭하면 전체 선택됩니다. Ctrl+C로 복사 후 티스토리 HTML 탭에 붙여넣기</p>
-</div>
-
-<!-- 미리보기 영역 -->
-<div class="preview-area" id="previewArea">
-<!-- 여기가 실제 블로그 본문 -->
-</div>
-
-<script>
-// 블로그 본문 HTML
-const blogHTML = `<!--
+<textarea id="fullHtml" onclick="this.select()" readonly><!--
 ★ 티스토리 SEO 설정 ★
 [제목] 자동차 연비 향상 완벽 가이드 2026 — 타이어 공기압·주행 습관·소모품 관리로 기름값 아끼는 법 총정리
 [설명 (meta description)] 자동차 연비 향상 방법을 총정리합니다. 타이어 공기압 관리, 저연비 타이어 선택, 주행 습관 개선, 소모품 교체 시기까지 — 실천만으로 연비 15~30% 개선이 가능한 핵심 관리법을 한눈에 확인하세요.
@@ -70,7 +53,7 @@ const blogHTML = `<!--
 [카테고리] 자동차 관리
 -->
 
-<script type="application/ld+json">
+&lt;script type="application/ld+json"&gt;
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -79,12 +62,12 @@ const blogHTML = `<!--
   "author": {"@type": "Organization", "name": "타이어모어 울산학산점"},
   "publisher": {"@type": "Organization", "name": "타이어모어 울산학산점"},
   "datePublished": "2026-07-23",
-  "dateModified": "2026-07-23",
+  "dateModified": "2026-07-24",
   "mainEntityOfPage": {"@type": "WebPage"}
 }
-<\\/script>
+&lt;/script&gt;
 
-<script type="application/ld+json">
+&lt;script type="application/ld+json"&gt;
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -131,7 +114,7 @@ const blogHTML = `<!--
     }
   ]
 }
-<\\/script>
+&lt;/script&gt;
 
 <p><strong>같은 차, 같은 기름을 넣어도 운전자마다 연비가 다릅니다.</strong> 타이어 공기압 하나만 제대로 관리해도 연비가 달라지고, 주행 습관을 조금만 바꿔도 한 달 주유비가 눈에 띄게 줄어듭니다. 이 글에서는 타이어 관리부터 주행 습관, 소모품 점검까지 — 당장 실천 가능한 연비 향상법을 총정리합니다.</p>
 
@@ -163,7 +146,7 @@ const blogHTML = `<!--
 </tbody>
 </table>
 
-<div class="info-box" style="background:#fff3e0;border-left:4px solid #ff9800;padding:12px 16px;margin:16px 0;border-radius:0 6px 6px 0;">
+<div style="background:#fff3e0;border-left:4px solid #ff9800;padding:12px 16px;margin:16px 0;border-radius:0 6px 6px 0;">
 <strong>💡 핵심 포인트:</strong> 적정 공기압은 운전석 도어 안쪽 스티커에서 확인할 수 있습니다. '냉간 시(주행 전 타이어가 식은 상태)' 기준이므로, 아침에 출발하기 전 점검하는 것이 가장 정확합니다.
 </div>
 
@@ -174,6 +157,8 @@ const blogHTML = `<!--
 <li>✅ TPMS(타이어 공기압 경고등)를 과신하지 말 것 — TPMS는 25% 이상 부족해야 경고</li>
 <li>✅ 적정 공기압보다 2~3 PSI 높게 유지하면 연비와 승차감 균형에 도움</li>
 </ul>
+
+<p>타이어 질소 충전을 활용하면 공기압 변동을 최소화할 수 있습니다. → <a href="https://usmichelin.tistory.com/entry/타이어-질소-충전-완벽-가이드-2026" target="_blank">타이어 질소 충전 완벽 가이드 2026 보러가기</a></p>
 
 <p>&nbsp;</p>
 
@@ -205,13 +190,13 @@ const blogHTML = `<!--
 <tbody>
 <tr><td><strong>미쉐린</strong></td><td>e.Primacy / Primacy A/S</td><td>연료 소비 최대 3.1% 개선, 정숙성 우수</td></tr>
 <tr><td><strong>콘티넨탈</strong></td><td>EcoContact 6 / PureContact LS</td><td>젖은 노면 제동 + 저연비 균형</td></tr>
-<tr><td><strong>한국타이어</strong></td><td>iON FlexClimate / Ventus Prime 4</td><td>EV·하이브리드 최적화, Auto Bild 1위</td></tr>
+<tr><td><strong>한국타이어</strong></td><td>iON FlexClimate / Ventus Prime 4</td><td>EV·하이브리드 최적화</td></tr>
 <tr><td><strong>금호</strong></td><td>Ecsta PA31</td><td>가성비 우수한 저연비 옵션</td></tr>
 <tr><td><strong>브리지스톤</strong></td><td>Ecopia EP422 Plus</td><td>연비 특화 라인업</td></tr>
 </tbody>
 </table>
 
-<div class="tip-box" style="background:#e8f5e9;border-left:4px solid #4caf50;padding:12px 16px;margin:16px 0;border-radius:0 6px 6px 0;">
+<div style="background:#e8f5e9;border-left:4px solid #4caf50;padding:12px 16px;margin:16px 0;border-radius:0 6px 6px 0;">
 <strong>🔑 2026년 변경사항:</strong> 올해부터 교체용 승용차 타이어에도 <strong>소음도 등급 표시</strong>가 의무화되었습니다. 타이어 구매 시 에너지 효율·젖은 노면 제동력·소음도 세 가지를 함께 확인하세요.
 </div>
 
@@ -270,9 +255,11 @@ const blogHTML = `<!--
 </tbody>
 </table>
 
-<div class="info-box" style="background:#fff3e0;border-left:4px solid #ff9800;padding:12px 16px;margin:16px 0;border-radius:0 6px 6px 0;">
+<div style="background:#fff3e0;border-left:4px solid #ff9800;padding:12px 16px;margin:16px 0;border-radius:0 6px 6px 0;">
 <strong>💡 엔진오일 팁:</strong> 제조사 권장 점도(예: 0W-20)보다 높은 점도(5W-40 등)를 사용하면 내부 마찰이 증가해 연비가 1~2% 떨어집니다. 특히 신차에서 권장하는 <strong>저점도 합성유</strong>를 사용하세요.
 </div>
+
+<p>점화플러그 교체 시기와 종류가 궁금하다면 → <a href="https://usmichelin.tistory.com/entry/자동차-점화플러그-교체-시기-종류-비용-완벽-가이드-2026" target="_blank">점화플러그 완벽 가이드 2026 보러가기</a></p>
 
 <p>&nbsp;</p>
 
@@ -319,34 +306,41 @@ const blogHTML = `<!--
 
 <p>&nbsp;</p>
 
-<div class="faq-section" style="background:#f0f7ff;border-radius:8px;padding:20px;margin:20px 0;">
+<div style="background:#f0f7ff;border-radius:8px;padding:20px;margin:20px 0;">
 <h3 style="color:#1565c0;margin-top:0;">❓ 자주 묻는 질문 (FAQ)</h3>
 
-<div class="faq-item" style="margin-bottom:16px;">
+<div style="margin-bottom:16px;">
 <p><strong style="color:#1565c0;">Q. 타이어 공기압이 연비에 얼마나 영향을 미치나요?</strong></p>
 <p>A. 적정 공기압보다 10% 부족하면 연비가 약 1~1.5% 하락하며, 20% 이상 부족하면 최대 5~10%까지 연비가 악화될 수 있습니다. 월 1회 이상 공기압을 점검하는 것이 중요합니다.</p>
 </div>
 
-<div class="faq-item" style="margin-bottom:16px;">
+<div style="margin-bottom:16px;">
 <p><strong style="color:#1565c0;">Q. 저연비 타이어(에너지 효율 1등급)를 쓰면 얼마나 절약되나요?</strong></p>
 <p>A. 에너지 효율 1등급 타이어는 5등급 대비 회전 저항이 약 30~40% 낮아, 연간 약 10~15만 원의 연료비를 절약할 수 있습니다. 연간 2만km 주행, 리터당 1,700원 기준입니다.</p>
 </div>
 
-<div class="faq-item" style="margin-bottom:16px;">
+<div style="margin-bottom:16px;">
 <p><strong style="color:#1565c0;">Q. 에코 드라이빙(경제 운전)으로 연비가 얼마나 좋아지나요?</strong></p>
 <p>A. 급가속·급제동을 피하고 경제속도(60~80km/h)를 유지하는 에코 드라이빙만으로도 연비를 10~20% 개선할 수 있습니다. 불필요한 공회전을 줄이면 추가로 5~10% 더 절약됩니다.</p>
 </div>
 
-<div class="faq-item" style="margin-bottom:16px;">
+<div style="margin-bottom:16px;">
 <p><strong style="color:#1565c0;">Q. 엔진오일 점도가 연비에 영향을 주나요?</strong></p>
 <p>A. 네, 제조사 권장 점도보다 높은 엔진오일을 사용하면 내부 마찰이 증가해 연비가 1~2% 하락할 수 있습니다. 0W-20, 0W-30 등 저점도 합성유를 사용하면 연비 개선에 도움이 됩니다.</p>
 </div>
 
-<div class="faq-item" style="margin-bottom:16px;">
+<div style="margin-bottom:16px;">
 <p><strong style="color:#1565c0;">Q. 여름철과 겨울철 연비 차이가 나는 이유는?</strong></p>
 <p>A. 겨울철에는 엔진 워밍업 시간이 길어지고, 히터·열선시트 등 전기장치 사용이 늘어나며, 타이어 공기압도 기온 하락으로 자연 감소해 연비가 10~20% 떨어집니다. 여름철에는 에어컨 사용으로 약 5~10% 연비가 감소합니다.</p>
 </div>
 </div>
+
+<p>&nbsp;</p>
+
+<p style="text-align:center;">
+<a href="https://link.coupang.com/a/feNvHGcAy4" target="_blank" referrerpolicy="unsafe-url"><img src="https://img2c.coupangcdn.com/image/affiliate/banner/4a5f12cb631e913a72b6b67a19a90745@2x.jpg" alt="7200mAh 휴대용 무선 차량용 에어펌프 타이어 공기압 주입기 다용도, 블랙, 1개" width="120" height="240"></a>
+</p>
+<p style="font-size:12px;color:#999;text-align:center;">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
 
 <p>&nbsp;</p>
 
@@ -357,28 +351,32 @@ const blogHTML = `<!--
 
 <h2>📌 함께 읽으면 좋은 글</h2>
 <ul>
-<li><a href="https://usmichelin.tistory.com" target="_blank">타이어 공기압 경고등(TPMS) 원인과 대처법 완벽 가이드 2026</a></li>
-<li><a href="https://usmichelin.tistory.com" target="_blank">자동차 엔진오일 교체 시기·종류 완벽 가이드 2026</a></li>
-<li><a href="https://usmichelin.tistory.com" target="_blank">타이어 교체 시기 판단 완벽 가이드 2026</a></li>
-<li><a href="https://usmichelin.tistory.com" target="_blank">자동차 에어컨 관리 완벽 가이드 2026</a></li>
+<li><a href="https://usmichelin.tistory.com/entry/타이어-공기압-경고등-TPMS-원인과-대처법-완벽-가이드-2026" target="_blank">타이어 공기압 경고등(TPMS) 원인과 대처법 완벽 가이드 2026</a></li>
+<li><a href="https://usmichelin.tistory.com/entry/자동차-엔진오일-교체-시기-종류-완벽-가이드-2026" target="_blank">자동차 엔진오일 교체 시기·종류 완벽 가이드 2026</a></li>
+<li><a href="https://usmichelin.tistory.com/entry/타이어-질소-충전-완벽-가이드-2026" target="_blank">타이어 질소 충전 완벽 가이드 2026</a></li>
+<li><a href="https://usmichelin.tistory.com/entry/자동차-점화플러그-교체-시기-종류-비용-완벽-가이드-2026" target="_blank">자동차 점화플러그 교체 시기·종류 완벽 가이드 2026</a></li>
 </ul>
 
 <p>&nbsp;</p>
 
-<p style="text-align:center;color:#888;font-size:14px;">📍 타이어모어 울산학산점 | 울산 중구 번영로 342-1 | ☎ 052-265-0085<br>미쉐린·콘티넨탈 공식 인증 대리점</p>`;
+<p style="text-align:center;color:#888;font-size:14px;">📍 타이어모어 울산학산점 | 울산 중구 번영로 342-1 | ☎ 052-265-0085<br>미쉐린·콘티넨탈 공식 인증 대리점</p></textarea>
+<p class="hint">👆 클릭하면 전체 선택됩니다. Ctrl+C로 복사 후 티스토리 HTML 탭에 붙여넣기</p>
+</div>
 
-// 미리보기에 삽입
-document.getElementById('previewArea').innerHTML = blogHTML;
+<!-- 미리보기 영역 -->
+<div class="preview-area" id="previewArea"></div>
 
-// textarea에 전체 HTML 삽입
-document.getElementById('fullHtml').value = blogHTML;
+<script>
+// textarea value를 읽어서 미리보기에 렌더링
+var ta = document.getElementById('fullHtml');
+document.getElementById('previewArea').innerHTML = ta.value;
 
-// 복사 기능
-function copyText(text) {
-  navigator.clipboard.writeText(text).then(() => {
-    const toast = document.getElementById('toast');
+function copySeoText() {
+  var text = document.getElementById('seoContent').innerText;
+  navigator.clipboard.writeText(text).then(function() {
+    var toast = document.getElementById('toast');
     toast.style.display = 'block';
-    setTimeout(() => toast.style.display = 'none', 2000);
+    setTimeout(function(){ toast.style.display = 'none'; }, 2000);
   });
 }
 </script>
