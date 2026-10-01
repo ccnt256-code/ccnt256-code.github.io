@@ -25,8 +25,8 @@
 </script>
 <style>
 *{box-sizing:border-box}body{margin:0;font-family:-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;background:#f4f6f9;color:#1d2433;line-height:1.6}
-header{background:#0b3d91;color:#fff;padding:18px 16px}header h1{margin:0;font-size:1.35rem}header p{margin:4px 0 0;font-size:.9rem;opacity:.9}
-nav{display:flex;gap:6px;overflow-x:auto;padding:10px 12px;background:#fff;position:sticky;top:0;box-shadow:0 1px 4px #0001;z-index:5}
+header{background:#0b3d91;color:#fff;padding:18px max(16px,calc((100% - 720px)/2));text-align:center}header h1{margin:0;font-size:1.35rem}header p{margin:4px 0 0;font-size:.9rem;opacity:.9}
+nav{display:flex;gap:6px;overflow-x:auto;padding:10px max(12px,calc((100% - 720px)/2));justify-content:safe center;background:#fff;position:sticky;top:0;box-shadow:0 1px 4px #0001;z-index:5}
 nav a{white-space:nowrap;padding:6px 12px;border-radius:20px;background:#e8eefc;color:#0b3d91;text-decoration:none;font-size:.9rem}
 main{max-width:720px;margin:0 auto;padding:12px}
 section{background:#fff;border-radius:12px;padding:16px;margin:12px 0;box-shadow:0 1px 3px #0001}
@@ -40,11 +40,13 @@ table{width:100%;border-collapse:collapse;font-size:.88rem}td,th{border-bottom:1
 .ad{min-height:90px;border:1px dashed #ccc;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:.8rem;margin:12px 0}
 .shop{background:#fff8e6;border:1px solid #ffd27a}.cp{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
 small{color:#777}footer{text-align:center;font-size:.8rem;color:#888;padding:20px}
+.ch{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:12px auto 0;max-width:720px}.ch a{padding:8px 14px;border-radius:8px;background:#fff;color:#0b3d91;text-decoration:none;font-size:.88rem;font-weight:700;border:1px solid #0b3d91}.ch a.tel{background:#0b3d91;color:#fff}.chw{max-width:720px;margin:0 auto;padding:4px 12px 0;text-align:center}.chw h2{font-size:.95rem;margin:10px 0 0;color:#444}footer{max-width:720px;margin:0 auto}footer .ch{margin-bottom:14px}@media(max-width:480px){.ch a{flex:1 1 44%;text-align:center}}
 </style>
 </head>
 <body>
 <header><h1>타이어 계산기</h1><p>울산에서 타이어 가게 하는 사장이 손님들 자주 묻는 것만 모아 만들었습니다</p></header>
 <nav><a href="#size">사이즈 호환</a><a href="#life">교체주기 진단</a><a href="#cost">교체비용</a><a href="#psi">공기압</a><a href="#faq">FAQ</a></nav>
+<div class="chw"><h2>우리 가게 채널</h2><div class="ch"><a href="https://blog.naver.com/tyremore_ulsanhaksan" target="_blank" rel="noopener">네이버 블로그 · 작업 후기</a><a href="https://m.place.naver.com/place/38598188" target="_blank" rel="noopener">네이버 플레이스 · 위치·예약·리뷰</a><a href="https://usmichelin.tistory.com" target="_blank" rel="noopener">티스토리 · 타이어 정보</a><a href="https://www.instagram.com/hwiseopseo/" target="_blank" rel="noopener">인스타그램</a><a href="https://www.facebook.com/1046188181917124" target="_blank" rel="noopener">페이스북</a><a class="tel" href="tel:052-265-0085">전화 052-265-0085</a></div></div>
 <main>
 <p>가게에서 제일 많이 듣는 질문이 "이거 언제 갈아야 돼요?"랑 "이 사이즈 끼워도 돼요?"예요. 답은 대체로 정해져 있습니다. 교체는 <b>4~6만km나 제조 5~6년</b>, 다른 사이즈는 <b>외경 차이 ±3% 안</b>이면 됩니다. 내 차 숫자 넣어서 보시면 됩니다.</p>
 
@@ -102,7 +104,7 @@ small{color:#777}footer{text-align:center;font-size:.8rem;color:#888;padding:20p
 </section>
 <div class="ad">광고 영역 (AdSense 승인 후)</div>
 </main>
-<footer>© 2026 타이어 계산기 · 타이어모어 울산학산점 · 계산 결과는 참고용입니다</footer>
+<footer><h2 style="font-size:.95rem;color:#444;margin:0 0 8px">우리 가게 채널</h2><div class="ch"><a href="https://blog.naver.com/tyremore_ulsanhaksan" target="_blank" rel="noopener">네이버 블로그 · 작업 후기</a><a href="https://m.place.naver.com/place/38598188" target="_blank" rel="noopener">네이버 플레이스 · 위치·예약·리뷰</a><a href="https://usmichelin.tistory.com" target="_blank" rel="noopener">티스토리 · 타이어 정보</a><a href="https://www.instagram.com/hwiseopseo/" target="_blank" rel="noopener">인스타그램</a><a href="https://www.facebook.com/1046188181917124" target="_blank" rel="noopener">페이스북</a><a class="tel" href="tel:052-265-0085">전화 052-265-0085</a></div>타이어모어 울산학산점 · 울산 중구 번영로 342-1<br>© 2026 타이어 계산기 · 계산 결과는 참고용입니다</footer>
 <script>
 var $=function(id){return document.getElementById(id)},n=function(id){return parseFloat($(id).value)};
 function dia(w,a,r){return r*25.4+2*w*a/100}
