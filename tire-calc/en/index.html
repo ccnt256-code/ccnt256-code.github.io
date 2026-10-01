@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tire Age Checker (DOT Code) &amp; Tire Size Calculator</title>
+<meta name="description" content="Enter the DOT code from your tire sidewall to see when it was made and how old it is. Also compare tire sizes (225/45R17 or 31x10.5R15), check speedometer error, and convert psi, bar and kPa.">
+<link rel="canonical" href="https://ccnt256-code.github.io/tire-calc/en/">
+<link rel="alternate" hreflang="en" href="https://ccnt256-code.github.io/tire-calc/en/">
+<link rel="alternate" hreflang="ko" href="https://ccnt256-code.github.io/tire-calc/">
+<link rel="alternate" hreflang="x-default" href="https://ccnt256-code.github.io/tire-calc/en/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tire Age Checker (DOT Code) &amp; Tire Size Calculator">
+<meta property="og:description" content="How old are your tires? Read the DOT code, compare sizes, convert pressure units.">
+<meta property="og:url" content="https://ccnt256-code.github.io/tire-calc/en/">
+<meta name="robots" content="index,follow">
+<!-- AdSense: uncomment after approval -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebApplication","name":"Tire Age Checker & Tire Size Calculator","url":"https://ccnt256-code.github.io/tire-calc/en/","applicationCategory":"UtilitiesApplication","operatingSystem":"All","inLanguage":"en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"Tyremore Ulsan Haksan"},"datePublished":"2026-10-01","dateModified":"2026-10-01"},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How do I read the tire age from the DOT code?","acceptedAnswer":{"@type":"Answer","text":"The last four digits of the DOT code on the sidewall are the week and year of manufacture. For example, 2319 means the 23rd week of 2019."}},
+{"@type":"Question","name":"How old is too old for a tire?","acceptedAnswer":{"@type":"Answer","text":"Rubber hardens and cracks with age even if the tread looks fine. Many automakers recommend replacing tires at 6 years from manufacture, and most tire makers say no tire should stay in service past 10 years."}},
+{"@type":"Question","name":"Where is the DOT code on a tire?","acceptedAnswer":{"@type":"Answer","text":"It is molded into the sidewall, starting with the letters DOT, usually near the rim. The full date code is often only on one side, so check the inner sidewall if you cannot find it."}},
+{"@type":"Question","name":"How much tire size difference is OK?","acceptedAnswer":{"@type":"Answer","text":"Keep the overall diameter within about 3% of the original size. Beyond that you risk speedometer error, rubbing, and problems with ABS and stability control."}},
+{"@type":"Question","name":"Does a bigger tire make my speedometer read wrong?","acceptedAnswer":{"@type":"Answer","text":"Yes. A larger diameter tire covers more ground per turn, so your actual speed is higher than the speedometer shows. A 3% bigger tire at an indicated 60 mph means you are really doing about 61.8 mph."}}]}]}
+</script>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,sans-serif;background:#f4f6f9;color:#1d2433;line-height:1.6}
+header{background:#0b3d91;color:#fff;padding:18px max(16px,calc((100% - 720px)/2));text-align:center;position:relative}header h1{margin:0;font-size:1.35rem}header p{margin:4px 0 0;font-size:.9rem;opacity:.9}
+.lang{position:absolute;top:8px;right:12px;color:#fff;font-size:.8rem;opacity:.9}
+nav{display:flex;gap:6px;overflow-x:auto;padding:10px max(12px,calc((100% - 720px)/2));justify-content:safe center;background:#fff;position:sticky;top:0;box-shadow:0 1px 4px #0001;z-index:5}
+nav a{white-space:nowrap;padding:6px 12px;border-radius:20px;background:#e8eefc;color:#0b3d91;text-decoration:none;font-size:.9rem}
+main{max-width:720px;margin:0 auto;padding:12px}
+section{background:#fff;border-radius:12px;padding:16px;margin:12px 0;box-shadow:0 1px 3px #0001}
+h2{font-size:1.15rem;margin:0 0 10px}h3{font-size:1rem;margin:12px 0 2px}label{display:block;font-size:.85rem;margin:8px 0 2px;color:#555}
+.row{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+input,select{width:100%;padding:10px;font-size:1rem;border:1px solid #ccd;border-radius:8px;background:#fff}
+button{margin-top:12px;width:100%;padding:12px;font-size:1rem;border:0;border-radius:8px;background:#0b3d91;color:#fff;font-weight:700}
+.out{margin-top:12px;padding:12px;border-radius:8px;background:#f0f4ff;font-size:.95rem}
+.ok{color:#127a3a;font-weight:700}.warn{color:#b06b00;font-weight:700}.bad{color:#c62828;font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:.88rem}td,th{border-bottom:1px solid #eee;padding:6px;text-align:center}
+.ad{min-height:90px;border:1px dashed #ccc;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:.8rem;margin:12px 0}
+small{color:#777}footer{text-align:center;font-size:.8rem;color:#888;padding:20px;max-width:720px;margin:0 auto}
+.amz a{display:block;padding:8px 0;color:#0b3d91}
+</style>
+</head>
+<body>
+<header><a class="lang" href="../" hreflang="ko">한국어</a><h1>Tire Age Checker &amp; Size Calculator</h1><p>I run a tire shop. These are the questions customers ask me most.</p></header>
+<nav><a href="#age">Tire age (DOT)</a><a href="#size">Size compare</a><a href="#psi">Pressure units</a><a href="#faq">FAQ</a></nav>
+<main>
+<section id="age">
+<h2>How old are my tires? (DOT code)</h2>
+<p>Every tire has a DOT code on the sidewall. The last 4 digits tell you the week and year it was made. Type those 4 digits, or paste the whole DOT code.</p>
+<label for="dot">DOT code or last 4 digits (e.g. 2319)</label>
+<input id="dot" placeholder="2319 or DOT U2LL LMLR 2319" autocomplete="off">
+<button onclick="checkAge()">Check tire age</button>
+<div class="out" id="ageOut">Enter a code above.</div>
+<h3>Where to find it</h3>
+<p>Look on the sidewall near the rim for the letters <b>DOT</b> followed by 10–12 letters and numbers. The date is the last group, often inside a small oval. Example: <code>DOT U2LL LMLR 2319</code> = week 23 of 2019. The full code is sometimes only on one side, so if the outside shows a short code, check the inner sidewall (a flashlight helps).</p>
+<h3>What I tell customers</h3>
+<table><tr><th>Age</th><th>What to do</th></tr>
+<tr><td>Under 5 years</td><td class="ok">Fine if tread and sidewalls look good</td></tr>
+<tr><td>5–6 years</td><td class="warn">Have them inspected every year</td></tr>
+<tr><td>6–10 years</td><td class="warn">Consider replacing (many automakers say 6 years max)</td></tr>
+<tr><td>Over 10 years</td><td class="bad">Replace, even if the tread looks new</td></tr></table>
+<small>Don't forget the spare. Spares often sit for 10+ years untouched.</small>
+</section>
+<div class="ad">Ad space</div>
+<section id="size">
+<h2>Tire size comparison &amp; speedometer error</h2>
+<p>Metric (225/45R17) or inch/flotation (31x10.5R15) both work.</p>
+<div class="row"><div><label for="s1">Current size</label><input id="s1" value="225/45R17"></div><div><label for="s2">New size</label><input id="s2" value="235/45R17"></div></div>
+<label for="mph">Speedometer reading (mph)</label><input id="mph" type="number" value="60">
+<button onclick="cmpSize()">Compare</button>
+<div class="out" id="sizeOut">Enter two sizes.</div>
+<small>Rule of thumb: keep overall diameter within ±3% of the original. Also check load index and speed rating, and clearance at full lock.</small>
+</section>
+<section id="psi">
+<h2>Tire pressure converter (psi / bar / kPa)</h2>
+<div class="row"><div><label for="pv">Value</label><input id="pv" type="number" value="35" step="0.1" oninput="conv()"></div><div><label for="pu">Unit</label><select id="pu" onchange="conv()"><option>psi</option><option>bar</option><option>kPa</option></select></div></div>
+<div class="out" id="pOut"></div>
+<small>Use the number on the sticker inside the driver's door, not the max on the sidewall. Check cold, once a month.</small>
+</section>
+<section>
+<h2>Tools I'd keep in the glovebox</h2>
+<div class="amz">
+<a href="https://www.amazon.com/s?k=tire+pressure+gauge&tag=ccntangel-20" target="_blank" rel="nofollow sponsored noopener">Tire pressure gauge</a>
+<a href="https://www.amazon.com/s?k=tire+tread+depth+gauge&tag=ccntangel-20" target="_blank" rel="nofollow sponsored noopener">Tread depth gauge</a>
+<a href="https://www.amazon.com/s?k=portable+tire+inflator&tag=ccntangel-20" target="_blank" rel="nofollow sponsored noopener">Portable tire inflator</a>
+</div>
+<small>As an Amazon Associate I earn from qualifying purchases.</small>
+</section>
+<section id="faq">
+<h2>FAQ</h2>
+<h3>How do I read the tire age from the DOT code?</h3><p>The last four digits are week and year. 2319 = week 23 of 2019. Tires made before 2000 used 3 digits; if you see that, the tire is far too old.</p>
+<h3>How old is too old for a tire?</h3><p>Rubber hardens and cracks with age even when the tread looks fine. Many automakers say replace at 6 years; most tire makers say 10 years is the absolute limit.</p>
+<h3>Where is the DOT code on a tire?</h3><p>Molded into the sidewall near the rim, starting with "DOT". The full date code may only be on the inner side.</p>
+<h3>How much tire size difference is OK?</h3><p>Stay within about 3% of the original overall diameter. More than that can cause speedometer error, rubbing, and ABS/stability control issues.</p>
+<h3>Does a bigger tire make my speedometer read wrong?</h3><p>Yes. With a 3% larger tire, an indicated 60 mph is really about 61.8 mph.</p>
+</section>
+<div class="ad">Ad space</div>
+</main>
+<footer>Made by a tire shop owner in Korea · Tyremore Ulsan Haksan<br><a href="../">한국어 버전</a></footer>
+<script>
+function parseDot(s){var d=(s||'').replace(/\D/g,'');if(d.length<4)return null;var c=d.slice(-4),w=+c.slice(0,2),y=2000+ +c.slice(2);if(w<1||w>53)return null;return {w:w,y:y,code:c};}
+function weekDate(w,y){var j4=new Date(Date.UTC(y,0,4));var day=j4.getUTCDay()||7;var mon=new Date(j4.getTime()-(day-1)*864e5);return new Date(mon.getTime()+(w-1)*7*864e5);}
+function ageOf(w,y,now){now=now||new Date();var d=weekDate(w,y);var m=(now.getUTCFullYear()-d.getUTCFullYear())*12+(now.getUTCMonth()-d.getUTCMonth());if(now.getUTCDate()<d.getUTCDate())m--;return {date:d,months:m};}
+function verdict(m){var y=m/12;if(y<5)return ['ok','OK — under 5 years. Keep an eye on tread and sidewalls.'];if(y<6)return ['warn','Inspect yearly — 5 to 6 years old.'];if(y<10)return ['warn','Consider replacing — over 6 years. Many automakers advise replacing by 6 years.'];return ['bad','Replace — over 10 years old, regardless of tread.'];}
+function checkAge(){var o=document.getElementById('ageOut'),p=parseDot(document.getElementById('dot').value);if(!p){o.innerHTML='<span class="bad">Need 4 digits like 2319 (week 01–53 + year).</span>';return;}var a=ageOf(p.w,p.y);if(a.months<0){o.innerHTML='<span class="bad">That date is in the future. Check the digits (week first, then year).</span>';return;}var v=verdict(a.months);var mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][a.date.getUTCMonth()];o.innerHTML='Code <b>'+p.code+'</b> = week '+p.w+' of '+p.y+' (around '+mo+' '+p.y+')<br>Age: <b>'+Math.floor(a.months/12)+' years '+(a.months%12)+' months</b><br><span class="'+v[0]+'">'+v[1]+'</span>';}
+function parseSize(s){s=(s||'').toUpperCase().replace(/\s/g,'');var m=s.match(/^(?:P|LT)?(\d{3})\/(\d{2})Z?R?F?-?(\d{2}(?:\.\d)?)/);if(m){var w=+m[1],a=+m[2],r=+m[3];var side=w*a/100;return {d:2*side+r*25.4,w:w,side:side,label:w+'/'+a+'R'+r};}m=s.match(/^(\d{2}(?:\.\d+)?)X(\d{1,2}(?:\.\d+)?)R?(\d{2}(?:\.\d)?)/);if(m){var D=+m[1]*25.4,W=+m[2]*25.4,R=+m[3];return {d:D,w:W,side:(D-R*25.4)/2,label:m[1]+'x'+m[2]+'R'+m[3]};}return null;}
+function cmp(a,b,mph){var p=(b.d-a.d)/a.d*100;return {pct:p,real:mph*b.d/a.d};}
+function cmpSize(){var o=document.getElementById('sizeOut'),a=parseSize(document.getElementById('s1').value),b=parseSize(document.getElementById('s2').value),mph=+document.getElementById('mph').value||60;if(!a||!b){o.innerHTML='<span class="bad">Could not read a size. Use 225/45R17 or 31x10.5R15.</span>';return;}var c=cmp(a,b,mph),f=function(x){return x.toFixed(1)};var cls=Math.abs(c.pct)<=3?'ok':'bad';o.innerHTML='<table><tr><th></th><th>'+a.label+'</th><th>'+b.label+'</th></tr><tr><td>Diameter</td><td>'+f(a.d)+' mm<br>'+(a.d/25.4).toFixed(2)+' in</td><td>'+f(b.d)+' mm<br>'+(b.d/25.4).toFixed(2)+' in</td></tr><tr><td>Width</td><td>'+f(a.w)+' mm</td><td>'+f(b.w)+' mm</td></tr><tr><td>Sidewall</td><td>'+f(a.side)+' mm</td><td>'+f(b.side)+' mm</td></tr></table><p>Diameter difference: <span class="'+cls+'">'+(c.pct>0?'+':'')+c.pct.toFixed(2)+'% — '+(cls=='ok'?'within ±3%, generally OK':'over ±3%, not recommended')+'</span><br>Speedometer shows '+mph+' mph → actual <b>'+c.real.toFixed(1)+' mph</b></p>';}
+function conv(){var v=+document.getElementById('pv').value,u=document.getElementById('pu').value;var k=u=='psi'?v*6.894757:u=='bar'?v*100:v;document.getElementById('pOut').innerHTML='<b>'+(k/6.894757).toFixed(1)+'</b> psi · <b>'+(k/100).toFixed(2)+'</b> bar · <b>'+k.toFixed(0)+'</b> kPa';}
+conv();
+if(typeof module!=='undefined')module.exports={parseDot:parseDot,ageOf:ageOf,parseSize:parseSize,cmp:cmp,verdict:verdict};
+</script>
+</body>
+</html>
