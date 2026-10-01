@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>타이어 계산기 2026 | 사이즈 호환·교체주기·공기압·교체비용 한 번에</title>
-<meta name="description" content="타이어 사이즈 호환 계산기(외경·속도계 오차), 타이어 교체주기 자가진단(주행거리·DOT 제조일·트레드), 적정 공기압, 교체비용 예상까지. 미쉐린·콘티넨탈 공식점 현직 정비사가 만든 무료 타이어 계산기.">
+<title>타이어 계산기 | 울산 타이어 가게 사장이 만든 사이즈·교체주기·공기압 계산</title>
+<meta name="description" content="타이어 사이즈 호환 계산기(외경·속도계 오차), 타이어 교체주기 자가진단(주행거리·DOT 제조일·트레드), 적정 공기압, 교체비용 예상까지. 울산에서 미쉐린·콘티넨탈 공식점을 운영하는 타이어 가게 사장이 만들었습니다.">
 <meta name="keywords" content="타이어 계산기, 타이어 사이즈 계산기, 타이어 교체주기, 타이어 공기압, 타이어 교체비용, 타이어 제조일 보는법, DOT">
 <link rel="canonical" href="https://ccnt256-code.github.io/tire-calc/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="타이어 계산기 2026 — 사이즈·교체주기·공기압·비용">
-<meta property="og:description" content="현직 타이어 정비사가 만든 무료 타이어 계산기">
+<meta property="og:title" content="타이어 계산기 | 울산 타이어 가게 사장이 만든">
+<meta property="og:description" content="가게에서 자주 받는 질문들, 계산기로 정리해 뒀습니다. 사이즈 호환·교체주기·공기압·교체비용.">
 <meta property="og:url" content="https://ccnt256-code.github.io/tire-calc/">
 <meta name="robots" content="index,follow">
 <!-- AdSense: 승인 후 아래 주석 해제 + ca-pub ID 입력 -->
@@ -43,51 +43,51 @@ small{color:#777}footer{text-align:center;font-size:.8rem;color:#888;padding:20p
 </style>
 </head>
 <body>
-<header><h1>🛞 타이어 계산기 2026</h1><p>사이즈 호환 · 교체주기 · 공기압 · 교체비용 — 현직 타이어 정비사가 만든 무료 도구</p></header>
+<header><h1>타이어 계산기</h1><p>울산에서 타이어 가게 하는 사장이 손님들 자주 묻는 것만 모아 만들었습니다</p></header>
 <nav><a href="#size">사이즈 호환</a><a href="#life">교체주기 진단</a><a href="#cost">교체비용</a><a href="#psi">공기압</a><a href="#faq">FAQ</a></nav>
 <main>
-<p><b>요약:</b> 타이어는 보통 <b>4~6만km 또는 제조 5~6년</b>마다 교체하고, 다른 사이즈는 <b>외경 차이 ±3% 이내</b>면 장착 가능합니다. 아래 계산기로 내 차 상황을 바로 확인하세요.</p>
+<p>가게에서 제일 많이 듣는 질문이 "이거 언제 갈아야 돼요?"랑 "이 사이즈 끼워도 돼요?"예요. 답은 대체로 정해져 있습니다. 교체는 <b>4~6만km나 제조 5~6년</b>, 다른 사이즈는 <b>외경 차이 ±3% 안</b>이면 됩니다. 내 차 숫자 넣어서 보시면 됩니다.</p>
 
-<section id="size"><h2>① 타이어 사이즈 호환 계산기</h2>
+<section id="size"><h2>① 다른 사이즈 끼워도 될까</h2>
 <small>예: 225/45R17 → 단면폭 225 / 편평비 45 / 휠 17인치</small>
 <label>순정(현재) 사이즈</label>
 <div class="row"><input id="w1" type="number" value="225" inputmode="numeric" aria-label="현재 단면폭"><input id="a1" type="number" value="45" inputmode="numeric" aria-label="현재 편평비"><input id="r1" type="number" value="17" inputmode="numeric" aria-label="현재 인치"></div>
 <label>바꾸려는 사이즈</label>
 <div class="row"><input id="w2" type="number" value="235" inputmode="numeric" aria-label="변경 단면폭"><input id="a2" type="number" value="40" inputmode="numeric" aria-label="변경 편평비"><input id="r2" type="number" value="18" inputmode="numeric" aria-label="변경 인치"></div>
-<button onclick="calcSize()">호환 여부 계산</button><div class="out" id="sizeOut">사이즈를 입력하고 계산을 눌러주세요.</div>
+<button onclick="calcSize()">호환 여부 계산</button><div class="out" id="sizeOut">사이즈 넣고 계산 누르면 나옵니다.</div>
 </section>
 
 <div class="ad">광고 영역 (AdSense 승인 후)</div>
 
-<section id="life"><h2>② 타이어 교체주기 자가진단</h2>
+<section id="life"><h2>② 지금 갈아야 하나</h2>
 <label>장착 후 주행거리 (km)</label><input id="km" type="number" value="35000" inputmode="numeric">
 <label>DOT 제조코드 마지막 4자리 (예: 2321 = 2021년 23주)</label><input id="dot" type="text" value="2321" maxlength="4" inputmode="numeric">
 <label>남은 트레드 깊이 (mm, 모르면 비워두기 · 신품 약 8mm)</label><input id="tread" type="number" step="0.1" placeholder="예: 3.5">
 <label>운전 스타일</label><select id="style"><option value="1">보통 (출퇴근·시내)</option><option value="0.85">급가속·고속 주행 많음</option><option value="1.1">얌전한 편 / 고속도로 위주</option></select>
-<button onclick="calcLife()">교체 시기 진단</button><div class="out" id="lifeOut">정보를 입력해주세요.</div>
+<button onclick="calcLife()">교체 시기 진단</button><div class="out" id="lifeOut">주행거리랑 제조코드만 넣어도 대충 나옵니다.</div>
 </section>
 
-<section id="cost"><h2>③ 타이어 교체비용 예상</h2>
+<section id="cost"><h2>③ 교체하면 얼마쯤 드나</h2>
 <label>휠 인치</label><select id="inch"><option>15</option><option>16</option><option selected>17</option><option>18</option><option>19</option><option>20</option><option>21</option></select>
 <label>등급</label><select id="grade"><option value="0">실속형 (국산 보급형)</option><option value="1" selected>표준 (국산 프리미엄)</option><option value="2">프리미엄 (미쉐린·콘티넨탈 등)</option></select>
 <label>교체 개수</label><select id="cnt"><option>1</option><option>2</option><option selected>4</option></select>
 <label><input type="checkbox" id="align" style="width:auto"> 휠얼라이먼트 포함</label>
-<button onclick="calcCost()">비용 계산</button><div class="out" id="costOut">2026년 시중 평균가 기준 대략적 범위를 보여드립니다.</div>
+<button onclick="calcCost()">비용 계산</button><div class="out" id="costOut">시중 평균가 기준 대략적인 범위입니다. 정확한 금액은 규격 보고 말씀드릴 수 있어요.</div>
 </section>
 
-<section id="psi"><h2>④ 차종별 적정 공기압 & 단위 변환</h2>
+<section id="psi"><h2>④ 공기압은 얼마로</h2>
 <table><tr><th>차종</th><th>권장(psi)</th><th>bar</th></tr>
 <tr><td>경차·소형</td><td>32~33</td><td>2.2~2.3</td></tr><tr><td>준중형·중형 세단</td><td>33~35</td><td>2.3~2.4</td></tr>
 <tr><td>SUV</td><td>35~36</td><td>2.4~2.5</td></tr><tr><td>전기차(EV)</td><td>38~42</td><td>2.6~2.9</td></tr><tr><td>승합·1톤</td><td>40~65</td><td>2.8~4.5</td></tr></table>
-<small>정확한 값은 운전석 도어 안쪽 스티커 기준. 겨울엔 기온 10℃ 하락마다 약 1~2psi 빠집니다.</small>
+<small>정확한 값은 운전석 문 안쪽 스티커에 있어요. 겨울엔 기온 10℃ 떨어질 때마다 1~2psi쯤 빠지니, 추워지면 한 번 봐주세요.</small>
 <label>단위 변환 (psi 입력)</label><input id="psiIn" type="number" value="35" oninput="conv()"><div class="out" id="psiOut"></div>
 </section>
 
-<section class="shop"><h2>🔧 직접 확인이 어렵다면?</h2>
-<p><b>타이어모어 울산학산점</b> — 미쉐린·콘티넨탈 공식 인증 대리점<br>트레드·편마모·제조일 점검, 사이즈 상담 환영<br>📞 <a href="tel:0522650085">052-265-0085</a> · <a href="https://blog.naver.com/tyremore_ulsanhaksan" target="_blank" rel="noopener">작업 후기 블로그</a></p>
+<section class="shop"><h2>직접 보기 애매하면</h2>
+<p><b>타이어모어 울산학산점</b> — 미쉐린·콘티넨탈 공식 인증 대리점<br>트레드, 편마모, 제조일은 가게 오시면 같이 봐드립니다. 사이즈 문의도 전화 주세요.<br> <a href="tel:0522650085">052-265-0085</a> · <a href="https://blog.naver.com/tyremore_ulsanhaksan" target="_blank" rel="noopener">작업 후기 블로그</a></p>
 </section>
 
-<section><h2>함께 보면 좋은 차량 용품</h2>
+<section><h2>차에 두면 쓸 만한 것들</h2>
 <div class="cp">
 <a href="https://link.coupang.com/a/fQ6F3ST21A" target="_blank" referrerpolicy="unsafe-url"><img src="https://img5a.coupangcdn.com/image/affiliate/banner/e01ec4f39b558cfa122f76b582efb39f@2x.jpg" alt="불스원 Rain OK 에탄올 3in1 발수코팅 워셔액, 1.8L, 2개" width="120" height="240"></a>
 <a href="https://link.coupang.com/a/fQ9UJqbjbg" target="_blank" referrerpolicy="unsafe-url"><img src="https://img4a.coupangcdn.com/image/affiliate/banner/af1c4a531710a04d1412d82e13c70a44@2x.jpg" alt="DEWALT 디월트 충전 미드토크 임팩트렌치" width="120" height="240"></a>
@@ -95,10 +95,10 @@ small{color:#777}footer{text-align:center;font-size:.8rem;color:#888;padding:20p
 </section>
 
 <section id="faq"><h2>자주 묻는 질문</h2>
-<h3>타이어 교체주기는 얼마인가요?</h3><p>보통 4만~6만km 또는 제조 후 5~6년. 트레드 1.6mm 이하는 법적 한계, 3mm 이하부터 교체 권장.</p>
-<h3>다른 사이즈 타이어를 끼워도 되나요?</h3><p>외경 차이 ±3% 이내면 일반적으로 가능. 넘으면 속도계 오차·간섭·ABS 오작동 위험.</p>
-<h3>타이어 제조일은 어떻게 보나요?</h3><p>옆면 DOT 코드 마지막 4자리. 2324 = 2024년 23주차 생산.</p>
-<h3>적정 공기압은?</h3><p>도어 스티커 값 기준, 승용차 대개 32~36psi. 냉간 상태로 월 1회 점검.</p>
+<h3>타이어 교체주기는 얼마인가요?</h3><p>보통 4만~6만km, 아니면 제조 후 5~6년입니다. 트레드 1.6mm가 법적 한계인데, 비 오는 날 생각하면 3mm쯤에서 가는 걸 권해드려요.</p>
+<h3>다른 사이즈 타이어를 끼워도 되나요?</h3><p>외경 차이가 ±3% 안이면 대부분 괜찮습니다. 그 이상이면 속도계가 틀어지고, 차체에 닿거나 ABS가 엉뚱하게 작동할 수 있어요.</p>
+<h3>타이어 제조일은 어떻게 보나요?</h3><p>옆면 DOT 코드 끝 4자리를 보면 됩니다. 2324면 2024년 23주차에 만든 타이어예요.</p>
+<h3>적정 공기압은?</h3><p>문 스티커에 적힌 값이 기준이고, 승용차는 대개 32~36psi입니다. 달리기 전 식은 상태에서 한 달에 한 번 재보세요.</p>
 </section>
 <div class="ad">광고 영역 (AdSense 승인 후)</div>
 </main>
