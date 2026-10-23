@@ -1,0 +1,15 @@
+🎨 이미지 생성 중 (grok-imagine-image-2.0)...
+✅ 저장: ccnt256-code.github.io/blog-images/issue-2026-10-11-ev/p1.jpg (151KB, (1200, 800))
+  🔍 image_qa 시도 1: FAIL [anthropic:claude-sonnet-4-5] YES
+
+The image does not match the intended scene description - it contains two people in the background when the description specifies "no people."
+🎨 이미지 생성 중 (grok-imagine-image-2.0)...
+✅ 저장: ccnt256-code.github.io/blog-images/issue-2026-10-11-ev/p1.jpg (133KB, (675, 1200))
+  🔍 image_qa 시도 2: FAIL [image_qc] Baseball glove lacks clearly separated finger stalls and a distinct thumb; web not evident—appears as a rounded mitt-like lump rather than a fingered fielding glove per required silhouette.; object un
+🎨 이미지 생성 중 (grok-imagine-image-2.0)...
+✅ 저장: ccnt256-code.github.io/blog-images/issue-2026-10-11-ev/p1.jpg (153KB, (675, 1200))
+  🔍 image_qa 시도 3: FAIL [anthropic:claude-sonnet-4-5] YES
+
+The image does not match the intended scene description - it shows two people in the background when the description specifically calls for "no people."
+  ⛔ QA 최종 불합격 → 이 이미지는 제외 (글에서 빼고 진행)
+IMAGE_QA_STATUS=excluded
